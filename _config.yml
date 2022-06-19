@@ -19,12 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Federated Directory
-email: your-email@example.com
+email: help@federated.directory
 description: # this means to ignore newlines until "baseurl:"
-baseurl: "help2" # the subpath of your site, e.g. /blog
-url: "http://localhost" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://help2.federated.directory" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: fed_dir
 
 # Build settings
 theme: "just-the-docs"
