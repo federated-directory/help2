@@ -25,6 +25,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://help2.federated.directory" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fed_dir
 
+# Color scheme
+color_scheme: fd
+
 # Build settings
 theme: "just-the-docs"
 search_enabled: true
