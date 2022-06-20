@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default
 title: Search
-permalink: /search/
+nav_order: 4
 ---
 
 Federated Directory has been built to make it easier to find the right contact information.
