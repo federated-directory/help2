@@ -113,61 +113,45 @@ On this tab you will find a couple of separate settings:
 
 - [Basic settings](#basic-settings)
 - [Authentication method](#authentication-method)
-- [User management integration](#user-management-introduction)
 - [Logo](#logo)
 
 #### Basic settings
 
-These are settings which do not have any influence on the way, your directory works.
+Set the name and a description of this directory.
+
+You will also find the **DELETE DIRECTORY** button here. Be careful, this will immediately delete all the users in this directory.
 
 #### Authentication Method
 
-Authentication method defines the way your users will log in to Federated Directory. We supports a wide range of authentication methods, which are listed below:
+Authentication method defines the way your users will log in to Federated Directory. You can enable multiple options at the same time.
 
-<dl>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-none.svg" alt="No authentication method for users in this directory"/> None</dt>
-<dd>This way, users in current directory will not be able to log in at all. For security reasons, we have made this the default authentication method setting when you create a new directory. For example it's a great way to prevent users from logging in, while you are still setting things up for.</dd>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-federateddirectory.svg" alt="Federated Directory accounts"/> Federated Directory accounts</dt>
-<dd>Users from this directory will be able to log in directly with their Federated Directory credentials. If a user has forgotten his or her username or password, he can reset it, as long as there is a valid email address present on the account.</dd>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-azure.svg" alt="Microsoft accounts"/> Microsoft accounts</dt>
-<dd>Users will log in with their Microsoft account. The same set of credentials they use to log in to Office 365 and other applications that are integrated with Microsoft Azure AD. <a href="./microsoft">Setup authentication with Microsoft accounts</a></dd>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-gsuite.svg" alt="Google accounts"/> Google accounts</dt>
-<dd>Users will log in with their Google account. The same set of credentials they use to log in to their Google Workspace services and other applications that are integrated with Google Cloud Identity. <a href="./google">Setup authentication with Google accounts</a></dd>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-saml.svg" alt="No authentication method for users in this directory"/> SAML 2.0</dt>
-<dd>Unlike the other authentication methods, SAML 2.0 is not a company specific authentication method. It's an open standard for logging users into applications. If you already have a SAML 2.0 Identity Provider (IDP) in your organization, select this option to integrate it with your Federated Directory. <a href="./saml">Setup authentication with SAML 2.0</a></dd>
-</dl>
-
-#### User management integration
-
-The power of your Federated Directory depends on the accuracy and completeness of the contact data it contains. The best and easiest way to keep it up to date, is to create an integration with your current enterprise address book and to automate the management (create, update, delete) of users data in your directory. We support the methods described below.
-
-<dl>
-
-<dt><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-none.svg" alt="No authentication method for users in this directory"/> None</dt>
-
-<dd>No integration and no automation. This is the best option if you currently don't have an corporate address book . Users can be created directly in our portal and users can update their own profile and photo. Bulk updates can easily be handled by uploading a CSV files.</dd>
-
-<dt><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-azure.svg" alt="No authentication method for users in this directory"/> Azure AD</dt>
-<dd>Push new and existing users and their profiles from Microsoft to Federated Directory, including subsequent profile updates and user removals. <a href="./microsoft">Setup an integration  with Azure AD</a></dd>
-
-<dt><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-gsuite.svg" alt="No authentication method for users in this directory"/> Google Workspace Directory</dt>
-<dd>Push new and existing users and their profiles from Google to Federated Directory, including subsequent profile updates and user removals. <a href="./google">Setup an integration with Google Workspace Directory</a></dd>
-
-<dt><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-onelogin.svg" alt="No authentication method for users in this directory"/> OneLogin</dt>
-<dd>Push new and existing users and their profiles from OneLogin to Federated Directory, including subsequent profile updates and user removals. <a href="./onelogin">Setup an integration with OneLogin<a></dd>
-
-<dt><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-okta.svg" alt="No authentication method for users in this directory"/> Okta</dt>
-<dd>Push new and existing users and their profiles from OneLogin to Federated Directory, including subsequent profile updates and user removals. <a href="./okta">Setup an integration with Okta</a></dd>
-
-<dt><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-scim.svg" alt="No authentication method for users in this directory"/> SCIM 2.0</dt>
-<dd>System for Cross-domain Identity Management (SCIM) is an open standard for automating the exchange of user identity information between IT systems. Our user API is SCIM 2.0 compliant. Create a directory API key and integrate your system with our API. <a href="./scim">Setup an integration with our SCIM 2.0 users API</a></dd>
-
-</dl>
+<table>
+  <tr>
+    <td><img style="width: 40px; display:inline;" src="../../assets/images/directories-introduction-none.svg" alt="No authentication method for users in this directory"/></td>
+    <td>None</td>
+    <td>This way, users in current directory will not be able to log in at all. For security reasons, we have made this the default authentication method setting when you create a new directory. For example it's a great way to prevent users from logging in, while you are still setting things up for</td>
+  </tr>
+  <tr>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-federateddirectory.svg" alt="Federated Directory accounts"/> </td>
+    <td>Federated Directory accounts</td>
+    <td>Users from this directory will be able to log in directly with their Federated Directory credentials. If a user has forgotten his or her username or password, he can reset it, as long as there is a valid email address present on the account.</td>
+  </tr>
+    <tr>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-azure.svg" alt="Microsoft accounts"/> </td>
+    <td>Microsoft accounts</td>
+    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Office 365 and other applications that are integrated with Microsoft Azure AD. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
+  </tr>
+    <tr>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-gsuite.svg" alt="Google accounts"/> </td>
+    <td>Google accounts</td>
+    <td>Users will log in with their Google account. The same set of credentials they use to log in to their Google Workspace services and other applications that are integrated with Google Cloud Identity. <a href="./google">Setup authentication with Google accounts</a></td>
+  </tr>
+    <tr>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-saml.svg" alt="No authentication method for users in this directory"/> </td>
+    <td>SAML 2.0</td>
+    <td>SAML 2.0 is an open standard for logging users into applications. If you already have a SAML 2.0 Identity Provider (IDP) in your organization, select this option to integrate it with your Federated Directory. <a href="./saml">Setup authentication with SAML 2.0</a></td>
+  </tr>
+</table>
 
 #### Logo
 

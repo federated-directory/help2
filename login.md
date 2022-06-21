@@ -12,7 +12,7 @@ Login with your Google or Microsoft account if your Federated Directory is integ
 
 If you are not sure, enter your email address. You will be taken to Google, Microsoft or your companies login page at Federated Directory to authenticate.
 
-<img style="width:350px" src="../../assets/images/login-homeland.png" alt="Enter companies short name" />
+<img style="width:350px;" src="../../assets/images/login-homeland.png" alt="Enter companies short name" />
 
 Your companies login page will only show you the authentication methods available in your company. It is located at:
 

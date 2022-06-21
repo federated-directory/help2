@@ -48,9 +48,7 @@ Benefits:
 
 Once you have signed up, it's time to fill your Federated Directory with the employees of your organization.
 
-Those employees will be able to [log in](./login) to Federated Directory and [search](./search) each others contact data.
-
-Below you cases, how you can 'arrange' your company directory.
+Those employees will be able to [log in](./login) and [search](./search) each others contact data.
 
 ### Two to one
 
