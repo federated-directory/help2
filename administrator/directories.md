@@ -25,7 +25,7 @@ In case you have only one cloud service with contacts information, it's obvious 
 
 Multiple directories or single directory have no impact on your users search experience. Federated Directory uses [Groups](./groups) to make users searchable to each other and this is what you have to configure, to make search work.
 
-### Singe directory
+### Single directory
 
 The most common use case for having single directory mapped to multiple sources is when you have two or more sources in the same cloud service, like two G Mail or two Office 365. In this case, you can provision the directory from both sources and have all the users sitting in one directory. The benefit of having such a setup is that your users won't need to select a separate directory when login.
 
