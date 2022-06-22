@@ -4,6 +4,8 @@ title: Microsoft Outlook add-in
 nav_order: 7
 ---
 
+# Microsoft Outlook add-in
+
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Using the add-in in Outlook](#using-the-add-in-in-outlook)

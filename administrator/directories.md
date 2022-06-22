@@ -6,6 +6,8 @@ nav_order: 2
 has_children: false
 ---
 
+# Directory
+
 A directory contains the users of your company and their contact data. Some of the characteristics of a directory are:
 
 - Contains users that can log in to Federated Directory

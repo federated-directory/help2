@@ -4,7 +4,7 @@ title: Login
 nav_order: 3
 ---
 
-## Companies short name
+# Login
 
 You can start your login process at https://federated.directory/of
 

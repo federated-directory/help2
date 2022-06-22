@@ -6,6 +6,8 @@ nav_order: 2
 has_children: false
 ---
 
+# Company
+
 As an administrator you can change your company data by clicking on 'Company' in the menu.
 
 There are two types of data your can update:

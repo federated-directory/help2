@@ -6,9 +6,9 @@ nav_order: 10
 has_children: false
 ---
 
-SAML-based single sign-on (SSO) gives users access to their Federated Directory through an identity provider (IDP) of your choice.
+# Integrate with SAML 2.0
 
----
+SAML-based single sign-on (SSO) gives users access to their Federated Directory through an identity provider (IDP) of your choice.
 
 ## Authentication
 

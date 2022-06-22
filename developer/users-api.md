@@ -6,6 +6,8 @@ nav_order: 3
 has_children: false
 ---
 
+# Users API
+
 Our fully [SCIM 2.0](http://www.simplecloud.info) compliant API to create, search, retrieve, update and remove user information.
 
 All described API calls below require a valid token. See here how to <a href="../developer/obtaining-a-token">obtain a token</a>. <br>

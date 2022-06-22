@@ -4,6 +4,8 @@ title: My Account
 nav_order: 5
 ---
 
+# My Account
+
 Once you're logged in, you can view and change your personal information by going to "My Account" in the menu on the left.
 
 There are three types of data you can view:

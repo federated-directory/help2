@@ -6,6 +6,8 @@ nav_order: 7
 has_children: false
 ---
 
+# Integrate with Microsoft
+
 In case your company uses Office 365, your corporate address book resides in Azure AD.  
 You can integrate Azure AD with Federated Directory.
 

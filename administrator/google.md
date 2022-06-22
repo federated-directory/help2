@@ -6,6 +6,8 @@ nav_order: 6
 has_children: false
 ---
 
+# Integrate with Google
+
 In case your company uses Google, your corporate address book resides in Google Workspace
 Users in this Google Workspace directory login to Federated Directory with their Google account (based on OAuth 2.0 but alternatively you can also configure SAML for this).
 

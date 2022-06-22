@@ -4,6 +4,8 @@ title: Search
 nav_order: 4
 ---
 
+# Search
+
 Federated Directory has been built to make it easier to find the right contact information.
 If your company is federated with other companies, you can search for contact information across companies you work with. Otherwise, you can search within your own company.
 

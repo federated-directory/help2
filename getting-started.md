@@ -4,7 +4,7 @@ title: Getting started
 nav_order: 2
 ---
 
-## Sign up
+# Getting started
 
 Before you start using Federated Directory, you have to sign up. It is easy and free.
 

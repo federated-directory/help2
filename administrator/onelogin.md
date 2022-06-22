@@ -6,6 +6,8 @@ nav_order: 9
 has_children: false
 ---
 
+# Integrate with OneLogin
+
 In case your company uses OneLogin as their identity and access management solution, a lot of contact data is already centrally available.
 Which is great, because you can [provision your OneLogin users](#automatic-user-provisioning) directly to your Federated Directory.
 

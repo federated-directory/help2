@@ -4,6 +4,8 @@ title: Groups
 nav_order: 6
 ---
 
+# Groups
+
 Users are created in directories and can be made a member of multiple groups. Users can search through the contact data of members in the same groups.
 Which means, that if a user is not part of any group, it will not be able to find any contact data and visa versa.
 

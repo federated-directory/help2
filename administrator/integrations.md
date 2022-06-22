@@ -6,6 +6,8 @@ nav_order: 3
 has_children: false
 ---
 
+# Integrations
+
 To integrate other services or applications with your Federated Directory you will need an API key. This is an OAuth 2 key with administrative permissions for your entire Federated Directory. It has the same permissions as an administrator, except the ability to log in to our portal.
 So make sure you submit these keys only at locations you trust and remove the keys you don't use.
 

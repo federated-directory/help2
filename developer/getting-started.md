@@ -6,6 +6,8 @@ nav_order: 1
 has_children: false
 ---
 
+# Getting started
+
 You can use the information in your Federated Directory in your own applications
 
 We made it as easy as possible to get started with our (SCIM compliant) APIs and integrate it into your application.

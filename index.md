@@ -4,6 +4,8 @@ title: Home
 nav_order: 1
 ---
 
+# Welcome
+
 Federated Directory makes it possible to connect multiple corporate address books<sup id="a1">[1](#f1)</sup> (Google Workspace / Microsoft Office 365 - Azure AD, for example) and make them available to other companies you work with and trust.
 
 This way, you can create a connected corporate address book that stretches over multiple companies.

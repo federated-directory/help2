@@ -6,6 +6,8 @@ nav_order: 2
 has_children: false
 ---
 
+# Obtaining a token
+
 Any service or application that wants to integrate with the Federated Directory APIs needs to obtain an access token. This access token should be placed in the `Authorization` header of every API call as a Bearer token. Like this:
 
     Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
