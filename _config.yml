@@ -22,7 +22,7 @@ title: Federated Directory
 email: help@federated.directory
 description: # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://help2.federated.directory" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://help.federated.directory" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fed_dir
 
 # Google Analytics
