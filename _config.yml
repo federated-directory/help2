@@ -25,6 +25,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://help2.federated.directory" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fed_dir
 
+# Google Analytics
+ga_tracking: G-5FT2Y1PF6Z
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
 # Color scheme
 color_scheme: fd
 
