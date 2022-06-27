@@ -6,11 +6,22 @@ nav_order: 2
 
 # Getting started
 
+{: .no_toc }
+
+## Table of contents
+
+{: .no_toc .text-delta }
+
+1. TOC
+   {:toc}
+
+## Sign up
+
 Before you start using Federated Directory, you have to sign up. It is easy and free.
 
-You can do it here: [SIGNUP](https://www.federated.directory/signup){: .btn .btn-outline .v-align-middle}
+[SIGN UP HERE](https://www.federated.directory/signup){: .btn .btn-outline .v-align-middle}
 
-To sign up to Federated Directory, you can choose of one of two options.
+Two ways to sign up:
 
 1. Sign up with your Google or Microsoft account.
 2. Sign up manually.
@@ -19,10 +30,11 @@ You can finalize the sign-up process only after you have read and agreed to [ter
 
 ### Sign up with your Google or Microsoft account
 
-The easiest way to sign up is to use your Google or Microsoft. This way you don't have to remember a new set of credentials, and you don't have to fill in a form with your details.
+The easiest way to sign up is to use your Google or Microsoft.
 
 Benefits:
 
+- Quicker
 - No extra account details to remember
 - Easier to setup your integration with Microsoft or Google
 
