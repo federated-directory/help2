@@ -6,7 +6,7 @@ nav_order: 4
 has_children: false
 ---
 
-#Audit logs
+# Audit logs
 
 Every change made within your Federated Directory environment is recorded and can be reviewed. We store this information in two different audit logs:
 
