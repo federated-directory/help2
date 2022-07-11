@@ -12,7 +12,6 @@ nav_order: 2
    2. [Combine users into groups](#combine-users-into-groups)
    3. [Search through the contact details](#search-through-the-contact-details)
    4. [Optional: Sync a group to Azure AD](#optional-sync-a-group-to-azure-ad)
-      <<<<<<< HEAD
 3. [Scenarios](#scenarios)
    1. [Combine directories within your company](#combine-directories-within-your-company)
    2. [Combine directories over multiple companies](#combine-directories-over-multiple-companies)
