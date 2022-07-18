@@ -107,7 +107,7 @@ By default you will appear on the first tab **USERS**
 
 On this tab you can manage users of the current directory. You can create, update and remove them. Additionally you can import and export users using CSV format.
 
-To export users click <i class="material-icons with-border">get_app</i> icon and to import click <i class="material-icons with-border">publish</i> button.
+To export users click <img style="display:inline;" src="../../assets/images/directories-get_app.svg" alt="Export icon"/> icon and to import click <img style="display:inline;" src="../../assets/images/directories-publish.svg" alt="Import Users"/> button.
 
 ### Configure directory
 
