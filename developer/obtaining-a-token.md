@@ -14,10 +14,10 @@ Any service or application that wants to integrate with the Federated Directory 
 
 In this chapter we will explain in more detail:
 
-- The different [audiences and roles](#audiencesandroles) of access tokens and their impact
-- How to [retrieve an access token with a key](#key)
+- The different [audiences and roles](#audiences-and-roles) of access tokens and their impact
+- How to [retrieve an access token with a key](#retrieve-an-access-token-with-a-key)
 
-<h2 id="audiencesandroles"> Audiences and roles </h2>
+## Audiences and roles
 
 The combination of an audience (aud) and a role describe the authorizations of an access token.
 
@@ -36,16 +36,16 @@ A role determines the authorizations given to an access token.
 | directoryKey | Always a key (audience) that has admin permissions on one specific directory in your Federated Directory. Ideal for integration with your current corporate address book or IAM solution (like Azure AD, Google Directory or Okta) |
 | admin        | Full administrative permissions. Can modify all users and settings in its company                                                                                                                                                  |
 
-<h2 id="key"> Retrieve and access token with a key </h2>
+## Retrieve an access token with a key
 
 There are two sort of keys.
 
-1. Directory key (role = directoryKey)
-2. API key (role = admin)
+1. [Directory key](#create-a-directory-key) (role = directoryKey)
+2. [API key](#create-an-api-key) (role = admin)
 
 Decide which key is appropriate for your integration scenario.
 
-#### Create a directory key
+### Create a directory key
 
 Go to 'directories' and select the directory you want to integrate with.
 Go to the "KEYS" tab and create a new key.
@@ -63,7 +63,7 @@ The 'issuer' and 'private key' can be used to [create access tokens](#createtoke
 same lifetime as a user session. This is [configurable per tenant](/administrator/company)
 but has a default value of 480 minutes (8 hours).
 
-#### Create an API key
+### Create an API key
 
 An API key has the same permissions as a user with the 'administrator' role.
 
@@ -74,11 +74,11 @@ After the key has been created you will receive two things:
 1. issuer
 2. private key
 
-The 'issuer' and 'private key' can be used to [create access tokens](#createtokenwithkey). These tokens have the
+The 'issuer' and 'private key' can be used to [create access tokens](#create-an-access-token-with-the-issuer-and-private-key). These tokens have the
 same lifetime as a user session. This is [configurable per tenant](/administrator/company)
 but has a default value of 480 minutes (8 hours).
 
-<h3 id="createtokenwithkey">Create an access token with the issuer and private key</h3>
+## Create an access token with the issuer and private key
 
 Place the 'issuer' value of your key in the below JSON.
 
@@ -91,7 +91,7 @@ Place the 'issuer' value of your key in the below JSON.
 ```
 
 Use RS256 encryption to create and parse a JWT token. Use your 'private key' for this.
-There are a [a lot of libraries](https://www.jwt.io) available that can do this.
+There are a [a lot of libraries](https://jwt.io/libraries) available that can do this.
 
 This JWT can then be submitted by a POST action to this end-point :
 
@@ -101,7 +101,7 @@ This JWT can then be submitted by a POST action to this end-point :
 | url    | ht<span>tps://api.federated.directory/v2/Login/Oauth2/Token |
 | body   | See below                                                   |
 
-#### Body
+### Body
 
 The JWT needs to be called "assertion" in the final payload :
 
@@ -112,7 +112,7 @@ The JWT needs to be called "assertion" in the final payload :
 }
 ```
 
-### Example Request
+## Example Request
 
 ```json
 {
@@ -121,7 +121,7 @@ The JWT needs to be called "assertion" in the final payload :
 }
 ```
 
-### Example Response
+## Example Response
 
 ```json
 {
