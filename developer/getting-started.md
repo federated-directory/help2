@@ -31,7 +31,7 @@ You’ll need a Federated Directory to get started. If you don’t have one alre
 
 3. Launch Postman and click the Import button. Select Import From Link, and paste this link into the textbox:
 
-   - `https://help.federated.directory/files/api.federated.directory.postman_environment.json` <br><br>
+   - `https://help.federated.directory/assets/files/api.federated.directory.postman_environment.json` <br><br>
      <img style="width: 450px" src="../../assets/images/developer-gettingstarted-pmenvironment1.jpg" alt="Import the Federated Directory Getting Started Environment"/>
 
 4. Once it’s imported, make sure the _api.federated.directory_ environment is selected.
