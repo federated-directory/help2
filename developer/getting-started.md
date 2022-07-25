@@ -12,7 +12,7 @@ You can use the information in your Federated Directory in your own applications
 
 We made it as easy as possible to get started with our (SCIM compliant) APIs and integrate it into your application.
 
-Getting started in three steps:
+Getting started in four steps:
 
 1. [Sign-up](#sign-up)
 2. [Setup your environment](#setup-your-environment)

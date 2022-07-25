@@ -13,23 +13,15 @@ Our fully [SCIM 2.0](http://www.simplecloud.info) compliant API to create, searc
 All described API calls below require a valid token. See here how to <a href="../developer/obtaining-a-token">obtain a token</a>. <br>
 Working examples can be found in our Postman collection in the <a href="../developer/getting-started">"Getting Started"</a> section.
 
-<span>[- User data model](#d1)</span>
-
-<span>[- Full JSON user representation](#d2)</span>
-
-<span>[- Search users](#f1)</span>
-
-<span>[- Get a user](#f2)</span>
-
-<span>[- Create user](#f3)</span>
-
-<span>[- Update user (PATCH)](#f4a)</span>
-
-<span>[- Update user (PUT)](#f4b)</span>
-
-<span>[- Delete user](#f5)</span>
-
-<span>[- Bulk user updates](#f6)</span>
+- [User data model](#d1)
+- [Full JSON user representation](#d2)
+- [Search users](#f1)
+- [Get a user](#f2)
+- [Create user](#f3)
+- [Update user (PATCH)](#f4a)
+- [Update user (PUT)](#f4b)
+- [Delete user](#f5)
+- [Bulk user updates](#f6)
 
 <h2 id="d1">User data model</h2>
 
@@ -372,106 +364,104 @@ curl -X GET \
 
 ### Example Response
 
-<mark>http status code: 200</mark>
+`http status code: 200`
 
-```JSON
+```json
 {
-    "totalResults": 4,
-    "itemsPerPage": 4,
-    "startIndex": 1,
-    "schemas": [
-        "urn:ietf:params:scim:api:messages:2.0:ListResponse"
-    ],
-    "Resources": [
+  "totalResults": 4,
+  "itemsPerPage": 4,
+  "startIndex": 1,
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+  "Resources": [
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+      ],
+      "id": "0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
+      "displayName": "Armando Pearson",
+      "photos": [
         {
-            "schemas": [
-                "urn:ietf:params:scim:schemas:core:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-            ],
-            "id": "0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
-            "displayName": "Armando Pearson",
-            "photos": [
-                {
-                    "type": "photo",
-                    "primary": true,
-                    "value": "https://cdn.federated.directory/images/users/demo/m26.jpg"
-                },
-                {
-                    "type": "thumbnail",
-                    "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_m26.jpg"
-                }
-            ],
-            "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-                "division": "Getting Started",
-                "department": "Bulk"
-            },
-            "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-                "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
-            }
+          "type": "photo",
+          "primary": true,
+          "value": "https://cdn.federated.directory/images/users/demo/m26.jpg"
         },
         {
-            "schemas": [
-                "urn:ietf:params:scim:schemas:core:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-            ],
-            "id": "0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
-            "displayName": "Deborah Watson",
-            "photos": [
-                {
-                    "type": "photo",
-                    "primary": true,
-                    "value": "https://cdn.federated.directory/images/users/demo/w18.jpg"
-                },
-                {
-                    "type": "thumbnail",
-                    "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w18.jpg"
-                }
-            ],
-            "title": "Project Manager",
-            "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-                "division": "Getting Started",
-                "department": "Bulk"
-            },
-            "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-                "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
-            }
-        },
-        {
-            "schemas": [
-                "urn:ietf:params:scim:schemas:core:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-            ],
-            "id": "0fbbc0b0-4d2d-11e8-a9c6-fbdcd95513af",
-            "displayName": "Mae Thomas",
-            "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-                "division": "Getting Started",
-                "department": "Bulk"
-            },
-            "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-                "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
-            }
-        },
-        {
-            "schemas": [
-                "urn:ietf:params:scim:schemas:core:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-                "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-            ],
-            "id": "0fbc5cf0-4d2d-11e8-a9c6-fbdcd95513af",
-            "displayName": "Rói Da Rosa",
-            "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-                "division": "Getting Started",
-                "department": "Bulk"
-            },
-            "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-                "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
-            }
+          "type": "thumbnail",
+          "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_m26.jpg"
         }
-    ]
-}`
+      ],
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "division": "Getting Started",
+        "department": "Bulk"
+      },
+      "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+      ],
+      "id": "0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
+      "displayName": "Deborah Watson",
+      "photos": [
+        {
+          "type": "photo",
+          "primary": true,
+          "value": "https://cdn.federated.directory/images/users/demo/w18.jpg"
+        },
+        {
+          "type": "thumbnail",
+          "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w18.jpg"
+        }
+      ],
+      "title": "Project Manager",
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "division": "Getting Started",
+        "department": "Bulk"
+      },
+      "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+      ],
+      "id": "0fbbc0b0-4d2d-11e8-a9c6-fbdcd95513af",
+      "displayName": "Mae Thomas",
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "division": "Getting Started",
+        "department": "Bulk"
+      },
+      "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
+      }
+    },
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+      ],
+      "id": "0fbc5cf0-4d2d-11e8-a9c6-fbdcd95513af",
+      "displayName": "Rói Da Rosa",
+      "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+        "division": "Getting Started",
+        "department": "Bulk"
+      },
+      "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66"
+      }
+    }
+  ]
+}
 ```
 
 <h2 id="f2">Get a user</h2>
@@ -507,46 +497,46 @@ curl -X GET \
 
 ### Example Response
 
-<mark>http status code: 200</mark>
+`http status code: 200`
 
-```JSON
+```json
 {
-    "schemas": [
-        "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-    ],
-    "id": "0dc48490-4d2d-11e8-a9c6-fbdcd95513af",
-    "userName": "bjensen@example.com",
-    "name": {
-        "givenName": "Barbara"
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+  ],
+  "id": "0dc48490-4d2d-11e8-a9c6-fbdcd95513af",
+  "userName": "bjensen@example.com",
+  "name": {
+    "givenName": "Barbara"
+  },
+  "displayName": "Babs Jensen",
+  "phoneNumbers": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "0061 3 9297 1600"
     },
-    "displayName": "Babs Jensen",
-    "phoneNumbers": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "0061 3 9297 1600"
-        },
-        {
-            "type": "home",
-            "value": "(345)-767-6101"
-        },
-        {
-            "type": "mobile",
-            "value": "(068)-597-6483"
-        }
-    ],
-    "active": true,
-    "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-        "description": "Potest manducare glacies crepito formidolose"
+    {
+      "type": "home",
+      "value": "(345)-767-6101"
     },
-    "roles": [
-        {
-            "value": "user",
-            "display": "user"
-        }
-    ]
-}`
+    {
+      "type": "mobile",
+      "value": "(068)-597-6483"
+    }
+  ],
+  "active": true,
+  "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+    "description": "Potest manducare glacies crepito formidolose"
+  },
+  "roles": [
+    {
+      "value": "user",
+      "display": "user"
+    }
+  ]
+}
 ```
 
 <h2 id="f3">Create user</h2>
@@ -568,7 +558,7 @@ a directoryId is not needed, since the directory key is bound to one single dire
 
 ### Body
 
-User JSON object. See chapter "<span>[User data model](#d1)</span>" and "<span>[Full JSON user representation](#d2)</span>".
+User JSON object. See chapter "<span>[User data model](#d1)" and "<span>[Full JSON user representation](#d2)".
 
 Always include the mandatory attributes `userName` & `displayName` when creating a user. However a <a href="../directories/introduction">contact</a> does not contain a `userName`.
 Do not include an `id` attribute or the `meta` object.
@@ -673,129 +663,134 @@ curl -X POST \
 
 ### Example Response
 
-<mark>http status code: 201</mark>
+`http status code: 201`
 
-```JSON
+```json
 {
-    "schemas": [
-        "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-    ],
-    "id": "dfc73700-586b-11e8-8519-2b3682bb456c",
-    "externalId": "701984",
-    "userName": "bjensen@example.com",
-    "name": {
-        "familyName": "Jensen",
-        "givenName": "Barbara"
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+  ],
+  "id": "dfc73700-586b-11e8-8519-2b3682bb456c",
+  "externalId": "701984",
+  "userName": "bjensen@example.com",
+  "name": {
+    "familyName": "Jensen",
+    "givenName": "Barbara"
+  },
+  "displayName": "Babs Jensen",
+  "nickName": "Fruit Loop",
+  "profileUrl": "https://profile.example.com/bjensen",
+  "addresses": [
+    {
+      "type": "work",
+      "primary": true,
+      "streetAddress": "100 Universal City Plaza",
+      "postalCode": "91608",
+      "locality": "Hollywood",
+      "region": "CA",
+      "country": "USA"
     },
-    "displayName": "Babs Jensen",
-    "nickName": "Fruit Loop",
-    "profileUrl": "https://profile.example.com/bjensen",
-    "addresses": [
-        {
-            "type": "work",
-            "primary": true,
-            "streetAddress": "100 Universal City Plaza",
-            "postalCode": "91608",
-            "locality": "Hollywood",
-            "region": "CA",
-            "country": "USA"
-        },
-        {
-            "type": "home",
-            "streetAddress": "7632 cherry st",
-            "postalCode": "coral springs",
-            "locality": "nevada",
-            "region": "85702",
-            "country": "Spain"
-        }
-    ],
-    "emails": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "bjensen@example.com"
-        },
-        {
-            "type": "home",
-            "value": "babs@jensen.org"
-        }
-    ],
-    "phoneNumbers": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "0061 3 9297 1600"
-        },
-        {
-            "type": "home",
-            "value": "(345)-767-6101"
-        },
-        {
-            "type": "mobile",
-            "value": "(068)-597-6483"
-        }
-    ],
-    "photos": [
-        {
-            "type": "photo",
-            "primary": true,
-            "value": "https://cdn.federated.directory/images/users/demo/w1.jpg"
-        },
-        {
-            "type": "thumbnail",
-            "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w1.jpg"
-        }
-    ],
-    "userType": "Employee",
-    "title": "Tour Guide",
-    "groups": [{
-            "value": "7e9f14a0-fe8d-11ea-b3f4-d179f9eb8415",
-            "display": "All users",
-            "logos": [{
-                "value": "https://cdn.federated.directory/images/groups/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
-                "type": "logo"
-            }, {
-                "value": "https://cdn.federated.directory/images/groups/thumb/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
-                "type": "thumbnail"
-            }],
-            "owner": false,
-            "assignedByFilter": true
-        }],
-    "active": true,
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-        "organization": "Cafe Expresso",
-        "employeeNumber": "701984",
-        "costCenter": "Hub04387",
-        "division": "Getting Started"
-    },
-    "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
-        "companyLogos": [
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "logo"
-            },
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "thumbnail"
-            }
-        ],
-        "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a",
-        "description": "Potest manducare glacies crepito formidolose"
-    },
-    "roles": [
-        {
-            "value": "user",
-            "display": "user"
-        }
-    ],
-    "meta": {
-        "resourceType": "User",
-        "location": "https://api.federated.directory/v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
-        "created": "2018-05-15T18:14:57.392Z"
+    {
+      "type": "home",
+      "streetAddress": "7632 cherry st",
+      "postalCode": "coral springs",
+      "locality": "nevada",
+      "region": "85702",
+      "country": "Spain"
     }
+  ],
+  "emails": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "bjensen@example.com"
+    },
+    {
+      "type": "home",
+      "value": "babs@jensen.org"
+    }
+  ],
+  "phoneNumbers": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "0061 3 9297 1600"
+    },
+    {
+      "type": "home",
+      "value": "(345)-767-6101"
+    },
+    {
+      "type": "mobile",
+      "value": "(068)-597-6483"
+    }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "primary": true,
+      "value": "https://cdn.federated.directory/images/users/demo/w1.jpg"
+    },
+    {
+      "type": "thumbnail",
+      "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w1.jpg"
+    }
+  ],
+  "userType": "Employee",
+  "title": "Tour Guide",
+  "groups": [
+    {
+      "value": "7e9f14a0-fe8d-11ea-b3f4-d179f9eb8415",
+      "display": "All users",
+      "logos": [
+        {
+          "value": "https://cdn.federated.directory/images/groups/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
+          "type": "logo"
+        },
+        {
+          "value": "https://cdn.federated.directory/images/groups/thumb/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
+          "type": "thumbnail"
+        }
+      ],
+      "owner": false,
+      "assignedByFilter": true
+    }
+  ],
+  "active": true,
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+    "organization": "Cafe Expresso",
+    "employeeNumber": "701984",
+    "costCenter": "Hub04387",
+    "division": "Getting Started"
+  },
+  "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+    "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
+    "companyLogos": [
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "logo"
+      },
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "thumbnail"
+      }
+    ],
+    "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a",
+    "description": "Potest manducare glacies crepito formidolose"
+  },
+  "roles": [
+    {
+      "value": "user",
+      "display": "user"
+    }
+  ],
+  "meta": {
+    "resourceType": "User",
+    "location": "https://api.federated.directory/v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
+    "created": "2018-05-15T18:14:57.392Z"
+  }
 }
 ```
 
@@ -817,10 +812,10 @@ a specific operation (add, remove, replace) on one or more attributes of this us
 
 There are two types of `Operation` objects:
 
-<span>[1. With a path key](#patchwithpath)</span>  
+<span>[1. With a path key](#patchwithpath)  
 One user attribute per operation can be changed. The path indicates the user attribute that needs to be changed. In case of an 'add' or 'replace' operation, will the new value be present in the 'value' key.
 
-<span>[2. Without a path key](#patchwithoutpath)</span>  
+<span>[2. Without a path key](#patchwithoutpath)  
 Every operation can change multiple user attributes. Every operation can basically contain part .
 
 <h3 id="patchwithpath"> Body with a path key </h3>
@@ -992,147 +987,155 @@ curl -X PATCH \
 
 ### Example Response
 
-<mark>http status code: 200</mark>
+`http status code: 200`
 
-```JSON
+```json
 {
-    "schemas": [
-        "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-    ],
-    "id": "dfc73700-586b-11e8-8519-2b3682bb456c",
-    "externalId": "701984",
-    "userName": "babs@example.net",
-    "name": {
-        "familyName": "Gibson",
-        "givenName": "Barbara"
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+  ],
+  "id": "dfc73700-586b-11e8-8519-2b3682bb456c",
+  "externalId": "701984",
+  "userName": "babs@example.net",
+  "name": {
+    "familyName": "Gibson",
+    "givenName": "Barbara"
+  },
+  "displayName": "Ms. Barbara J Jensen, III",
+  "nickName": "Fruit Loop",
+  "profileUrl": "https://profile.example.com/bjensen",
+  "addresses": [
+    {
+      "type": "work",
+      "primary": true,
+      "streetAddress": "100 Universal City Plaza",
+      "postalCode": "91608",
+      "locality": "Berlin",
+      "region": "CA",
+      "country": "DE"
     },
-    "displayName": "Ms. Barbara J Jensen, III",
-    "nickName": "Fruit Loop",
-    "profileUrl": "https://profile.example.com/bjensen",
-    "addresses": [
-        {
-            "type": "work",
-            "primary": true,
-            "streetAddress": "100 Universal City Plaza",
-            "postalCode": "91608",
-            "locality": "Berlin",
-            "region": "CA",
-            "country": "DE"
-        },
-        {
-            "type": "home",
-            "streetAddress": "7632 cherry st",
-            "postalCode": "coral springs",
-            "locality": "nevada",
-            "region": "85702",
-            "country": "Spain"
-        }
-    ],
-    "emails": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "bjensen@example.com"
-        },
-        {
-            "type": "home",
-            "value": "babs@example.net"
-        }
-    ],
-    "phoneNumbers": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "02012345678"
-        },
-        {
-            "type": "home",
-            "value": "03012345678"
-        },
-        {
-            "type": "mobile",
-            "value": "(068)-597-6483"
-        }
-    ],
-    "photos": [
-        {
-            "type": "photo",
-            "primary": true,
-            "value": "https://cdn.federated.directory/images/users/demo/w1.jpg"
-        },
-        {
-            "type": "thumbnail",
-            "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w1.jpg"
-        }
-    ],
-    "userType": "Patched UserType",
-    "title": "Tour Guide",
-    "active": true,
-    "groups": [{
-            "value": "7e9f14a0-fe8d-11ea-b3f4-d179f9eb8415",
-            "display": "All users",
-            "logos": [{
-                "value": "https://cdn.federated.directory/images/groups/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
-                "type": "logo"
-            }, {
-                "value": "https://cdn.federated.directory/images/groups/thumb/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
-                "type": "thumbnail"
-            }],
-            "owner": false,
-            "assignedByFilter": true
-        },
-        {
-            "value": "5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422",
-            "display": "Project Muffin",
-            "logos": [{
-                "value": "https://cdn.federated.directory/uploads/groups/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422_IKJuk.svg",
-                "type": "logo"
-            }, {
-                "value": "https://cdn.federated.directory/uploads/groups/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422/thumb/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422_IKJuk.svg",
-                "type": "thumbnail"
-            }],
-            "owner": true,
-            "assignedByFilter": false
-        }],
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-        "organization": "Cafe Expresso",
-        "employeeNumber": "701984",
-        "costCenter": "Hub04387",
-        "manager": {
-            "value": "dfc73700-586b-11e8-8519-2b3682bb456c",
-            "$ref": "../v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
-            "displayName": "Babs Jensen"
-        }
-    },
-    "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
-        "companyLogos": [
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "logo"
-            },
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "thumbnail"
-            }
-        ],
-        "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a",
-        "description": "Company Chess Champion of 2012"
-    },
-    "roles": [
-        {
-            "value": "admin",
-            "display": "admin"
-        }
-    ],
-    "meta": {
-        "resourceType": "User",
-        "location": "https://api.federated.directory/v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
-        "created": "2018-05-15T18:14:57.000Z",
-        "lastModified": "2018-05-15T18:41:35.736Z"
+    {
+      "type": "home",
+      "streetAddress": "7632 cherry st",
+      "postalCode": "coral springs",
+      "locality": "nevada",
+      "region": "85702",
+      "country": "Spain"
     }
+  ],
+  "emails": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "bjensen@example.com"
+    },
+    {
+      "type": "home",
+      "value": "babs@example.net"
+    }
+  ],
+  "phoneNumbers": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "02012345678"
+    },
+    {
+      "type": "home",
+      "value": "03012345678"
+    },
+    {
+      "type": "mobile",
+      "value": "(068)-597-6483"
+    }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "primary": true,
+      "value": "https://cdn.federated.directory/images/users/demo/w1.jpg"
+    },
+    {
+      "type": "thumbnail",
+      "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_w1.jpg"
+    }
+  ],
+  "userType": "Patched UserType",
+  "title": "Tour Guide",
+  "active": true,
+  "groups": [
+    {
+      "value": "7e9f14a0-fe8d-11ea-b3f4-d179f9eb8415",
+      "display": "All users",
+      "logos": [
+        {
+          "value": "https://cdn.federated.directory/images/groups/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
+          "type": "logo"
+        },
+        {
+          "value": "https://cdn.federated.directory/images/groups/thumb/defaultgroup_icon_dskgidIYUDFYGUIKJugkj.svg",
+          "type": "thumbnail"
+        }
+      ],
+      "owner": false,
+      "assignedByFilter": true
+    },
+    {
+      "value": "5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422",
+      "display": "Project Muffin",
+      "logos": [
+        {
+          "value": "https://cdn.federated.directory/uploads/groups/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422_IKJuk.svg",
+          "type": "logo"
+        },
+        {
+          "value": "https://cdn.federated.directory/uploads/groups/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422/thumb/5e9f14a0-fe8d-11ea-b3f4-d179f9eb8422_IKJuk.svg",
+          "type": "thumbnail"
+        }
+      ],
+      "owner": true,
+      "assignedByFilter": false
+    }
+  ],
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+    "organization": "Cafe Expresso",
+    "employeeNumber": "701984",
+    "costCenter": "Hub04387",
+    "manager": {
+      "value": "dfc73700-586b-11e8-8519-2b3682bb456c",
+      "$ref": "../v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
+      "displayName": "Babs Jensen"
+    }
+  },
+  "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+    "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
+    "companyLogos": [
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "logo"
+      },
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "thumbnail"
+      }
+    ],
+    "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a",
+    "description": "Company Chess Champion of 2012"
+  },
+  "roles": [
+    {
+      "value": "admin",
+      "display": "admin"
+    }
+  ],
+  "meta": {
+    "resourceType": "User",
+    "location": "https://api.federated.directory/v2/Users/dfc73700-586b-11e8-8519-2b3682bb456c",
+    "created": "2018-05-15T18:14:57.000Z",
+    "lastModified": "2018-05-15T18:41:35.736Z"
+  }
 }
 ```
 
@@ -1201,75 +1204,75 @@ curl -X PUT \
 
 ### Example Response
 
-<mark>http status code: 200</mark>
+`http status code: 200`
 
-```JSON
+```json
 {
-    "schemas": [
-        "urn:ietf:params:scim:schemas:core:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
-        "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
-    ],
-    "id": "0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
-    "userName": "armando.pearson@example.com",
-    "name": {
-        "familyName": "Pearson",
-        "givenName": "Armando Lawrence"
-    },
-    "displayName": "Armando Pearson",
-    "emails": [
-        {
-            "type": "work",
-            "primary": true,
-            "value": "armando.pearson@example.com"
-        }
-    ],
-    "photos": [
-        {
-            "type": "photo",
-            "primary": true,
-            "value": "https://cdn.federated.directory/images/users/demo/m26.jpg"
-        },
-        {
-            "type": "thumbnail",
-            "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_m26.jpg"
-        }
-    ],
-    "active": false,
-    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
-        "organization": "Cafe Expresso",
-        "manager": {
-            "value": "0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
-            "$ref": "../v2/Users/0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
-            "displayName": "Deborah Watson"
-        }
-    },
-    "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
-        "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
-        "companyLogos": [
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "logo"
-            },
-            {
-                "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
-                "type": "thumbnail"
-            }
-        ],
-        "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a"
-    },
-    "roles": [
-        {
-            "value": "user",
-            "display": "user"
-        }
-    ],
-    "meta": {
-        "resourceType": "User",
-        "location": "https://api.federated.directory/v2/Users/0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
-        "created": "2018-05-01T10:47:36.000Z",
-        "lastModified": "2018-05-15T18:55:54.102Z"
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:fd:2.0:User"
+  ],
+  "id": "0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
+  "userName": "armando.pearson@example.com",
+  "name": {
+    "familyName": "Pearson",
+    "givenName": "Armando Lawrence"
+  },
+  "displayName": "Armando Pearson",
+  "emails": [
+    {
+      "type": "work",
+      "primary": true,
+      "value": "armando.pearson@example.com"
     }
+  ],
+  "photos": [
+    {
+      "type": "photo",
+      "primary": true,
+      "value": "https://cdn.federated.directory/images/users/demo/m26.jpg"
+    },
+    {
+      "type": "thumbnail",
+      "value": "https://cdn.federated.directory/images/users/demo/thumb/thumb_m26.jpg"
+    }
+  ],
+  "active": false,
+  "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+    "organization": "Cafe Expresso",
+    "manager": {
+      "value": "0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
+      "$ref": "../v2/Users/0fbbe7c0-4d2d-11e8-a9c6-fbdcd95513af",
+      "displayName": "Deborah Watson"
+    }
+  },
+  "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
+    "companyId": "8dc57fd0-d2af-11e7-9840-e757c2c4aa66",
+    "companyLogos": [
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "logo"
+      },
+      {
+        "value": "https://dev.federated.directory/uploads/8dc57fd0-d2af-11e7-9840-e757c2c4aa66/thumb/8dc57fd0-d2af-11e7-9840-e757c2c4aa66_ow8fl.png",
+        "type": "thumbnail"
+      }
+    ],
+    "directoryId": "5b0afcc1-3262-11e7-9579-1d8db7d7ec6a"
+  },
+  "roles": [
+    {
+      "value": "user",
+      "display": "user"
+    }
+  ],
+  "meta": {
+    "resourceType": "User",
+    "location": "https://api.federated.directory/v2/Users/0fbc35e0-4d2d-11e8-a9c6-fbdcd95513af",
+    "created": "2018-05-01T10:47:36.000Z",
+    "lastModified": "2018-05-15T18:55:54.102Z"
+  }
 }
 ```
 
@@ -1295,7 +1298,7 @@ curl -X DELETE \
 
 ### Example Response
 
-<mark>http status code: 204</mark>
+`http status code: 204`
 
 <h2 id="f6">Bulk user updates</h2>
 
@@ -1437,18 +1440,16 @@ curl -X POST \
       "path": "/Users/d6b52060-4d7f-11e8-8b44-3d5adce8c545"
     }
   ]
-}'
+}
 ```
 
 ### Example Response
 
-<mark>http status code: 200</mark>
+`http status code: 200`
 
-```
+```json
 {
-  "schemas": [
-    "urn:ietf:params:scim:api:messages:2.0:BulkResponse"
-  ],
+  "schemas": ["urn:ietf:params:scim:api:messages:2.0:BulkResponse"],
   "Operations": [
     {
       "bulkId": "bjensen@example.com",
