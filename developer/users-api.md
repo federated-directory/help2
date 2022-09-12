@@ -119,6 +119,9 @@ You can see how these schema's and attributes form a user JSON object in the nex
 |                  | type          | 4   | 9   | "logo" or "thumbnail"                 |
 |                  | value         | 0   | 200 | Valid URL, starting with 'http(s)://' |
 | directoryId      |               | 36  | 36  | UUID format                           |
+| custom01         |               | 0   | 150 | Custom attribute 1                    |
+| custom02         |               | 0   | 150 | Custom attribute 2                    |
+| custom03         |               | 0   | 150 | Custom attribute 3                    |
 
 <h2 id="d2">Full JSON user representation</h2>
 
@@ -283,8 +286,8 @@ The attributes, filter and sortBy parameters can be configured by the below list
 | Attribute                                                                 | Filter operator         |
 | ------------------------------------------------------------------------- | ----------------------- |
 | **id**                                                                    | eq                      |
-| externalId                                                                | co (admin only)         |
-| userName                                                                  | co (admin only)         |
+| externalId                                                                | eq | co (admin only)    |
+| userName                                                                  | eq | co (admin only)    |
 | name.givenName                                                            |                         |
 | name.familyName                                                           |                         |
 | **displayName**                                                           | co                      |
