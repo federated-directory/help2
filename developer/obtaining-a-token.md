@@ -85,7 +85,7 @@ Place the 'issuer' value of your key in the below JSON.
 ```json
 {
   "iss": "<issuer>",
-  "scope": ["directoryKey"],
+  "scope": ["directoryKey"], // ["admin"] if this is the API key and not Directory key
   "aud": "key"
 }
 ```
