@@ -286,8 +286,8 @@ The attributes, filter and sortBy parameters can be configured by the below list
 | Attribute                                                                 | Filter operator         |
 | ------------------------------------------------------------------------- | ----------------------- |
 | **id**                                                                    | eq                      |
-| externalId                                                                | eq | co (admin only)    |
-| userName                                                                  | eq | co (admin only)    |
+| externalId                                                                | eq <br/> co (admin only)    |
+| userName                                                                  | eq <br/> co (admin only)    |
 | name.givenName                                                            |                         |
 | name.familyName                                                           |                         |
 | **displayName**                                                           | co                      |
