@@ -493,7 +493,7 @@ When no 'attributes' parameter is specified, all user attributes with a value wi
 
 ```bash
 curl -X GET \
-  'https://api.federated.directory/v2/Users/?attributes=displayName,userName,phoneNumbers,name.givenName,urn:ietf:params:scim:schemas:extension:fd:2.0:User:description,active,roles' \
+  'https://api.federated.directory/v2/Users/0dc48490-4d2d-11e8-a9c6-fbdcd95513af?attributes=displayName,userName,phoneNumbers,name.givenName,urn:ietf:params:scim:schemas:extension:fd:2.0:User:description,active,roles' \
   -H 'Authorization: Bearer {token}' \
   -H 'Content-Type: application/json'
 ```
@@ -510,10 +510,17 @@ curl -X GET \
   ],
   "id": "0dc48490-4d2d-11e8-a9c6-fbdcd95513af",
   "userName": "bjensen@example.com",
+  "displayName": "Babs Jensen",
+  "roles": [
+    {
+      "value": "user",
+      "display": "user"
+    }
+  ],
+  "active": true,
   "name": {
     "givenName": "Barbara"
   },
-  "displayName": "Babs Jensen",
   "phoneNumbers": [
     {
       "type": "work",
@@ -529,16 +536,9 @@ curl -X GET \
       "value": "(068)-597-6483"
     }
   ],
-  "active": true,
   "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
     "description": "Potest manducare glacies crepito formidolose"
   },
-  "roles": [
-    {
-      "value": "user",
-      "display": "user"
-    }
-  ]
 }
 ```
 
