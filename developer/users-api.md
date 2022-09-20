@@ -1458,19 +1458,25 @@ curl -X POST \
       "bulkId": "bjensen@example.com",
       "method": "POST",
       "location": "https://api.federated.directory/v2/Users/a9460fa0-eb0e-11e7-b1e2-6f788593d827",
-      "status": 201
+      "status": {
+        "code": 201
+      }
     },
     {
       "bulkId": "d6b52060-4d7f-11e8-8b44-3d5adce8c545",
       "method": "PUT",
       "location": "https://api.federated.directory/v2/Users/d6b52060-4d7f-11e8-8b44-3d5adce8c545",
-      "status": 200
+      "status": {
+        "code": 200
+      }
     },
     {
       "bulkId": "d6b52060-4d7f-11e8-8b44-3d5adce8c545",
       "method": "DELETE",
       "location": "https://api.federated.directory/v2/Users/d6b52060-4d7f-11e8-8b44-3d5adce8c545",
-      "status": 204
+      "status": {
+        "code": 204
+      }
     }
   ]
 }
