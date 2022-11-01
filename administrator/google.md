@@ -27,29 +27,40 @@ Integrating Federated Directory with Google Workspace provides you with the foll
 
 ## Install from Google Workspace Marketplace
 
-From your Google admin menu, browse to Apps ⇒ Marketplace apps. Once the screen is opened, click "Add app to domain install list". Alternatively go directly to https://gsuite.google.com/marketplace/search/Federated%20Directory
+Open your aps in Google Admin Console by visiting link: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
+From here you should click "INSTALL APP" button and you will arrive in the marketplace. Alternatively you can visit directly our app on Google Marketplace: [https://workspace.google.com/marketplace/app/federated_directory/293967924849](https://workspace.google.com/marketplace/app/federated_directory/293967924849)
 
 <img style="width: 600px;" src="../../assets/images/google-install-1.png" alt="GSuite Admin"/>
 
-Search for "Federated Directory" app by typing in the search field.
+If you have decided to go to Marketplace via "INSTALL APP" button, search for "Federated Directory" app by typing in the search field and click on the tile.
 
-<img style="width: 600px;" src="../../assets/images/google-install-2.jpg" alt="Search Federated Directory in Google Marketplace"/>
+<img style="width: 600px;" src="../../assets/images/google-install-2.png" alt="Search Federated Directory in Google Marketplace"/>
 
-Click the tile and a detail screen will open, on this screen click 'Domain install'.
+On the screen of Federated Directory app click 'Admin install'.
 
-<img style="width: 600px;" src="../../assets/images/google-install-3.jpg" alt="Federated Directory in Google Marketplace"/>
+<img style="width: 600px;" src="../../assets/images/google-install-3.png" alt="Federated Directory in Google Marketplace"/>
 
 This will kick-off the consent process to allow users to login to Federated Directory using a Google Workspace account. Click **CONTINUE**:
 
-<img style="width: 600px;" src="../../assets/images/google-install-4.jpg" alt="Prompt in Marketplace to install Federated Directory" />
+<img style="width: 600px;" src="../../assets/images/google-install-4.png" alt="Prompt in Marketplace to install Federated Directory" />
 
 <img style="width: 600px;" src="../../assets/images/google-install-5.png" alt="Admin console consent" />
 
 After you've accepted consent, you will see information dialog.
 
-<img style="width: 600px;" src="../../assets/images/google-install-6.jpg" alt="App installed in Marketplace" />
+<img style="width: 600px;" src="../../assets/images/google-install-6.png" alt="App installed in Marketplace" />
 
-Then select 'Federated Directory' from your Apps Launcher icon. This will show up Federated Directory but since your company hasn't been created on our side (and the name may/can deviate from your actual Google Workspace domain name), choose **Sign up**
+After that you should be able to see Federated Directory app inside installed apps in Google Admin Console
+
+<img style="width: 600px;" src="../../assets/images/google-install-6a.png" alt="Federated Directory sign in"/>
+
+Visit this link to confirm: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
+
+## Creating new company
+
+If you haven't created a company within Federated Directory, follow this steps, otherwise skip to next section about [User Provisioning](#google-workspace-configure-provisioning)
+
+Head directly to Sign Up page of Federated Directory at [https://www.federated.directory/signup](https://www.federated.directory/signup) 
 
 <img style="width: 600px;" src="../../assets/images/google-install-7.png" alt="Federated Directory sign in"/>
 
