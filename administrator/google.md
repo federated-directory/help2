@@ -80,68 +80,98 @@ Now that you have created a company within Federated Directory it is time to set
 
 ---
 
-## Google Workspace configure provisioning
+## Google Workspace configure Federated Directory for SSO
 
-From your Google admin console, browse to Apps ⇒ SAML Apps. Once that screen is shown, click yellow "Plus" button 'Enable SSO for a SAML application'
+From your Google admin console, browse to Apps ⇒ Web and Mobile Apps. Once that screen is shown, click "Add app" button and then "Search for apps"
 
-<img style="width: 600px;" src="../../assets/images/google-install-1.png" alt="SAML Apps"/>
+<img style="width: 600px;" src="../../assets/images/google-install-saml-0.png" alt="SAML Apps"/>
 
-In the filter box enter 'Federated Directory' and select it.
+In the filter box enter 'Federated Directory' and select it by clicking "Select" button
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-1.png" alt="Enable SSO for a SAML application dialog"/>
+<img style="width: 600px;" src="../../assets/images/google-install-saml-1.png" alt="Selecting Federated Directory app"/>
 
-Click **NEXT**
+You will arrive on the configuration screen. 
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-2.png" alt="Google IdP Information dialog"/>
 
-Accept defaults and click **NEXT**
+Accept defaults and click **CONTINUE**:
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-3.png" alt="Basic information for Federated Directory dialog "/>
+<img style="width: 600px;" src="../../assets/images/google-install-saml-3.png" alt="Service provider details dialog"/>
 
-Click **NEXT** again
-
-<img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Service Provider Details dialog"/>
-
-Change 'ACS URL' to `https://federated.directory` and 'Entity ID' to `federated.directory` and click **FINISH**.
-
-In the next screen click **SETUP NOW** to configure user provisioning, but if you are planning to use SAML for authentication instead of OAuth 2.0, please follow [these](#configure-saml-login) instructions instead.
+Change 'ACS URL' to `https://federated.directory` and 'Entity ID' to `federated.directory` and click **CONTINUE**.
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-5.png" alt="Set authentication to Google"/>
 
-Select **EDIT SERVICE**
+Click **FINISH**.
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-6.jpg" alt="Federated Directory edit screen"/>
 
-Enable the service for all users within your Google Workspace domain by selecting "ON for everyone".
+## Configure User Provisioning
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-5b.jpg" alt="Set authentication to Google"/>
+In this chapter we will configure user provisioning, but if you are planning to use SAML for authentication instead of OAuth 2.0, please follow [these](#configure-saml-login) instructions instead.
 
-After you click **SAVE** you should navigate back to the SAML APPS and open it. Click **User provisioning** area and choose **SET UP USER PROVISIONING**:
+<img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Configured app"/>
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-6a.jpg" alt="Federated Directory edit screen"/>
+First of all enable the service for all users within your Google Workspace domain by clicking header **User access**
 
-Enter your directory API key from Federated Directory and select **NEXT**. If you don't know how to create an API key, please see [Directories guide](./directories)
+<img style="width: 600px;" src="../../assets/images/google-install-saml-5b.png" alt="Set authentication to Google"/>
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-7.png" alt="Authorize dialog"/>
+Select **ON for everyone** and click **SAVE**. Now navigate back to Configuration dialog by clicking "Federated Directory" in the breadcrumbs:
 
-On the "Map attributes" screen, accept the default attribute mapping between Google Workspace and Federated Directory and click **NEXT**
+<img style="width: 600px;" src="../../assets/images/google-install-saml-5a.png" alt="Breadcrumbs"/>
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-8.png" alt="Map attributes dialog"/>
+Click **Configure auto-provisioning** in the "Auto-provisioning" pane.
 
-No scope is required, click **FINISH**
+<img style="width: 600px;" src="../../assets/images/google-install-saml-6a.png" alt="Federated Directory edit screen"/>
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-9.png" alt="Set provisioning scope dialog"/>
+Enter your directory API key from Federated Directory and select **CONTINUE**. If you don't know how to create an API key, please see [Directories guide](./directories)
 
-Now you can **ACTIVATE PROVISIONING**
+<img style="width: 600px;" src="../../assets/images/google-install-saml-7.png" alt="Mapping dialog"/>
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-10.png" alt="Activate provisioning dialog"/>
+On the "Map attributes" screen, set the mapping to correct values:
+
+|  Google directory attributes | App attributes |
+|------------------------------|:--------------:|
+| Country | addresses.country |
+| Address > Locality | addresses.locality |
+| Address > Is primary | addresses.primary |
+| Address > Region | addresses.region |
+| Address > Value |  addresses.streetAddress |
+| Additional Details > Formatted name | displayName |
+| Email > Is primary | email.primary |
+| Email > Type | emails.type |
+| Email > Value | emails.value |
+| Basic Information > Last name | name.familyName |
+| Basic Information > First name | name.givenName |
+| - | nickName |
+| Phone > Is primary | phoneNumbers.primary |
+| Phone > Value | phoneNumbers.value |
+| Additional Details > Website URL |  profileUrl |
+| Employee  Details > Title | title |
+| Employee  Details > Department | urn:ietf:params:scim:schemas:extension:enterprise:2.0:User.department |
+| Basic Information > Username | userName | 
+| Employee Details > Type | userType |
+
+Click **CONTINUE**
+
+<img style="width: 600px;" src="../../assets/images/google-install-saml-8.png" alt="Set provisioning scope" />
+
+No scope is required, click **CONTINUE**
+
+<img style="width: 600px;" src="../../assets/images/google-install-saml-9.png" alt="Set deprovisioning"/>
+
+Choose "Deprovisoning" options which you think are appropriate for your company and click **FINISH**
+
+<img style="width: 600px;" src="../../assets/images/google-install-saml-10.png" alt="provisioning active"/>
+
+Now it's time to turn on provisioning by switching the state from "Inactive" to "active". When you click "Inactive" switch you will get a consent dialog
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-11.png" alt="Consent dialog"/>
 
+Click **TURN ON** and you're good to go.
+
 ## Configure SAML login
 
-The steps above will provide a Federated Directory that is automatically maintained by (de)provisioning actions and that allow your users to login to
-Federated Directory using OAuth 2.0.
+The steps above will provide a Federated Directory that is automatically maintained by (de-)provisioning actions and that allow your users to login to Federated Directory using OAuth 2.0.
 
 Alternatively, you can also switch to SAML login. This is described in this article : https://support.google.com/a/answer/7530226?hl=en
 
