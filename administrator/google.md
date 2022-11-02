@@ -8,8 +8,8 @@ has_children: false
 
 # Integrate with Google
 
-In case your company uses Google, your corporate address book resides in Google Workspace
-Users in this Google Workspace directory login to Federated Directory with their Google account (based on OAuth 2.0 but alternatively you can also configure SAML for this).
+Often your corporate address book resides in Google Workspace if your company uses Google.
+Users in this directory can log in to Federated Directory with their Google account (based on OAuth 2.0 but alternatively, you can also configure SAML for this).
 
 Enabling Federated Directory to work with Google Workspace consists of two steps:
 
@@ -17,50 +17,50 @@ Enabling Federated Directory to work with Google Workspace consists of two steps
 
 - [Enable auto (de)provisioning of users within Federated Directory by Google Workspace ](#g-suite-configure-provisioning)
 
-Alternatively you can use SAML instead of OAuth 2.0, which is described here:
+Alternatively, you can use SAML instead of OAuth 2.0, which is described here:
 
 - [Configure SAML login for Google Workspace users](#configure-saml-login)
 
 Integrating Federated Directory with Google Workspace provides you with the following benefits:
 
-- [Users can login (Single Sign-On) with their Google accounts.](#authentication)
+- [Users can log in (Single Sign-On) with their Google accounts.](#authentication)
 
 ## Install from Google Workspace Marketplace
 
-Open your aps in Google Admin Console by visiting link: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
-From here you should click "INSTALL APP" button and you will arrive in the marketplace. Alternatively you can visit directly our app on Google Marketplace: [https://workspace.google.com/marketplace/app/federated_directory/293967924849](https://workspace.google.com/marketplace/app/federated_directory/293967924849)
+Open your apps in Google Admin Console by visiting the link: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
+You should click **INSTALL APP** button and arrive in the Marketplace. Alternatively, you can visit our app directly on Google Marketplace: [https://workspace.google.com/marketplace/app/federated_directory/293967924849](https://workspace.google.com/marketplace/app/federated_directory/293967924849)
 
 <img style="width: 600px;" src="../../assets/images/google-install-1.png" alt="GSuite Admin"/>
 
-If you have decided to go to Marketplace via "INSTALL APP" button, search for "Federated Directory" app by typing in the search field and click on the tile.
+If you have decided to go to Marketplace via the **INSTALL APP** button, search for the "Federated Directory" app by typing in the search field and clicking on the tile.
 
 <img style="width: 600px;" src="../../assets/images/google-install-2.png" alt="Search Federated Directory in Google Marketplace"/>
 
-On the screen of Federated Directory app click 'Admin install'.
+On the screen of the Federated Directory app click, **Admin install**.
 
 <img style="width: 600px;" src="../../assets/images/google-install-3.png" alt="Federated Directory in Google Marketplace"/>
 
-This will kick-off the consent process to allow users to login to Federated Directory using a Google Workspace account. Click **CONTINUE**:
+This will kick off the consent process to allow users to log in to Federated Directory using a Google Workspace account. Click **CONTINUE**:
 
 <img style="width: 600px;" src="../../assets/images/google-install-4.png" alt="Prompt in Marketplace to install Federated Directory" />
 
 <img style="width: 600px;" src="../../assets/images/google-install-5.png" alt="Admin console consent" />
 
-After you've accepted consent, you will see information dialog.
+After you've accepted consent, you will see an information dialog.
 
 <img style="width: 600px;" src="../../assets/images/google-install-6.png" alt="App installed in Marketplace" />
 
-After that you should be able to see Federated Directory app inside installed apps in Google Admin Console
+From now on you should be able to see the Federated Directory app inside installed apps in Google Admin Console
 
 <img style="width: 600px;" src="../../assets/images/google-install-6a.png" alt="Federated Directory sign in"/>
 
 Visit this link to confirm: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
 
-## Creating new company
+## Federated Directory: Creating new company
 
-If you haven't created a company within Federated Directory, follow this steps, otherwise skip to next section about [User Provisioning](#google-workspace-configure-provisioning)
+If you haven't created a company within Federated Directory, follow these steps, otherwise, skip to the next section about [User Provisioning](#google-workspace-configure-provisioning)
 
-Head directly to Sign Up page of Federated Directory at [https://www.federated.directory/signup](https://www.federated.directory/signup) 
+Head directly to the Sign Up page of Federated Directory at [https://www.federated.directory/signup](https://www.federated.directory/signup) 
 
 <img style="width: 600px;" src="../../assets/images/google-install-7.png" alt="Federated Directory sign in"/>
 
@@ -68,25 +68,25 @@ Choose 'Sign up with Google'
 
 <img style="width: 600px;" src="../../assets/images/google-install-8.png" alt="Federated Directory sign up"/>
 
-After a couple of redirects you will arrive your Federated Directory and dialog will be show. Populate the finalize setup screen and select **FINALIZE SIGNUP**
+After a couple of redirects, you will arrive at your Federated Directory, and a dialog will be shown. Populate the finalize setup screen and select **FINALIZE SIGNUP**
 
 <img style="width: 600px;" src="../../assets/images/google-install-9.jpg" alt="Finalize signup"/>
 
-From this moment onwards, when you select 'Federated Directory' from your Google Workspace App Launcher it will automatically log in to this company. You can also see your own account which was automatically created.
+From this moment onwards, when you select 'Federated Directory' from your Google Workspace App Launcher, it will automatically log in to this company. You can also see your account, which was automatically created.
 
 <img style="width: 600px;" src="../../assets/images/google-install-10.jpg" alt="Federated Directory portal"/>
 
-Now that you have created a company within Federated Directory it is time to setup provisioning of the Google Workspace accounts from your organization to Federated Directory.
+Now that you have created a company within Federated Directory, it is time to set up provisioning of the Google Workspace accounts from your organization to Federated Directory.
 
 ---
 
-## Google Workspace configure Federated Directory for SSO
+## Google Workspace: configure Federated Directory for SSO
 
-From your Google admin console, browse to Apps ⇒ Web and Mobile Apps. Once that screen is shown, click "Add app" button and then "Search for apps"
+From your Google admin console, browse to Apps ⇒ Web and Mobile Apps. Once that screen is shown, click the **Add app** button and then "Search for apps"
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-0.png" alt="SAML Apps"/>
 
-In the filter box enter 'Federated Directory' and select it by clicking "Select" button
+In the filter box enter 'Federated Directory' and select it by clicking **Select** button
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-1.png" alt="Selecting Federated Directory app"/>
 
@@ -107,27 +107,32 @@ Click **FINISH**.
 
 ## Configure User Provisioning
 
-In this chapter we will configure user provisioning, but if you are planning to use SAML for authentication instead of OAuth 2.0, please follow [these](#configure-saml-login) instructions instead.
+In this chapter, we will configure user provisioning, but if you to use SAML for authentication instead of OAuth 2.0, please follow [these](#configure-saml-login) instructions.
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Configured app"/>
 
-First of all enable the service for all users within your Google Workspace domain by clicking header **User access**
+First of all, enable the service for all users within your Google Workspace domain by clicking the header "User access".
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-5b.png" alt="Set authentication to Google"/>
 
-Select **ON for everyone** and click **SAVE**. Now navigate back to Configuration dialog by clicking "Federated Directory" in the breadcrumbs:
+Select **ON for everyone** and click **SAVE**. Now navigate back to the Configuration dialog by clicking "Federated Directory" in the breadcrumbs:
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-5a.png" alt="Breadcrumbs"/>
 
 Click **Configure auto-provisioning** in the "Auto-provisioning" pane.
 
-<img style="width: 600px;" src="../../assets/images/google-install-saml-6a.png" alt="Federated Directory edit screen"/>
+<img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Configured app"/>
 
 Enter your directory API key from Federated Directory and select **CONTINUE**. If you don't know how to create an API key, please see [Directories guide](./directories)
 
+<img style="width: 600px;" src="../../assets/images/google-install-saml-6a.png" alt="Federated Directory edit screen"/>
+
+On the "Map attributes" screen, set the mapping to the correct values.
+
 <img style="width: 600px;" src="../../assets/images/google-install-saml-7.png" alt="Mapping dialog"/>
 
-On the "Map attributes" screen, set the mapping to correct values:
+Compare values in the screen with these:
+
 
 |  Google directory attributes | App attributes |
 |------------------------------|:--------------:|
@@ -159,11 +164,11 @@ No scope is required, click **CONTINUE**
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-9.png" alt="Set deprovisioning"/>
 
-Choose "Deprovisoning" options which you think are appropriate for your company and click **FINISH**
+Choose "Deprovisoning" options that you think are appropriate for your company and click **FINISH**
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-10.png" alt="provisioning active"/>
 
-Now it's time to turn on provisioning by switching the state from "Inactive" to "active". When you click "Inactive" switch you will get a consent dialog
+Now it's time to turn on provisioning by switching the state from the "Inactive" to "Active". When you click **Inactive** switch, you will get a consent dialog
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-11.png" alt="Consent dialog"/>
 
