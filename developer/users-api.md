@@ -119,6 +119,9 @@ You can see how these schema's and attributes form a user JSON object in the nex
 |                  | type          | 4   | 9   | "logo" or "thumbnail"                 |
 |                  | value         | 0   | 200 | Valid URL, starting with 'http(s)://' |
 | directoryId      |               | 36  | 36  | UUID format                           |
+| custom01         |               | 0   | 150 | Custom attribute 1                    |
+| custom02         |               | 0   | 150 | Custom attribute 2                    |
+| custom03         |               | 0   | 150 | Custom attribute 3                    |
 
 <h2 id="d2">Full JSON user representation</h2>
 
@@ -283,8 +286,8 @@ The attributes, filter and sortBy parameters can be configured by the below list
 | Attribute                                                                 | Filter operator         |
 | ------------------------------------------------------------------------- | ----------------------- |
 | **id**                                                                    | eq                      |
-| externalId                                                                | co (admin only)         |
-| userName                                                                  | co (admin only)         |
+| externalId                                                                | eq <br/> co (admin only)    |
+| userName                                                                  | eq <br/> co (admin only)    |
 | name.givenName                                                            |                         |
 | name.familyName                                                           |                         |
 | **displayName**                                                           | co                      |
@@ -490,7 +493,7 @@ When no 'attributes' parameter is specified, all user attributes with a value wi
 
 ```bash
 curl -X GET \
-  'https://api.federated.directory/v2/Users/?attributes=displayName,userName,phoneNumbers,name.givenName,urn:ietf:params:scim:schemas:extension:fd:2.0:User:description,active,roles' \
+  'https://api.federated.directory/v2/Users/0dc48490-4d2d-11e8-a9c6-fbdcd95513af?attributes=displayName,userName,phoneNumbers,name.givenName,urn:ietf:params:scim:schemas:extension:fd:2.0:User:description,active,roles' \
   -H 'Authorization: Bearer {token}' \
   -H 'Content-Type: application/json'
 ```
@@ -507,10 +510,17 @@ curl -X GET \
   ],
   "id": "0dc48490-4d2d-11e8-a9c6-fbdcd95513af",
   "userName": "bjensen@example.com",
+  "displayName": "Babs Jensen",
+  "roles": [
+    {
+      "value": "user",
+      "display": "user"
+    }
+  ],
+  "active": true,
   "name": {
     "givenName": "Barbara"
   },
-  "displayName": "Babs Jensen",
   "phoneNumbers": [
     {
       "type": "work",
@@ -526,16 +536,9 @@ curl -X GET \
       "value": "(068)-597-6483"
     }
   ],
-  "active": true,
   "urn:ietf:params:scim:schemas:extension:fd:2.0:User": {
     "description": "Potest manducare glacies crepito formidolose"
   },
-  "roles": [
-    {
-      "value": "user",
-      "display": "user"
-    }
-  ]
 }
 ```
 
@@ -1455,19 +1458,25 @@ curl -X POST \
       "bulkId": "bjensen@example.com",
       "method": "POST",
       "location": "https://api.federated.directory/v2/Users/a9460fa0-eb0e-11e7-b1e2-6f788593d827",
-      "status": 201
+      "status": {
+        "code": 201
+      }
     },
     {
       "bulkId": "d6b52060-4d7f-11e8-8b44-3d5adce8c545",
       "method": "PUT",
       "location": "https://api.federated.directory/v2/Users/d6b52060-4d7f-11e8-8b44-3d5adce8c545",
-      "status": 200
+      "status": {
+        "code": 200
+      }
     },
     {
       "bulkId": "d6b52060-4d7f-11e8-8b44-3d5adce8c545",
       "method": "DELETE",
       "location": "https://api.federated.directory/v2/Users/d6b52060-4d7f-11e8-8b44-3d5adce8c545",
-      "status": 204
+      "status": {
+        "code": 204
+      }
     }
   ]
 }
