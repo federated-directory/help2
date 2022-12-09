@@ -42,14 +42,6 @@ As soon as you’ve finished all the login steps, the popup window will be close
 
 <img src="../../assets/images/microsoft-outlook-using-add-in-step-4.png" alt="Start using Federated DIrectory as you are used to"/>
 
-## Supported versions of Outlook
-
-The add-in works with:
-
-- Windows Microsoft Outlook 2013 and onwards
-- Outlook for Mac (= Outlook 15.3) and onwards
-- Outlook Web Access 2013 and onwards
-
 ## Known limitations
 
 Currently there are no known issues.
