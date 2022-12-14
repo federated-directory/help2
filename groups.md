@@ -9,6 +9,8 @@ nav_order: 6
 Users are created in directories and can be made a member of multiple groups. Users can search through the contact data of members in the same groups.
 Which means, that if a user is not part of any group, it will not be able to find any contact data and visa versa.
 
+<img src="../../assets/images/getting_started-3-steps.svg " alt="Groups determine which contact data a user can see"/>
+
 A group can contain users of one or more companies.
 
 The data that is shared between the members of a group, is configured during the creation of a group.
@@ -28,10 +30,23 @@ In the next step you can configure your new group.
 | Description       | A description of your group. Max 250 characters.                   |
 | Shared Attributes | The attributes that will be shared between the user in this group. |
 
-You will be able to change the name and description later on. The shared attributes can not be changed after a group has been created. This way, we protect the privacy of the members of that group.
+You will be able to change the name, description and the used '[chat methods](#chat-methods)' later on. The shared attributes can not be changed after a group has been created. This way, we protect the privacy of the members of that group.
 After the group is created, you can also change the logo of the group.
 
 Click the **NEXT** button. Confirm the creation of the group in the last step by clicking the **CREATE GROUP** button.
+
+### Chat methods
+
+A group can be configured with the chat methods that are being used between the users in this group. A chat method is enabled on a specific mail or phone attribute.
+
+The icon of an enabled chat method will be shown on the id card of a user. Clicking on this icon will give the user the option to start a direct chat.
+
+|                                                                                                       | Chat Methods    | Enabled option on a contact             |
+| :---------------------------------------------------------------------------------------------------- | :-------------- | :-------------------------------------- |
+| <img style="width: 40px;" src="../../assets/images/groups-googleChat.svg" alt="Google Chat"/>         | Google Chat     | Copy email address and open Google Chat |
+| <img style="width: 40px;" src="../../assets/images/groups-microsoftTeams.svg" alt="Microsoft Teams"/> | Microsoft Teams | Open a direct chat in Microsoft Teams   |
+| <img style="width: 40px;" src="../../assets/images/groups-slack.svg" alt="Slack"/>                    | Slack           | Copy email address and open Slack       |
+| <img style="width: 40px;" src="../../assets/images/groups-whatsApp.svg" alt="WhatsApp"/>              | WhatsApp        | Open a direct chat in WhatsApp          |
 
 ## Group roles
 
