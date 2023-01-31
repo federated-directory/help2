@@ -6,6 +6,16 @@ nav_order: 6
 
 # Groups
 
+1. [Introduction](#introduction)
+2. [Create a group](#create-a-group)
+3. [Group roles](#group-roles)
+4. [Invite others to your group](#invite-others-to-your-group)
+5. [Automatically add users to a group](#automatically-add-users-to-a-group)
+6. [Multiple companies in a group](#multiple-companies-in-a-group)
+7. [Chat methods](#chat-methods)
+
+## Introduction
+
 Users are created in directories and can be made a member of multiple groups. Users can search through the contact data of members in the same groups.
 Which means, that if a user is not part of any group, it will not be able to find any contact data and visa versa.
 
@@ -34,19 +44,6 @@ You will be able to change the name, description and the used '[chat methods](#c
 After the group is created, you can also change the logo of the group.
 
 Click the **NEXT** button. Confirm the creation of the group in the last step by clicking the **CREATE GROUP** button.
-
-### Chat methods
-
-A group can be configured with the chat methods that are being used between the users in this group. A chat method is enabled on a specific mail or phone attribute.
-
-The icon of an enabled chat method will be shown on the id card of a user. Clicking on this icon will give the user the option to start a direct chat.
-
-|                                                                                                       | Chat Methods    | Enabled option on a contact             |
-| :---------------------------------------------------------------------------------------------------- | :-------------- | :-------------------------------------- |
-| <img style="width: 40px;" src="../../assets/images/groups-googleChat.svg" alt="Google Chat"/>         | Google Chat     | Copy email address and open Google Chat |
-| <img style="width: 40px;" src="../../assets/images/groups-microsoftTeams.svg" alt="Microsoft Teams"/> | Microsoft Teams | Open a direct chat in Microsoft Teams   |
-| <img style="width: 40px;" src="../../assets/images/groups-slack.svg" alt="Slack"/>                    | Slack           | Copy email address and open Slack       |
-| <img style="width: 40px;" src="../../assets/images/groups-whatsApp.svg" alt="WhatsApp"/>              | WhatsApp        | Open a direct chat in WhatsApp          |
 
 ## Group roles
 
@@ -103,3 +100,22 @@ Every company present in a group can add one Smart Filter to that group. Provide
 To combine the contact data of multiple companies, you need to create a group and invite one or more users from the other companies to this group.
 
 Make those users a group owner as well, so they can invite others or add a Smart Filter to add the users from their company automatically.
+
+## Chat methods
+
+Manage the chat methods that are being used within this group. This will add the option, on the detail page of a contact, to start a chat.
+
+<img src="../../assets/images/search-simple.gif" alt="Search and open chat method"/> <br>
+
+Enable a chat method on an email address or phone number.
+
+<img style="width: 400px" src="../../assets/images/groups-chat-methods.png" alt="Chat methods config in group"/>
+
+Federated Directory is currently integrated with these chat methods.
+
+|                                                                                                       | Chat Methods    | Enabled option on a contact             |
+| :---------------------------------------------------------------------------------------------------- | :-------------- | :-------------------------------------- |
+| <img style="width: 40px;" src="../../assets/images/groups-googleChat.svg" alt="Google Chat"/>         | Google Chat     | Copy email address and open Google Chat |
+| <img style="width: 40px;" src="../../assets/images/groups-microsoftTeams.svg" alt="Microsoft Teams"/> | Microsoft Teams | Open a direct chat in Microsoft Teams   |
+| <img style="width: 40px;" src="../../assets/images/groups-slack.svg" alt="Slack"/>                    | Slack           | Copy email address and open Slack       |
+| <img style="width: 40px;" src="../../assets/images/groups-whatsApp.svg" alt="WhatsApp"/>              | WhatsApp        | Open a direct chat in WhatsApp          |
