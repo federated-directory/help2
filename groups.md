@@ -69,6 +69,8 @@ Select the checkbox if you want to make these users, owner of this group as well
 Lastly enter an optional custom message, which we will include in the invitation.
 Click the **SEND INVITATIONS** button.
 
+<img style="width: 400px" src="../../assets/images/groups-send-invite.png" alt="Invite someone to a group"/>
+
 After the invitations have been sent, you will see them added to the 'past invitations' rows below.
 By selecting a 'past invitation', you can see who send it and when. But you can also revoke or resend the invitation.
 
@@ -81,6 +83,8 @@ A Smart Filter adds all the users to a group that adhere to this filter. The fil
 
 If you are both a group owner and an administrator in your company you can add a Smart Filter by going to the 'Settings' tab in your group.  
 In the “Smart Filter” card, click the **ADD FILTER** button.
+
+<img style="width: 400px" src="../../assets/images/groups-smart-filter.png" alt="Add Smart Filter to a group"/>
 
 Build your Smart Filter with these parameters
 
