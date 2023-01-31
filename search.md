@@ -9,7 +9,7 @@ nav_order: 4
 Federated Directory has been built to make it easier to find the right contact information.
 If your company is federated with other companies, you can search for contact information across companies you work with. Otherwise, you can search within your own company.
 
-Important to note, that search will only match contacts within groups you are member of. This means that you should be a member of at least one group with other users if you want to see any results. Information about groups can be found in [this guide](./administrator/groups).
+Important to note, that search will only match contacts within groups you are member of. This means that you should be a member of at least one group with other users if you want to see any results. Information about groups can be found in [this guide](./groups).
 
 Searching for contacts is as easy as typing the name of the person you are looking for.
 With every letter you type, we instantly search for and filter the list of your Federated Directory contacts. Select the contact you are looking for to open up the contact details page.

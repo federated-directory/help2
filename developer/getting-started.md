@@ -50,11 +50,9 @@ Click Update to save your changes.
 
 ## Import our Postman demo collection
 
-Click the link below to import our collection of demo API calls into Postman.
+Launch Postman and click the Import button. Select Import From Link, and paste this link into the textbox:
 
-<a href="https://app.getpostman.com/run-collection/2fa300b7bcf5a4a9e25e" target="_blank">Click here to import collection 📥</a>
-
-You can also import the collection by following the Web View link and downloading the collection as a JSON file. Import that file into Postman by clicking the 'Import' button.
+- `https://api.postman.com/collections/3391846-b6f8dc30-4a1e-4f29-b6ab-d20d9e216c75?access_key=PMAT-01GMK0V1P25KNWPQC2J87AH4NZ`
 
 ## Send some requests
 
