@@ -8,33 +8,44 @@ has_children: false
 
 # Integrate with Google
 
-Often your corporate address book resides in Google Workspace if your company uses Google.
-Users in this directory can log in to Federated Directory with their Google account (based on OAuth 2.0 but alternatively, you can also configure SAML for this).
-
-Enabling Federated Directory to work with Google Workspace consists of two steps:
-
-- [Install Federated Directory from Google Workspace marketplace](#g-suite-install-from-marketplace)
-
-- [Enable auto (de)provisioning of users within Federated Directory by Google Workspace ](#g-suite-configure-provisioning)
-
-Alternatively, you can use SAML instead of OAuth 2.0, which is described here:
-
-- [Configure SAML login for Google Workspace users](#configure-saml-login)
+If your corporate address book resides in Google Workspace you may want to integrate it with your Federated Directory.
 
 Integrating Federated Directory with Google Workspace provides you with the following benefits:
 
-- [Users can log in (Single Sign-On) with their Google accounts.](#authentication)
+- [Users can log in with their Google accounts.](#authentication)
+- [Users are synced from your Google Workspace.](#user-management-by-google-workspace)
 
-## Install from Google Workspace Marketplace
+Before you continue make sure you <a href="../getting-started#sign-up">signed up</a> to Federated Directory.
 
-Open your apps in Google Admin Console by visiting the link: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
-You should click **INSTALL APP** button and arrive in the Marketplace. Alternatively, you can visit our app directly on Google Marketplace: [https://workspace.google.com/marketplace/app/federated_directory/293967924849](https://workspace.google.com/marketplace/app/federated_directory/293967924849)
+## Authentication
 
-<img style="width: 600px;" src="../../assets/images/google-install-1.png" alt="GSuite Admin"/>
+The <a href="../login">login</a> chapter describes how users can login with their Google account. Enabling this, is as easy as selecting `Google accounts` as an authentication method on the settings tab on a directory.
 
-If you have decided to go to Marketplace via the **INSTALL APP** button, search for the "Federated Directory" app by typing in the search field and clicking on the tile.
+We only allow access to users that are created in this directory. During the authentication process we map the users Google ID with the `userName` of the user in our directory.
 
-<img style="width: 600px;" src="../../assets/images/google-install-2.png" alt="Search Federated Directory in Google Marketplace"/>
+|                   | Google Directory | Federated Directory |
+| :---------------- | :--------------: | :-----------------: |
+| Attribute mapping |        id        |     userName ️️     |
+
+So make sure these two match.
+
+## User management by Google Workspace
+
+The following provisioning features are supported when using provisioning from Google Workspace to Federated Directory:
+
+- Create Users: New or existing users in your Google Workspace will be pushed to Federated Directory as new users.
+- Update User Attributes: Updates to user profiles in your Google Workspace will be pushed to Federated Directory.
+- Deactivate Users: Users deactivated in your Google Workspace will be automatically disabled in Federated Directory, but their contact data can still be found. If reactivated, users will regain access to Federated Directory.
+- Delete Users: When a user is deleted in your Google Workspace it will be deleted in Federated Directory as well.
+
+Enabling Google Workspace to sync users to Federated Directory consists of two steps:
+
+1. [Install Federated Directory from Google Workspace marketplace](#install-from-google-workspace-marketplace)
+2. [Enable the sync of users from your Google Workspace to Federated Directory](#enable-the-sync-of-users-from-your-google-workspace-to-federated-directory)
+
+### Install from Google Workspace Marketplace
+
+Make sure you are a Google Workspace administrator and go to our app in the Marketplace: [https://workspace.google.com/marketplace/app/federated_directory/293967924849](https://workspace.google.com/marketplace/app/federated_directory/293967924849){:target="\_blank"}
 
 On the screen of the Federated Directory app click, **Admin install**.
 
@@ -54,43 +65,19 @@ From now on you should be able to see the Federated Directory app inside install
 
 <img style="width: 600px;" src="../../assets/images/google-install-6a.png" alt="Federated Directory sign in"/>
 
-Visit this link to confirm: [https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB](https://admin.google.com/ac/apps/gmail/marketplace/apps?hl=en_GB).
+Visit this link to confirm: [https://admin.google.com/ac/apps/gmail/marketplace/apps](https://admin.google.com/ac/apps/gmail/marketplace/apps){:target="\_blank"}.
 
-## Federated Directory: Creating new company
-
-If you haven't created a company within Federated Directory, follow these steps, otherwise, skip to the next section about [User Provisioning](#google-workspace-configure-provisioning)
-
-Head directly to the Sign Up page of Federated Directory at [https://www.federated.directory/signup](https://www.federated.directory/signup) 
-
-<img style="width: 600px;" src="../../assets/images/google-install-7.png" alt="Federated Directory sign in"/>
-
-Choose 'Sign up with Google'
-
-<img style="width: 600px;" src="../../assets/images/google-install-8.png" alt="Federated Directory sign up"/>
-
-After a couple of redirects, you will arrive at your Federated Directory, and a dialog will be shown. Populate the finalize setup screen and select **FINALIZE SIGNUP**
-
-<img style="width: 600px;" src="../../assets/images/google-install-9.jpg" alt="Finalize signup"/>
-
-From this moment onwards, when you select 'Federated Directory' from your Google Workspace App Launcher, it will automatically log in to this company. You can also see your account, which was automatically created.
-
-<img style="width: 600px;" src="../../assets/images/google-install-10.jpg" alt="Federated Directory portal"/>
-
-Now that you have created a company within Federated Directory, it is time to set up provisioning of the Google Workspace accounts from your organization to Federated Directory.
-
----
-
-## Google Workspace: configure Federated Directory for SSO
+### Enable the sync of users from your Google Workspace to Federated Directory
 
 From your Google admin console, browse to Apps ⇒ Web and Mobile Apps. Once that screen is shown, click the **Add app** button and then "Search for apps"
-
-<img style="width: 600px;" src="../../assets/images/google-install-saml-0.png" alt="SAML Apps"/>
 
 In the filter box enter 'Federated Directory' and select it by clicking **Select** button
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-1.png" alt="Selecting Federated Directory app"/>
 
-You will arrive on the configuration screen. 
+You will arrive on the configuration screen.
+
+To enable user provisioning (sync) in Google, it requires you to configure Single Sign-On. Although we don't use these settings directly we have to finish this step.
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-2.png" alt="Google IdP Information dialog"/>
 
@@ -104,10 +91,7 @@ Change 'ACS URL' to `https://federated.directory` and 'Entity ID' to `federated.
 
 Click **FINISH**.
 
-
-## Configure User Provisioning
-
-In this chapter, we will configure user provisioning, but if you to use SAML for authentication instead of OAuth 2.0, please follow [these](#configure-saml-login) instructions.
+Now we can actually configure the user provisioning.
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Configured app"/>
 
@@ -123,7 +107,7 @@ Click **Configure auto-provisioning** in the "Auto-provisioning" pane.
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-4.png" alt="Configured app"/>
 
-Enter your directory API key from Federated Directory and select **CONTINUE**. If you don't know how to create an API key, please see [Directories guide](./directories)
+Enter an access token from a **directory API key** and select **CONTINUE**. If you don't know how to create such a directory API key in Federated Directory, please see these [instructions](./directories#directory-keys)
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-6a.png" alt="Federated Directory edit screen"/>
 
@@ -133,38 +117,37 @@ On the "Map attributes" screen, set the mapping to the correct values.
 
 Compare values in the screen with these:
 
-
-|  Google directory attributes | App attributes |
-|------------------------------|:--------------:|
-| Country | addresses.country |
-| Address > Locality | addresses.locality |
-| Address > Is primary | addresses.primary |
-| Address > Region | addresses.region |
-| Address > Value |  addresses.streetAddress |
-| Additional Details > Formatted name | displayName |
-| Email > Is primary | email.primary |
-| Email > Type | emails.type |
-| Email > Value | emails.value |
-| Basic Information > Last name | name.familyName |
-| Basic Information > First name | name.givenName |
-| - | nickName |
-| Phone > Is primary | phoneNumbers.primary |
-| Phone > Value | phoneNumbers.value |
-| Additional Details > Website URL |  profileUrl |
-| Employee  Details > Title | title |
-| Employee  Details > Department | urn:ietf:params:scim:schemas:extension:enterprise:2.0:User.department |
-| Basic Information > Username | userName | 
-| Employee Details > Type | userType |
+| Google directory attributes         |                            App attributes                             |
+| ----------------------------------- | :-------------------------------------------------------------------: |
+| Country                             |                           addresses.country                           |
+| Address > Locality                  |                          addresses.locality                           |
+| Address > Is primary                |                           addresses.primary                           |
+| Address > Region                    |                           addresses.region                            |
+| Address > Value                     |                        addresses.streetAddress                        |
+| Additional Details > Formatted name |                              displayName                              |
+| Email > Is primary                  |                             email.primary                             |
+| Email > Type                        |                              emails.type                              |
+| Email > Value                       |                             emails.value                              |
+| Basic Information > Last name       |                            name.familyName                            |
+| Basic Information > First name      |                            name.givenName                             |
+| -                                   |                               nickName                                |
+| Phone > Is primary                  |                         phoneNumbers.primary                          |
+| Phone > Value                       |                          phoneNumbers.value                           |
+| Additional Details > Website URL    |                              profileUrl                               |
+| Employee Details > Title            |                                 title                                 |
+| Employee Details > Department       | urn:ietf:params:scim:schemas:extension:enterprise:2.0:User.department |
+| Basic Information > Username        |                               userName                                |
+| Employee Details > Type             |                               userType                                |
 
 Click **CONTINUE**
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-8.png" alt="Set provisioning scope" />
 
-No scope is required, click **CONTINUE**
+If you want, you can limit the scope of users that will be provisioned to your Federated Directory. A scope is not required, click **CONTINUE**
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-9.png" alt="Set deprovisioning"/>
 
-Choose "Deprovisoning" options that you think are appropriate for your company and click **FINISH**
+Choose the "Deprovisoning" options that you think are appropriate for your company and click **FINISH**
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-10.png" alt="provisioning active"/>
 
@@ -172,29 +155,12 @@ Now it's time to turn on provisioning by switching the state from the "Inactive"
 
 <img style="width: 600px;" src="../../assets/images/google-install-saml-11.png" alt="Consent dialog"/>
 
-Click **TURN ON** and you're good to go.
+Click **TURN ON** and you're good to go. Google will now start provisioning users to your Federated Directory.
 
-## Configure SAML login
+## Troubleshooting
 
-The steps above will provide a Federated Directory that is automatically maintained by (de-)provisioning actions and that allow your users to login to Federated Directory using OAuth 2.0.
+Whenever you don't get the expected results go to the Federated Directory app in your Google Admin console. You will see the provisioning results on the 'auto-provisioning' card.
 
-Alternatively, you can also switch to SAML login. This is described in this article : https://support.google.com/a/answer/7530226?hl=en
+<img style="width: 600px;" src="../../assets/images/google-install-11.jpg" alt="Troubleshoot"/>
 
-<b>IMPORTANT</b> If you follow the instruction provided by the link above, in step 3, you don't need to replace directoryId in the ACS URL, but replace the complete url by:
-
-` https://api.federated.directory/v2/Login/Saml2/{directoryId}/Acs`
-
-## Authentication
-
-The <a href="../login">login</a> chapter describes how users can login with their Google account. Enabling this, is as easy as selecting `Google accounts` from the authentication drop-down on a directory.
-
-<img style="width: 600px;" src="../../assets/images/directories-google-authentication.png" alt="Set authentication to Google"/>
-
-We only allow access to users that are created in your directory. During the authentication process we map the users Google ID with the `userName` of the user in our directory.
-
-|                   | Google Directory | Federated Directory |
-| :---------------- | :--------------: | :-----------------: | --- |
-| Attribute mapping |        id        |     userName ️️     |
-|                   |                  |                     |     |
-
-So make sure these are filled in correctly.
+View the sync log or download the list with provisioning failures. Alternatively, you can always contact us at <a href="mailto:help@federated.directory">help@federated.directory</a>.
