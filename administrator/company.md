@@ -14,9 +14,10 @@ You can update this data on your company:
 
 1. [General](#general)
 2. [Logo](#logo)
-3. [Session time](#session-time)
-4. [Custom user attributes](#custom-user-attributes)
-5. [Communication preferences](#communication-preferences)
+3. [Verified domains](#verified-domains)
+4. [Session time](#session-time)
+5. [Custom user attributes](#custom-user-attributes)
+6. [Communication preferences](#communication-preferences)
 
 ## General
 
@@ -50,6 +51,22 @@ When you have selected a correct image, you will see it appear on your screen an
 <img style="width: 300px" src="../../assets/images/company-photo2.png " alt="Upload new company logo"/>
 
 Press the "update logo" button and your new company logo will be uploaded, optimized, and shown in places like the login page and within the navigation bar.
+
+## Verified domains
+
+By adding and verifying your company's domains, you can restrict users within your organization from creating their own Federated Directory. Once you verify a domain, users with email addresses using that domain will not be able to create their own directory.
+
+To validate a domain follow these steps
+
+1. Log in to your domain registrar's website and access your DNS settings.
+2. Create a new TXT record with the following information:
+   - Name: Enter "@" or leave it blank.
+   - Value: Enter the CompanyID provided to you.
+3. Save the changes to your DNS settings.
+4. Wait for the DNS changes to propagate, which can take up to 24-48 hours.
+5. Enter the domain name below and click on the "Verify" button.
+
+Please note that the exact steps to create a TXT record may vary depending on your domain registrar.
 
 ## Session time
 
