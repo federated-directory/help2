@@ -10,32 +10,43 @@ has_children: false
 
 A directory contains the users of your company and their contact data. Some of the characteristics of a directory are:
 
-- Contains users that can log in to Federated Directory
-- Contains information the way users are authenticated e.g. using SSO or direct login
-- Can be provisioned by other services e.g. Azure AD or Google Workspace
-- Can co-exist next to other directories
+- contains users that can log in to Federated Directory
+- contains information the way users are authenticated e.g. using SSO or direct login
+- can be provisioned by other services e.g. Azure AD or Google Workspace
+- can co-exist next to other directories
 
-When you sign up to Federated Directory, we create your first directory called "Default Directory". The administrator account you receive during sign up is located in this directory.
+When you sign up to Federated Directory, we create your first directory. The administrator account you receive during sign up is located in this directory.
 
 Depending on your situation and wishes you might have one or multiple directories inside your tenant at Federated Directory. For possible use-cases please refer to the next paragraph.
+
+1. [Single Directory versus Multiple Directories](#single-directory-versus-multiple-directories)
+2. [Create a directory](#create-a-directory)
+3. [Manage or sync users](#manage-or-sync-users)
+4. [Directory settings](#directory-settings)
+5. [Directory keys](#directory-keys)
+6. [Delete a directory](#delete-a-directory)
 
 ---
 
 ## Single Directory versus Multiple Directories
 
-In case you have only one cloud service with contacts information, it's obvious that you will have only one directory inside your account. It's going to be one to one relation between cloud service and Federated Directory. But what about the case when you have more than one source of information? This could happen after mergers, but it could also be a deliberate choice of your IT department.
-
-Multiple directories or single directory have no impact on your users search experience. Federated Directory uses [Groups](./groups) to make users searchable to each other and this is what you have to configure, to make search work.
-
 ### Single directory
 
-The most common use case for having single directory mapped to multiple sources is when you have two or more sources in the same cloud service, like two G Mail or two Office 365. In this case, you can provision the directory from both sources and have all the users sitting in one directory. The benefit of having such a setup is that your users won't need to select a separate directory when login.
-
-You also can combine multiple sources into one directory when they are from different cloud provider, but in that case you will have to make a choice which cloud provider will perform as identity provider when using Single Sign On. This means that only some of your users will be able to log in.
+In case your organization have stored all the contacts information centrally, you will probably only need one directory inside Federated Directory. It's going to be one to one relation between your contact source and Federated Directory.
 
 ### Multiple directories
 
-Whenever you have multiple cloud services providing you contact information it's wise to create for every provider one directory. In case you have multiple sources of contact information with the same cloud provider, you also could make for every source one directory.
+If you have multiple directories in your organization we advice you to create a directory for every source.  
+Multiple directories or a single directory have no impact on the search experience or your users. Users from separate directories or even companies are joined within Federated Directory in [groups](./groups). This is how they can find each other's contact data.
+
+### Multiple companies
+
+Whenever your users need to search through the address lists of multiple organizations, it might be smart to let every organization sign up to Federated Directory individually and create a group that contains the users of these companies.
+
+The benefits of this setup is:
+
+- Users can filter on the organization of a contact and see this information in tje results
+- Admins of the various organizations get their Federated Directory environment and stay in control of their own data
 
 ---
 
@@ -56,7 +67,7 @@ Whenever you are done, click **CREATE DIRECTORY** button at the bottom to finali
 
 ---
 
-## Fill directory with users
+## Manage or sync users
 
 To fill a directory, you can choose one of two options:
 
@@ -68,7 +79,7 @@ To fill a directory, you can choose one of two options:
 If your company owns a corporate address book, you can provision it to directory with all the users becoming available to you automatically. We have turnkey integrations with following systems:
 
 - [Google](./administrator/google)
-- [Office 365 / Azure AD](./administrator/microsoft)
+- [Microsoft 365 / Azure AD](./administrator/microsoft)
 - [OneLogin](./administrator/onelogin)
 - [Okta](./administrator/okta)
 
@@ -90,40 +101,28 @@ If your company does not have a corporate address book, you can fill your direct
 
    This will allow you to add multiple users at the same time
 
----
-
-## View/Edit directory information
-
-After you've created a directory or just opened an existing one, you will lend onto page with four tabs:
-
-- [USERS](#users)
-- [CONFIG](#configure-directory)
-- [KEYS](#directory-keys)
-- [LOGS](#logs)
-
-By default you will appear on the first tab **USERS**
-
-### Users
-
-On this tab you can manage users of the current directory. You can create, update and remove them. Additionally you can import and export users using CSV format.
+### Export
 
 To export users click <img style="display:inline;" src="../../assets/images/directories-get_app.svg" alt="Export icon"/> icon and to import click <img style="display:inline;" src="../../assets/images/directories-publish.svg" alt="Import Users"/> button.
 
-### Configure directory
+---
+
+## Directory settings
 
 On this tab you will find a couple of separate settings:
 
 - [Basic settings](#basic-settings)
 - [Authentication method](#authentication-method)
 - [Logo](#logo)
+- [User functionality](#user-functionality)
 
-#### Basic settings
+### Basic settings
 
 Set the name and a description of this directory.
 
 You will also find the **DELETE DIRECTORY** button here. Be careful, this will immediately delete all the users in this directory.
 
-#### Authentication Method
+### Authentication Method
 
 Authentication method defines the way your users will log in to Federated Directory. You can enable multiple options at the same time.
 
@@ -141,7 +140,7 @@ Authentication method defines the way your users will log in to Federated Direct
     <tr>
     <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-azure.svg" alt="Microsoft accounts"/> </td>
     <td>Microsoft accounts</td>
-    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Office 365 and other applications that are integrated with Microsoft Azure AD. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
+    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Microsoft 365 and other applications that are integrated with Microsoft Azure AD. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
   </tr>
     <tr>
     <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-gsuite.svg" alt="Google accounts"/> </td>
@@ -155,7 +154,7 @@ Authentication method defines the way your users will log in to Federated Direct
   </tr>
 </table>
 
-#### Logo
+### Logo
 
 Logo is used whenever the directories of your company are displayed during the login process.
 
@@ -173,7 +172,16 @@ When you have selected a logo it will appear on your screen and the **SAVE LOGO*
 
 As soon as you press it your directory logo will be uploaded to our servers.
 
-### Directory keys
+### User functionality
+
+Enable or disable some functionalities in Federated Directory for the users in this directory.
+
+- My Account  
+  Let users update the data on their own account, directly in Federated Directory
+- Groups  
+  Let user create groups and invite users to this group. Users are still able to accept group invites or be promoted to group owner with this setting disabled. They can, however no longer create their own groups.
+
+## Directory keys
 
 The best way to integrate another system with one directory, is to use a directory key. A directory key only has administrator privileges inside the directory it is created.
 With a directory key, the other system can create, read, update and delete the users inside that directory only.
@@ -202,5 +210,3 @@ You can delete a directory from the 'directory overview'.
 2. Choose the directory you want to delete
 3. In the directory overview navigate to **CONFIG** tab
 4. Click **DELETE DIRECTORY** button
-
----
