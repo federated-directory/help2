@@ -18,6 +18,7 @@ You can update this data on your company:
 4. [Session time](#session-time)
 5. [Custom user attributes](#custom-user-attributes)
 6. [Communication preferences](#communication-preferences)
+7. [Subscription](#subscription)
 
 ## General
 
@@ -99,3 +100,24 @@ Every Federated Directory administrator within your company, could receive commu
 | Offers           | New or updated commercial offers.                                                    |
 | New Features     | New features in Federated Directory or in the solutions of our integration partners. |
 | Technical Issues | keep up to date when we experience any technical issues.                             |
+
+## Subscription
+
+The first 20 users in your Federated Directory are for free. If you need to create more users, you need a subscription. Here's how to get started:
+
+1. Navigate to company settings and open the subscription tab.
+2. Add Payment Information. Securely enter your credit card details.
+   - Usually you will be asked to validate your credit card in this process.
+3. Choose the Number of Licenses.
+   - Before confirming your subscription, the system will calculate the monthly costs based on the number of users you've selected. You will see these costs displayed for your review.
+4. Confirm Subscription.
+   - Once you've reviewed the monthly costs and are ready to proceed, confirm your subscription. The system will then securely deduct the monthly charges from your credit card.
+
+### Tiered pricing
+
+Benefit from tiered pricing with cost savings as you add more licenses. You can find detailed pricing information on the Pricing page at https://federated.directory/pricing.
+Alternative Payment Methods or Annual Payments:
+
+### Alternative payment methods or periods
+
+If you require an alternative payment method or prefer to pay annually, please contact our subscription support team at subscriptions@federated.directory. They will assist you with your specific payment requirements.
