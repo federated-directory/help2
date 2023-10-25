@@ -26,9 +26,11 @@ A group can contain users of one or more companies.
 The data that is shared between the members of a group, is configured during the creation of a group.
 
 By default, there is one “All Users” group created in your company. The members of this group share all attributes with each other. A Smart Filter on this group automatically adds all the users of your company to this group.
-If you want, you can remove this group.
+This group can be removed by the administrator.
 
 ## Create a group
+
+Both users and administrators are able to create groups, however an administrator can disable this for its users on the [directory settings](https://help.federated.directory/administrator/directories.html#user-functionality).
 
 You create a new group by going to 'Groups' in the main menu and click the **CREATE GROUP** button.
 
