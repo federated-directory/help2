@@ -31,9 +31,9 @@ During the authentication process we map the users username (`preferred_username
 
 Make sure the users username is unique.
 
-|           | OpenID Connect id_token or userinfo | Federated Directory |
-| :-------- | :---------------------------------: | :-----------------: |
-| Attribute |         preferred_username          |     userName ️️     |
+|           | In id_token or userinfo | Federated Directory |
+| :-------- | :---------------------: | :-----------------: |
+| Attribute |   preferred_username    |     userName ️️     |
 
 ### Parameters
 
@@ -49,7 +49,7 @@ Follow these parameters to configure the OpenID Connect within your IDP:
 | Nonce         | Expected back in the response.                                                                                                                                                   |
 | Login_hint    | Optionally included in the request and can used by your IDP to simplify the authentication flow. Only when we already received a userName through another authentication method. |
 
-Your IDP must ensure a user is both authenticated and authorized before sending an authorization code. If a user isn't authorized, assertions should not be sent. We recommend your IDP redirect a user to an HTTP 403 page or something similar.
+Your IDP must ensure a user is both authenticated and authorized before sending an authorization code.
 
 ---
 
