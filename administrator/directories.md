@@ -147,10 +147,15 @@ Authentication method defines the way your users will log in to Federated Direct
     <td>Google accounts</td>
     <td>Users will log in with their Google account. The same set of credentials they use to log in to their Google Workspace services and other applications that are integrated with Google Cloud Identity. <a href="./google">Setup authentication with Google accounts</a></td>
   </tr>
+     <tr>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-oidc.svg" alt="Connect your own IDP through a OpenID Connect connection"/> </td>
+    <td>OpenID Connect</td>
+    <td>OpenID Connect (OIDC) is an open standard used for user authentication in applications. If your organization already utilizes an OIDC Identity Provider (IDP), you can choose this option to integrate it with your Federated Directory. <a href="./oidc">Setup authentication with OpenID Connect</a></td>
+  </tr>
     <tr>
-    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-saml.svg" alt="No authentication method for users in this directory"/> </td>
+    <td><img style="width: 40px;   display:inline;" src="../../assets/images/directories-introduction-saml.svg" alt="Connect your own IDP through a SAML 2.0 connection"/> </td>
     <td>SAML 2.0</td>
-    <td>SAML 2.0 is an open standard for logging users into applications. If you already have a SAML 2.0 Identity Provider (IDP) in your organization, select this option to integrate it with your Federated Directory. <a href="./saml">Setup authentication with SAML 2.0</a></td>
+    <td>SAML 2.0 is an open standard used for user authentication in applications. It can be utilized to link Federated Directory with your personal Identity Provider (IDP). However, if your IDP is compatible with OpenID Connect, it is recommended to use that method. <a href="./saml">Setup authentication with SAML 2.0</a></td>
   </tr>
 </table>
 

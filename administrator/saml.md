@@ -2,7 +2,7 @@
 layout: default
 title: Integrate with SAML 2.0
 parent: Administrator
-nav_order: 10
+nav_order: 11
 has_children: false
 ---
 
@@ -14,7 +14,7 @@ SAML-based single sign-on (SSO) gives users access to their Federated Directory 
 
 If your identity provider of choice does not have a ready made integration with us, you have the option to use a custom SAML connection.
 
-Enabling this, is as easy as selecting `SAML 2.0` from the authentication drop-down on a directory.
+Enabling this, is as easy as selecting `SAML 2.0` from the authentication settings on a directory.
 
 <img style="width: 600px;" src="../../assets/images/directories-saml-authentication.png" alt="Set authentication to SAML 2.0"/>
 
