@@ -23,7 +23,13 @@ To search for a contact information of one desired company only, you should use 
 Within this dialog, you can select contact boundaries in which we will perform your contact search.
 
 **Company**
-Select the company the corporate address book of which you want to search in. If you select another company in this drop-down list, all other search filters will be reset.
+Select the company the corporate address book of which you want to search in. If you select another company in this drop-down list, all other search filters will be reset. All the filters below will be within the scope of the company selected.
+
+**Given name**
+Select a given name from the drop down. You can also type to filter the names. The selected given name will be an exact search. It will show all the contacts with that exact given name.
+
+**Family name**
+Select a family name from the drop down. You can also type to filter the names. The selected family name will be an exact search. It will show all the contacts with that exact family name.
 
 **Title**
 Search for contacts with a specific title. This drop-down list shows all the titles we have found within the company selected above.
@@ -32,7 +38,10 @@ Search for contacts with a specific title. This drop-down list shows all the tit
 Search for contacts with the same manager. Search through all the contacts within this company and select the manager. You will find all the contacts that refer to this user as their manager.
 
 **Division**
-Search for contacts in a specific division within the company selected above. Changing a selected division will reset the department drop-down list below.
+Search for contacts in a specific division within the company selected above. The selected division will be an exact search.
 
 **Department**
-Search for contacts in a specific department. The drop-down list shows the departments within the division selected above. If no division is selected, it will show all the departments within this company.
+Search for contacts in a specific department. The selected department will be an exact search.
+
+**Custom attributes**
+You administrator can enable some company specific attributes on users. You will be able to filter on those attributes as well.

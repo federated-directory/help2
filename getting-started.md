@@ -91,7 +91,7 @@ This 'smart filter' adds all the users to this group that meets this specific fi
 - Part of a division or department
 - Have been synced from a specific directory
 
-[GO TO GROUPS](./administrator/groups){: .btn .btn-outline .v-align-middle}
+[GO TO GROUPS](./groups){: .btn .btn-outline .v-align-middle}
 
 ### Search across companies
 

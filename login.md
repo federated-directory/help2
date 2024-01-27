@@ -63,7 +63,7 @@ If the email address and password combination don't match, an error will be disp
 
 ## Reset password
 
-If you use a Federated Directory account and you have forgotten or lost your password, then, you should follow the procedure below. If you do not have isolated Federated Directory account, you will follow the password reset procedure of your SSO provider.
+If you use a Federated Directory account to login and you have forgotten your password, then you should follow the procedure below. If you're utilizing a Microsoft, Google, or any other third-party account to sign into Federated Directory, you'll need to adhere to their respective password recovery process.
 
 **The password reset page**
 

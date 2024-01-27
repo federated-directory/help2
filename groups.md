@@ -111,9 +111,9 @@ Make those users a group owner as well, so they can invite others or add a Smart
 
 Manage the chat methods that are being used within this group. This will add the option, on the detail page of a contact, to start a chat.
 
-<img src="../../assets/images/search-simple.gif" alt="Search and open chat method"/> <br>
+<img src="../../assets/images/groups-search-chat-method.gif" alt="Search and open chat method"/> <br>
 
-Enable a chat method on an email address or phone number.
+Enable a chat method on an email address, phone number or username.
 
 <img style="width: 400px" src="../../assets/images/groups-chat-methods.png" alt="Chat methods config in group"/>
 
