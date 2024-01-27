@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: GitHub Checkout
         uses: actions/checkout@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.6
+      - name: Install specific version of Bundler
+        run: gem install bundler -v 2.4.22
       - name: Bundler Cache
         uses: actions/cache@v1
         with:
