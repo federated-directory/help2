@@ -41,39 +41,3 @@ When you click the “Login” button, a popup window will be shown. When you lo
 As soon as you’ve finished all the login steps, the popup window will be closed, and you should see list of contacts in the add-in pane
 
 <img src="../../assets/images/microsoft-outlook-using-add-in-step-4.png" alt="Start using Federated DIrectory as you are used to"/>
-
-## Known limitations
-
-Currently there are no known issues.
-
-## Using the beta add-in
-
-We are working on new features for outlook add-in, which are not released yet to AppSource. If you would like to test and try the latest version, you can follow the steps below to install it.
-
-Open your browser and navigate to:
-
-https://outlook.office365.com/owa/?path=/options/manageapps
-
-This will open the page where you can manage your add-ins.
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-1.png" alt="Manage your Outlook add-ins"/>
-
-Click on a “plus” icon to open a menu and click “Add from a URL”
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-2.png" alt="Add an Outlook add-in from a URL as source"/>
-
-After you’ve clicked the menu item, a new form will be visible where you can enter the URL of the manifest file. Enter https://federated.directory/owa/assets/manifest.xml into the input field and click “Next”
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-3.png" alt="Confirm you want to install the add-in from a URL"/>
-
-After you’ve clicked the “Next” button, a warning will be shown regarding unverified add-in. Ignore it for now, till our add-in is available in App Source. Click the “Install” button
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-4.png" alt="Install add-in from specified URL source"/>
-
-A confirmation message will be displayed, stating that the add-in is added to your Outlook account.
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-5.png" alt="Confirmation Outlook add-in was installed correctly"/>
-
-After you close the confirmation dialog, you should see “Federated Directory” add-in in the list of available add-ins:
-
-<img src="../../assets/images/microsoft-outlook-add-add-in-step-6.png" alt="List of installed add-ins within your Outlook client"/>

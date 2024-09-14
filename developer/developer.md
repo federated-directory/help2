@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Developer
-nav_order: 9
+nav_order: 50
 has_children: true
 has_toc: true
 ---
