@@ -42,18 +42,18 @@ You can see how these schema's and attributes form a user JSON object in the nex
 | Attribute         | Sub attribute    | Min | Max | Comment                                                                          |
 | ----------------- | ---------------- | --- | --- | -------------------------------------------------------------------------------- |
 | id                |                  | 36  | 36  | UUID format                                                                      |
-| externalId        |                  | 0   | 70  |                                                                                  |
+| externalId        |                  | 0   | 200 |                                                                                  |
 | userName          |                  | 1   | 150 | Unique in a directory                                                            |
 | name {}           |                  |     |     |                                                                                  |
-|                   | givenName        | 0   | 150 |                                                                                  |
-|                   | familyName       | 0   | 150 |                                                                                  |
+|                   | givenName        | 0   | 200 |                                                                                  |
+|                   | familyName       | 0   | 200 |                                                                                  |
 | displayName       |                  | 1   | 200 |                                                                                  |
-| nickName          |                  | 0   | 45  |                                                                                  |
+| nickName          |                  | 0   | 200 |                                                                                  |
 | profileUrl        |                  | 0   | 200 | "Valid URL, starting with 'http(s)://'"                                          |
 | title             |                  | 0   | 150 |                                                                                  |
 | userType          |                  | 0   | 150 |                                                                                  |
 | emails \[]        |                  |     |     | Max 2 email addresses                                                            |
-|                   | value            | 0   | 150 | Valid email address                                                              |
+|                   | value            | 0   | 200 | Valid email address                                                              |
 |                   | type             | 4   | 4   | "work" or "home"                                                                 |
 |                   | primary          |     |     |                                                                                  |
 | phoneNumbers \[]  |                  |     |     | Max 3 phone numbers                                                              |
@@ -61,9 +61,9 @@ You can see how these schema's and attributes form a user JSON object in the nex
 |                   | type             | 4   | 5   | "work", "home" or "mobile"                                                       |
 |                   | primary          |     |     | Boolean                                                                          |
 | addresses \[]     |                  |     |     | Max 2 addresses                                                                  |
-|                   | streetAddress    | 0   | 150 |                                                                                  |
-|                   | locality         | 0   | 150 |                                                                                  |
-|                   | region           | 0   | 150 |                                                                                  |
+|                   | streetAddress    | 0   | 200 |                                                                                  |
+|                   | locality         | 0   | 200 |                                                                                  |
+|                   | region           | 0   | 200 |                                                                                  |
 |                   | postalCode       | 0   | 45  |                                                                                  |
 |                   | country          | 0   | 150 |                                                                                  |
 |                   | type             | 4   | 4   | "work" or "home"                                                                 |
@@ -98,10 +98,10 @@ You can see how these schema's and attributes form a user JSON object in the nex
 | Attribute      | Sub attribute | Min | Max | Comment                        |
 | -------------- | ------------- | --- | --- | ------------------------------ |
 | organization   |               | 1   | 100 | Company Name                   |
-| employeeNumber |               | 0   | 150 |                                |
-| costCenter     |               | 0   | 150 |                                |
-| division       |               | 0   | 150 |                                |
-| department     |               | 0   | 150 |                                |
+| employeeNumber |               | 0   | 200 |                                |
+| costCenter     |               | 0   | 200 |                                |
+| division       |               | 0   | 200 |                                |
+| department     |               | 0   | 200 |                                |
 | manager {}     |               |     |     |                                |
 |                | value         | 36  | 36  | Id of user in the same company |
 |                | displayName   | 0   | 200 |                                |
