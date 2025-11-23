@@ -12,7 +12,7 @@ Login with your Google or Microsoft account if your Federated Directory is integ
 
 If you are not sure, enter your email address. You will be taken to Google, Microsoft or your companies login page at Federated Directory to authenticate.
 
-<img style="width:350px;" src="../../assets/images/login-homeland.png" alt="Enter companies short name" />
+<img style="width:350px;" src="../../assets/images/login-homeland.webp" alt="Login with Google, Microsoft or enter your email address" />
 
 Your companies login page will only show you the authentication methods available in your company. It is located at:
 
@@ -31,7 +31,7 @@ If you are on the wrong login page, click the **SWITCH COMPANY** button at the b
 Federated Directory supports a single sign-on login process, meaning you can use your Google account, Microsoft account or any other company account to login to Federated Directory.
 To do this, click button **LOGIN WITH GOOGLE** or **LOGIN WIH MICROSOFT** or **LOGIN WITH SAML** button. It is possible that not all the buttons are visible on the login landing page. This depends on the way your Federated Directory tenant is configured. Take as an example, page below, which has only Microsoft authentication enabled.
 
-<img style="width:350px" src="../../assets/images/login-page.png" alt="Login landing page" />
+<img style="width:350px" src="../../assets/images/login-page.webp" alt="Login landing page" />
 
 We also support the usage of isolated Federated Directory accounts, which is not associated with any Cloud or identity service. You can use it by clicking **LOGIN WITH CREDENTIALS**. To be able to use such type account, your Federated Directory tenant should be configured appropriately and you need to know your username and password.
 
@@ -57,7 +57,7 @@ If you have isolated Federated Directory account with a username and password, t
 
 If the email address and password combination don't match, an error will be displayed at the bottom of the screen. If you forgot your credentials, you could reset your password, as shown below.
 
-<img style="width: 350px" src="../../assets/images/login-fd.png " alt="Login with a Federated Directory account"/>
+<img style="width: 350px" src="../../assets/images/login-fd.webp " alt="Login with a Federated Directory account"/>
 
 ---
 
@@ -69,7 +69,7 @@ If you use a Federated Directory account to login and you have forgotten your pa
 
 Once you click the <span style="white-space:nowrap">**FORGOT PASSWORD**</span> button, you will be prompted to enter your email address, as you can see below:
 
-<img style="width: 350px" src="../../assets/images/login-resetpw1.png" alt="Forgot Password "/>
+<img style="width: 350px" src="../../assets/images/login-resetpw1.webp" alt="Forgot Password "/>
 
 Once you enter your details and click the **SUBMIT** button, we will send you an email containing your password reset link within 24 hours. If we cannot find your email address you won't be able to reset your password. In this case, you will need to contact your system administrator.
 
@@ -77,6 +77,6 @@ Once you enter your details and click the **SUBMIT** button, we will send you an
 
 The link in the email will take you to the location below. This is the second step of the password reset process where you can specify your new password.
 
-<img style="width: 350px" src="../../assets/images/login-resetpw2.png " alt="Password policy"/>
+<img style="width: 350px" src="../../assets/images/login-resetpw2.webp " alt="Password policy"/>
  
 Our password policy states that your new password must be between 8 and 30 characters long, with at least one lowercase character, one uppercase character, a number, and one special character.
