@@ -3,12 +3,37 @@
 
 :root {
   --vp-font-family-base: 'Roboto', sans-serif;
+  
+  /* Map VitePress brand color to Scalar */
+  --scalar-color-1: var(--vp-c-brand-1);
+  --scalar-color-2: var(--vp-c-brand-2);
+  --scalar-color-3: var(--vp-c-brand-3);
+  --scalar-color-accent: var(--vp-c-brand-1);
+
+  --scalar-background-1: var(--vp-c-bg);
+  --scalar-background-2: var(--vp-c-bg-soft);
+  --scalar-background-3: var(--vp-c-bg-mute);
+
+  --scalar-text-1: var(--vp-c-text-1);
+  --scalar-text-2: var(--vp-c-text-2);
+  --scalar-text-3: var(--vp-c-text-3);
+
+  --scalar-border-color: var(--vp-c-border);
+  --scalar-shadow-1: var(--vp-shadow-1);
+  
+  /* Font */
+  --scalar-font: var(--vp-font-family-base);
 }
 
 /* Ensure Scalar takes full width on its page */
 .scalar-api-reference {
   width: 100%;
   height: 100%;
+  
+  /* Ensure Scalar inherits the mapped variables */
+  --scalar-color-1: var(--vp-c-brand-1);
+  --scalar-background-1: var(--vp-c-bg);
+  --scalar-text-1: var(--vp-c-text-1);
 }
 
 /* Hide VitePress content padding for the API page specifically */
