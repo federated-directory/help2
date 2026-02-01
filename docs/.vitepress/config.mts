@@ -64,6 +64,10 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Federated Directory'
+    },
+
+    search: {
+      provider: 'local'
     }
   },
   ignoreDeadLinks: true
