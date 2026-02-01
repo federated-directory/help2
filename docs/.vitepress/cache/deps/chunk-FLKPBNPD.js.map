@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../node_modules/@scalar/api-client/dist/hooks/useSidebar.js"],
-  "sourcesContent": ["import { reactive as d } from \"vue\";\nconst o = d({}), s = (e, r) => o[e] = r, t = (e) => {\n  o[e] = !o[e];\n}, a = () => ({\n  collapsedSidebarFolders: o,\n  setCollapsedSidebarFolder: s,\n  toggleSidebarFolder: t\n});\nexport {\n  a as useSidebar\n};\n"],
-  "mappings": ";;;;;AACA,IAAM,IAAI,SAAE,CAAC,CAAC;AAAd,IAAiB,IAAI,CAAC,GAAG,MAAM,EAAE,CAAC,IAAI;AAAtC,IAAyC,IAAI,CAAC,MAAM;AAClD,IAAE,CAAC,IAAI,CAAC,EAAE,CAAC;AACb;AAFA,IAEG,IAAI,OAAO;AAAA,EACZ,yBAAyB;AAAA,EACzB,2BAA2B;AAAA,EAC3B,qBAAqB;AACvB;",
-  "names": []
-}
