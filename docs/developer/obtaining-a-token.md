@@ -88,41 +88,9 @@ There are a [a lot of libraries](https://jwt.io/libraries) available that can do
 
 This JWT can then be submitted by a POST action to this end-point :
 
-|        |                                                             |
-| ------ | ----------------------------------------------------------- |
-| method | POST                                                        |
-| url    | https://api.federated.directory/v2/Login/Oauth2/Token |
-| body   | See below                                                   |
-
-### Body
-
-The JWT needs to be called "assertion" in the final payload :
-
-```json
-{
-  "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
-  "assertion": "<JWT>"
-}
-```
-
-## Example Request
-
-```json
-{
-  "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
-  "assertion": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI1MWYxZTY1NmVsa3YzMXlwdXlmMWVlemlhd3VzbDM5a0BmZCIsInNjb3BlIjpbImFkbWluIl0sImF1ZCI6ImtleSJ9.NTcYu4kNx6xw7YeTuG0fEOgFccPco9oyDT1KcK5QLLT26_3VhF7kRTuHxDxxBrMjNDlb2RxkEXN0a3buME0lYDUoEcsooQlVCgH1teZsg8lzr4LdYmvY0j2EEH5FlkHDHRxejrstbGajlespxnFTK0c8t31sROaNMnKYBpwyf7I"
-}
-```
+<ScalarEndpoint operationId="postV2LoginOauth2Token" />
 
 ## Example Response
-
-```json
-{
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3d3dy5mZWRlcmF0ZWQuZGlyZWN0b3J5LyIsImF1ZCI6ImtleSIsImV4cCI6MTYwMjQ1ODg2OCwianRpIjoiN2RhNGUwYzAtZmRjYS0xMWVhLWEwZmEtNDdjMmFmMzE5YmU0In0.GIrdUmIccnFBTGKUmlLLOtIEGxqUL3uJ54yG1SJYGyo",
-  "token_type": "Bearer",
-  "expires_in": 28800
-}
-```
 
 You can use this token by including it in the header of any following request as:
 <br>

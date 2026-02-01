@@ -10,6 +10,8 @@ export default {
       app.component('ScalarWrapper', ScalarWrapper.default)
       const ContactButton = await import('./ContactButton.vue')
       app.component('ContactButton', ContactButton.default)
+      const ScalarEndpoint = await import('./ScalarEndpoint.vue')
+      app.component('ScalarEndpoint', ScalarEndpoint.default)
     }
   }
 }
