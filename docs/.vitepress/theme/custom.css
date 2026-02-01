@@ -1,26 +1,24 @@
 /* Custom Theme Styles */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
+/* Local Fonts */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/roboto-v32-latin-regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  src: url('/fonts/material-symbols-outlined.woff2') format('woff2');
+  font-weight: 100 700;
+  font-style: normal;
 }
 
 :root {
   /* Font - Federated Directory uses Roboto */
-  --vp-font-family-base: 'Roboto', Arial, sans-serif;
-  --vp-font-family-mono: 'Roboto Mono', monospace;
+  --vp-font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --vp-font-family-mono: 'Roboto Mono', source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   
   /* --- LIGHT THEME (Matches /fd/frontend .light-theme) --- */
   
@@ -64,13 +62,83 @@
   --scalar-text-3: var(--vp-c-text-3);
 
   --scalar-border-color: var(--vp-c-border);
-  --scalar-shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  
-  --scalar-font: var(--vp-font-family-base);
-  
-  /* Sidebar adjustments to match Material styling */
+  --vp-nav-bg-color: var(--vp-c-bg-soft);
   --vp-sidebar-bg-color: var(--vp-c-bg-soft);
 }
+
+
+/* Force Roboto on all elements to override VitePress/Inter defaults */
+body, button, input, select, textarea, .vp-doc {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+code, kbd, samp, pre, .vp-code {
+  font-family: var(--vp-font-family-mono) !important;
+}
+
+/* Global Material Icons/Symbols Override */
+.vp-icon, [class^="vpi-"], [class*=" vpi-"], .DocSearch-Search-Icon {
+  font-family: 'Material Symbols Outlined' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  mask: none !important;
+  -webkit-mask: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  font-size: 24px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.vp-icon::before, [class^="vpi-"]::before, [class*=" vpi-"]::before, .DocSearch-Search-Icon::before {
+  display: block;
+  font-family: 'Material Symbols Outlined' !important;
+}
+
+/* Mapping VitePress icons to Material Symbols */
+.vpi-chevron-right::before { content: 'chevron_right' !important; }
+.vpi-chevron-down::before { content: 'expand_more' !important; }
+.vpi-chevron-left::before { content: 'chevron_left' !important; }
+.vpi-chevron-up::before { content: 'expand_less' !important; }
+.vpi-external-link::before { content: 'open_in_new' !important; }
+.vpi-sun::before { content: 'light_mode' !important; }
+.vpi-moon::before { content: 'dark_mode' !important; }
+.vpi-menu::before { content: 'menu' !important; }
+.VPNavButton .vpi-menu::before { content: 'menu' !important; }
+.vpi-align-left::before { content: 'menu' !important; }
+.menu-icon::before { content: 'menu' !important; }
+.vpi-more-horizontal::before { content: 'more_horiz' !important; }
+.vpi-languages::before { content: 'translate' !important; }
+.DocSearch-Search-Icon::before { content: 'search' !important; }
+.vpi-arrow-right::before { content: 'arrow_forward' !important; }
+.vpi-arrow-left::before { content: 'arrow_back' !important; }
+.vpi-copy::before { content: 'content_copy' !important; }
+.vpi-check::before { content: 'check' !important; }
+
+/* Ensure the theme toggle and search button use the correct icon */
+.VPSwitchAppearance .vpi-sun::before { content: 'light_mode' !important; }
+.VPSwitchAppearance .vpi-moon::before { content: 'dark_mode' !important; }
+.DocSearch-Button .DocSearch-Search-Icon::before { content: 'search' !important; }
+
+/* Exception for Social Icons (Material doesn't have GitHub/Twitter/etc. usually) */
+.vpi-social-github, .vpi-social-linkedin, .vpi-social-twitter, .vpi-social-facebook, .vpi-social-instagram, .vpi-social-youtube {
+  font-family: inherit !important;
+  mask: var(--icon) no-repeat 50% 50% !important;
+  -webkit-mask: var(--icon) no-repeat 50% 50% !important;
+  background-color: currentColor !important;
+  width: 20px;
+  height: 20px;
+}
+.vpi-social-github::before, .vpi-social-linkedin::before, .vpi-social-twitter::before { content: '' !important; }
 
 .dark {
   /* --- DARK THEME (Matches /fd/frontend .dark-theme) --- */
@@ -114,6 +182,8 @@
   --scalar-text-3: var(--vp-c-text-3);
 
   --scalar-border-color: var(--vp-c-border);
+  --vp-nav-bg-color: var(--vp-c-bg-soft);
+  --vp-sidebar-bg-color: var(--vp-c-bg-soft);
 }
 
 /* Typography Overrides */
@@ -123,10 +193,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Layout Tweaks */
-.VPNavBar {
-  /* Use surface color for nav */
+.VPNav,
+.VPNavBar,
+.VPNavBar .wrapper,
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .content-body {
   background-color: var(--vp-c-bg-soft) !important;
+}
+
+.VPNav {
+  position: relative;
+}
+
+.VPNavBar {
   border-bottom: 1px solid var(--vp-c-divider);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .VPSidebar {

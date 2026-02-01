@@ -40,8 +40,6 @@ The file you select must have:
 - maximum file size of 3MB
 - a resolution of 850 x 850 pixels (for best results)
 
-To resize and crop an image you can use one of the online image resizing tools, like http://www.resizeimage.net
-
 When you have selected a picture, you will see it appear on your, screen and the **SAVE PHOTO** button lights up.
 
 Press the button, and your new profile photo will be uploaded, optimized, and shown to those searching for your contact data.

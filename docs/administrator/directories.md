@@ -164,8 +164,6 @@ The file you select must have:
 - a maximum file size of 3MB
 - a resolution of 150 x 150 pixels (for best results)
 
-To resize and crop an image you can use one of the online image resizing tools, like http://www.resizeimage.net
-
 When you have selected a logo it will appear on your screen and the **SAVE LOGO** button will lights up.
 
 As soon as you press it your directory logo will be uploaded to our servers.

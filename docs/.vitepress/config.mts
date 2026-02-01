@@ -5,8 +5,7 @@ export default defineConfig({
   description: "Developer Documentation",
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   vue: {
     template: {
@@ -17,7 +16,7 @@ export default defineConfig({
   },
   themeConfig: {
     siteTitle: false,
-    logo: '/images/logo-icon.svg',
+    logo: '/images/FederatedDirectory_horizontal.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started' },
@@ -68,11 +67,11 @@ export default defineConfig({
           { text: 'Obtaining a Token', link: '/developer/obtaining-a-token' },
           { text: 'Users API', link: '/developer/users-api' },
           { text: 'Design Principles', link: '/developer/design-principles' },
-          { text: 'API Reference', link: '/developer/api-reference' },
-          { text: 'Agents', link: '/developer/agents' },
+          { text: 'API Reference', link: '/developer/api-reference' }
         ]
       }
     ],
+
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/federated-directory/help2' }
