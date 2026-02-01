@@ -119,6 +119,7 @@ code, kbd, samp, pre, .vp-code {
 .vpi-more-horizontal::before { content: 'more_horiz' !important; }
 .vpi-languages::before { content: 'translate' !important; }
 .DocSearch-Search-Icon::before { content: 'search' !important; }
+.vpi-chat::before { content: 'chat' !important; }
 .vpi-arrow-right::before { content: 'arrow_forward' !important; }
 .vpi-arrow-left::before { content: 'arrow_back' !important; }
 .vpi-copy::before { content: 'content_copy' !important; }

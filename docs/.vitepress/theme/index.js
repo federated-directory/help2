@@ -8,6 +8,8 @@ export default {
     if (!import.meta.env.SSR) {
       const ScalarWrapper = await import('./ScalarWrapper.vue')
       app.component('ScalarWrapper', ScalarWrapper.default)
+      const ContactButton = await import('./ContactButton.vue')
+      app.component('ContactButton', ContactButton.default)
     }
   }
 }
