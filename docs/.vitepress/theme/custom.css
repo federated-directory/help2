@@ -123,6 +123,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--vp-c-brand-soft);
 }
 
+/* Logo Size */
+.VPNavBar .logo {
+  height: 40px !important;
+}
+
+/* Hide Site Title text in header */
+.VPNavBar .title {
+  display: none !important;
+}
+
 /* API Reference Page Layout */
 .scalar-api-reference {
   width: 100%;

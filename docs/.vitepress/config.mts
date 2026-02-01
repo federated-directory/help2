@@ -3,7 +3,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Federated Directory",
   description: "Developer Documentation",
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png', sizes: '32x32' }]
+  ],
   vue: {
     template: {
       compilerOptions: {
@@ -12,7 +16,8 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/images/FederatedDirectory_horizontal.svg',
+    siteTitle: false,
+    logo: '/images/logo-icon.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started' },
@@ -64,6 +69,7 @@ export default defineConfig({
           { text: 'Users API', link: '/developer/users-api' },
           { text: 'Design Principles', link: '/developer/design-principles' },
           { text: 'API Reference', link: '/developer/api-reference' },
+          { text: 'Agents', link: '/developer/agents' },
         ]
       }
     ],
