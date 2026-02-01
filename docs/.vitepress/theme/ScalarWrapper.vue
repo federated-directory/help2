@@ -6,7 +6,7 @@ import { ApiReference } from '@scalar/api-reference'
   <div class="scalar-api-reference">
     <ApiReference 
       :configuration="{ 
-        url: 'https://api.federated.directory/swagger.json',
+        spec: { url: 'https://api.federated.directory/swagger.json' },
         theme: 'default',
         hideModels: false
       }" 
