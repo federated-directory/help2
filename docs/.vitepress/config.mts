@@ -3,13 +3,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Federated Directory",
   description: "Developer Documentation",
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => tag === 'scalar-api-reference'
-      }
-    }
-  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
