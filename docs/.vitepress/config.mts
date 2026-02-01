@@ -3,12 +3,23 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Federated Directory",
   description: "Developer Documentation",
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag === 'scalar-api-reference'
+      }
+    }
+  },
   themeConfig: {
+    logo: '/images/FederatedDirectory_horizontal.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started' },
       { text: 'API Reference', link: '/developer/api-reference' },
+      { text: 'Contact Us', link: '/contact-us' },
     ],
+
 
     sidebar: [
       {
