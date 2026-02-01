@@ -2,9 +2,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-  --vp-font-family-base: 'Roboto', sans-serif;
+  /* Font - Federated Directory uses Roboto */
+  --vp-font-family-base: 'Roboto', Arial, sans-serif;
   
-  /* Map VitePress brand color to Scalar */
+  /* --- LIGHT THEME (Matches /fd/frontend .light-theme) --- */
+  
+  /* Primary Colors (Blue) */
+  --vp-c-brand-1: #1e88e5; /* Primary 40 */
+  --vp-c-brand-2: #1565c0; /* Primary 20 */
+  --vp-c-brand-3: #0d47a1; /* Primary 10 */
+  --vp-c-brand-soft: rgba(30, 136, 229, 0.14); /* Brand with opacity for backgrounds */
+
+  /* Backgrounds (Neutral) */
+  --vp-c-bg: #f8f9ff;      /* Neutral 98 - Main Page BG */
+  --vp-c-bg-soft: #ffffff; /* Neutral 100 - Cards/Surface */
+  --vp-c-bg-alt: #eef0f9;  /* Neutral 95 - Secondary BG */
+  
+  /* Text (Neutral) */
+  --vp-c-text-1: #181c22; /* Neutral 10 - Primary Text */
+  --vp-c-text-2: #43474d; /* Neutral 30 - Secondary Text */
+  --vp-c-text-3: #74777e; /* Neutral 50 - Disabled/Hint */
+  
+  /* Borders & Dividers */
+  --vp-c-border: #c4c6ce;  /* Neutral 80 */
+  --vp-c-divider: #e0e2ea; /* Neutral 90 */
+  
+  /* Functional Colors */
+  --vp-c-danger-1: #ba1a1a; /* Error 40 */
+  --vp-c-warning-1: #ffa000; /* Amber 700 */
+  --vp-c-success-1: #2e7d32; /* Green 800 */
+
+  /* SCALAR VARIABLES (Light) - Syncs API Docs */
+  --scalar-color-1: var(--vp-c-brand-1);
+  --scalar-color-2: var(--vp-c-brand-2);
+  --scalar-color-3: var(--vp-c-brand-3);
+  --scalar-color-accent: var(--vp-c-brand-1);
+
+  --scalar-background-1: var(--vp-c-bg);      /* Main BG */
+  --scalar-background-2: var(--vp-c-bg-soft); /* Sidebar/Cards */
+  --scalar-background-3: var(--vp-c-bg-alt);  /* Code blocks/Inputs */
+
+  --scalar-text-1: var(--vp-c-text-1);
+  --scalar-text-2: var(--vp-c-text-2);
+  --scalar-text-3: var(--vp-c-text-3);
+
+  --scalar-border-color: var(--vp-c-border);
+  --scalar-shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  
+  --scalar-font: var(--vp-font-family-base);
+  
+  /* Sidebar adjustments to match Material styling */
+  --vp-sidebar-bg-color: var(--vp-c-bg-soft);
+}
+
+.dark {
+  /* --- DARK THEME (Matches /fd/frontend .dark-theme) --- */
+  
+  /* Primary Colors (Light Blue) */
+  --vp-c-brand-1: #90caf9; /* Primary 80 */
+  --vp-c-brand-2: #64b5f6; /* Primary 70 */
+  --vp-c-brand-3: #42a5f5; /* Primary 60 */
+  --vp-c-brand-soft: rgba(144, 202, 249, 0.14);
+
+  /* Backgrounds (Neutral Dark) */
+  --vp-c-bg: #101419;      /* Neutral 6 - Main Page BG */
+  --vp-c-bg-soft: #181c22; /* Neutral 10 - Cards/Surface */
+  --vp-c-bg-alt: #1c2026;  /* Neutral 12 - Secondary BG */
+  
+  /* Text (Neutral Light) */
+  --vp-c-text-1: #e0e2ea; /* Neutral 90 */
+  --vp-c-text-2: #a8abb3; /* Neutral 70 */
+  --vp-c-text-3: #74777e; /* Neutral 50 */
+  
+  /* Borders & Dividers */
+  --vp-c-border: #43474d;  /* Neutral 30 */
+  --vp-c-divider: #2d3137; /* Neutral 20 */
+  
+  /* Functional Colors */
+  --vp-c-danger-1: #ffb4ab; /* Error 80 */
+  --vp-c-warning-1: #ffca28; /* Amber 200 */
+  
+  /* SCALAR VARIABLES (Dark) */
   --scalar-color-1: var(--vp-c-brand-1);
   --scalar-color-2: var(--vp-c-brand-2);
   --scalar-color-3: var(--vp-c-brand-3);
@@ -12,31 +90,45 @@
 
   --scalar-background-1: var(--vp-c-bg);
   --scalar-background-2: var(--vp-c-bg-soft);
-  --scalar-background-3: var(--vp-c-bg-mute);
+  --scalar-background-3: var(--vp-c-bg-alt);
 
   --scalar-text-1: var(--vp-c-text-1);
   --scalar-text-2: var(--vp-c-text-2);
   --scalar-text-3: var(--vp-c-text-3);
 
   --scalar-border-color: var(--vp-c-border);
-  --scalar-shadow-1: var(--vp-shadow-1);
-  
-  /* Font */
-  --scalar-font: var(--vp-font-family-base);
 }
 
-/* Ensure Scalar takes full width on its page */
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400 !important; /* Material Design standard */
+  letter-spacing: normal;
+}
+
+/* Layout Tweaks */
+.VPNavBar {
+  /* Use surface color for nav */
+  background-color: var(--vp-c-bg-soft) !important;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebar {
+  background-color: var(--vp-c-bg-soft) !important;
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+/* Button overrides to match Material buttons roughly */
+.vp-doc .custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
+}
+
+/* API Reference Page Layout */
 .scalar-api-reference {
   width: 100%;
   height: 100%;
-  
-  /* Ensure Scalar inherits the mapped variables */
-  --scalar-color-1: var(--vp-c-brand-1);
-  --scalar-background-1: var(--vp-c-bg);
-  --scalar-text-1: var(--vp-c-text-1);
 }
 
-/* Hide VitePress content padding for the API page specifically */
 .vp-doc.api-reference-page {
   padding: 0 !important;
   max-width: 100% !important;
