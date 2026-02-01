@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
+import '@scalar/api-reference/style.css'
 
 export default {
   extends: DefaultTheme,
@@ -7,7 +8,6 @@ export default {
     if (!import.meta.env.SSR) {
       const ScalarWrapper = await import('./ScalarWrapper.vue')
       app.component('ScalarWrapper', ScalarWrapper.default)
-      await import('@scalar/api-reference/style.css')
     }
   }
 }
