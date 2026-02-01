@@ -1,0 +1,26 @@
+{
+  "name": "help2",
+  "version": "1.0.0",
+  "description": "**Install all prerequisites.** https://jekyllrb.com/docs/installation/",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/federated-directory/help2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/federated-directory/help2/issues"
+  },
+  "homepage": "https://github.com/federated-directory/help2#readme",
+  "devDependencies": {
+    "@scalar/api-reference": "^1.44.6",
+    "vitepress": "^1.6.4"
+  }
+}
