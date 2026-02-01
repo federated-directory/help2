@@ -1,11 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { scalar } from '@scalar/vitepress-theme' // Wait, I need to check if this theme exists or if I should use the API component.
-
-// The @scalar/vitepress-theme package failed to install (404). This means it might be private or deprecated.
-// I will use the standard VitePress theme and embed Scalar as a component or page.
-// Actually, Scalar offers a 'vitepress-theme' but maybe I got the name wrong or it's new.
-// Let's stick to standard VitePress + Scalar Web Component for now, which is safer.
-// OR better: use the documented integration method.
 
 export default defineConfig({
   title: "Federated Directory",
@@ -38,7 +31,18 @@ export default defineConfig({
       {
         text: 'Administrator',
         items: [
-          // Will populate based on files
+          { text: 'Overview', link: '/administrator/administrator' },
+          { text: 'Directories', link: '/administrator/directories' },
+          { text: 'Company', link: '/administrator/company' },
+          { text: 'Integrations', link: '/administrator/integrations' },
+          { text: 'Audit Logs', link: '/administrator/auditlogs' },
+          { text: 'Integrate with Google', link: '/administrator/google' },
+          { text: 'Integrate with Microsoft', link: '/administrator/microsoft' },
+          { text: 'Integrate with Okta', link: '/administrator/okta' },
+          { text: 'Integrate with OneLogin', link: '/administrator/onelogin' },
+          { text: 'Integrate with OIDC', link: '/administrator/oidc' },
+          { text: 'Integrate with SAML 2.0', link: '/administrator/saml' },
+          { text: 'Integrate with SCIM 2.0', link: '/administrator/scim' },
         ]
       },
       {
@@ -60,8 +64,7 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2026 Federated Directory'
-    },
-    
-    ignoreDeadLinks: true
-  }
+    }
+  },
+  ignoreDeadLinks: true
 })
