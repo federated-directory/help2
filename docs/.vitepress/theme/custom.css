@@ -1,9 +1,26 @@
 /* Custom Theme Styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 :root {
   /* Font - Federated Directory uses Roboto */
   --vp-font-family-base: 'Roboto', Arial, sans-serif;
+  --vp-font-family-mono: 'Roboto Mono', monospace;
   
   /* --- LIGHT THEME (Matches /fd/frontend .light-theme) --- */
   
@@ -126,11 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Logo Size */
 .VPNavBar .logo {
   height: 40px !important;
-}
-
-/* Hide Site Title text in header */
-.VPNavBar .title {
-  display: none !important;
+  width: auto;
 }
 
 /* API Reference Page Layout */

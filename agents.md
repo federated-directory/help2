@@ -31,6 +31,15 @@ This project is a static documentation site built with [VitePress](https://vitep
 - **Links**: Use "Clean URLs" (no `.html` or `.md` extension in internal links).
 - **Frontmatter**: Keep frontmatter minimal. Navigation is controlled via `docs/.vitepress/config.mts`.
 
+## Design & Styling
+
+This project adheres to **Material Design 3 (M3)** principles to ensure a consistent user experience with the main Federated Directory application (`/fd/frontend`).
+
+- **Typography**: Use **Roboto** as the primary font family.
+- **Colors**: Adhere to the M3 color palette defined in `docs/.vitepress/theme/custom.css`. These tokens (e.g., `--vp-c-brand-1`) are synchronized with the frontend's primary blue and neutral tones.
+- **Dark Mode**: Supports native dark mode. All custom styling (including API references) must be responsive to the `.dark` class.
+- **Scalar Integration**: The API reference is styled via CSS variable mapping to match the documentation's Material theme exactly.
+
 ## Agent Operational Rules
 
 ### MANDATORY DEVELOPMENT WORKFLOW

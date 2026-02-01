@@ -28,7 +28,7 @@ You’ll need a Federated Directory to get started. If you don’t have one alre
      <img style="width: 450px" src="/images/developer-gettingstarted-pmenvironment1.jpg" alt="Import the Federated Directory Getting Started Environment"/>
 
 4. Once it’s imported, make sure the _api.federated.directory_ environment is selected.
-   <br><br>![Import the Federated Directory Example Environment](../../assets/images/developer-gettingstarted-pmenvironment2.jpg "Import the Federated Directory Example Environment")
+   <br><br>![Import the Federated Directory Example Environment](/images/developer-gettingstarted-pmenvironment2.jpg "Import the Federated Directory Example Environment")
    <br>
 5. Click the eye icon next to `api.federated.directory` and select **Edit** to replace the following values:
 
