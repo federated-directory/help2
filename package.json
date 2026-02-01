@@ -1,7 +1,7 @@
 {
   "name": "help2",
   "version": "1.0.0",
-  "description": "**Install all prerequisites.** https://jekyllrb.com/docs/installation/",
+  "description": "Federated Directory Documentation built with VitePress and Scalar",
   "main": "index.js",
   "scripts": {
     "docs:dev": "node scripts/sanitize-spec.js && vitepress dev docs",

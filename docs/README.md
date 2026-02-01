@@ -1,12 +1,38 @@
-# Getting started
+# Federated Directory Documentation
 
-**Install all prerequisites.**
-https://jekyllrb.com/docs/installation/
+This is the source code for the Federated Directory documentation site.
 
-**Install the jekyll and bundler gems.**
-`gem install jekyll bundler`
+## Development
 
-**Build the site and make it available on a local server.**
-`bundle exec jekyll serve --livereload`
+**Prerequisites:**
+- Node.js (v20 or higher)
+- npm
 
-Browse to http://localhost:4000
+**Install dependencies:**
+```bash
+npm install
+```
+
+**Start local development server:**
+```bash
+npm run docs:dev
+```
+Browse to [http://localhost:5173](http://localhost:5173)
+
+**Build for production:**
+```bash
+npm run docs:build
+```
+
+**Preview production build:**
+```bash
+npm run docs:preview
+```
+
+## Architecture
+
+This site is built with [VitePress](https://vitepress.dev/) and integrates [Scalar](https://scalar.com/) for interactive API documentation.
+
+- `docs/`: Markdown source files
+- `docs/.vitepress/`: VitePress configuration and theme customization
+- `scripts/`: Build-time scripts (e.g., Swagger sanitization)

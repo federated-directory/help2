@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Federated Directory",
   description: "Developer Documentation",
+  cleanUrls: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico', sizes: 'any' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
