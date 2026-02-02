@@ -124,8 +124,8 @@ code, kbd, samp, pre, .vp-code {
 .vpi-arrow-left::before { content: 'arrow_back' !important; }
 .vpi-copy::before { content: 'content_copy' !important; }
 .vpi-check::before { content: 'check' !important; }
-.vpi-arrow-down::before { content: 'keyboard_arrow_down' !important; }
-.vpi-arrow-up::before { content: 'keyboard_arrow_up' !important; }
+.vpi-arrow-down::before { content: 'keyboard_arrow_left' !important; }
+.vpi-arrow-up::before { content: 'keyboard_arrow_left' !important; }
 .vpi-corner-down-left::before { content: 'keyboard_return' !important; }
 
 /* Ensure the theme toggle and search button use the correct icon */
