@@ -261,3 +261,26 @@ h1, h2, h3, h4, h5, h6 {
 .scalar-api-references-standalone-search {
   display: none !important;
 }
+
+/* 
+  Fix Scalar Sidebar Scrolling 
+  1. Constrain the sidebar container (aside) to the viewport height but DISABLE its scroll.
+  2. Force the inner navigation list to handle the scrolling.
+*/
+.api-reference-page .scalar-api-reference aside {
+    position: sticky !important;
+    top: var(--vp-nav-height) !important;
+    max-height: calc(100vh - var(--vp-nav-height)) !important;
+    overflow: hidden !important; /* No scroll on the container */
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 10; 
+}
+
+.api-reference-page .scalar-api-reference .references-navigation-list {
+    overflow-y: auto !important; /* Scroll here */
+    height: auto !important; /* Override inline styles */
+    max-height: 100% !important; /* Fill the aside */
+    flex: 1 !important;
+}
+
