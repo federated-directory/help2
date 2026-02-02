@@ -4,6 +4,9 @@ description: Explore our SCIM 2.0 REST API with interactive documentation. Test 
 layout: page
 pageClass: api-reference-page
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/developer/api-reference
   - - meta
     - property: og:title
       content: Interactive API Reference - Federated Directory

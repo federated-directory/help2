@@ -2,6 +2,9 @@
 title: Teams App - Directory in Microsoft 365
 description: Access your Federated Directory from Teams, Outlook, and Microsoft 365 apps. Search contacts, chat, call, and email from one interface.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/teams-app
   - - meta
     - property: og:title
       content: Microsoft Teams App for Federated Directory

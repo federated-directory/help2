@@ -2,6 +2,9 @@
 title: Developer API Documentation - SCIM REST API
 description: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/developer/developer
   - - meta
     - property: og:title
       content: Developer Documentation - Federated Directory API

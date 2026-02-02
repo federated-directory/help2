@@ -2,6 +2,9 @@
 title: Developer Quick Start - API Integration Guide
 description: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/developer/getting-started
   - - meta
     - property: og:title
       content: Developer Getting Started Guide

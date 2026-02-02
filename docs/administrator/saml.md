@@ -2,6 +2,9 @@
 title: SAML 2.0 Integration - Single Sign-On Setup
 description: Set up SAML 2.0 single sign-on with your identity provider. Configure SP-initiated and IDP-initiated authentication flows.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/saml
   - - meta
     - property: og:title
       content: SAML 2.0 Integration Guide

@@ -2,6 +2,9 @@
 title: Search Contacts Across Multiple Companies
 description: Search corporate contacts across multiple companies instantly. Filter by name, department, title, manager, and more. Find the right person fast.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/search
   - - meta
     - property: og:title
       content: Search Contacts Across Companies

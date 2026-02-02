@@ -2,6 +2,9 @@
 title: Directory Management - User Sync & Provisioning
 description: Create and manage directories for Google Workspace, Microsoft 365, Okta, and more. Sync users automatically or manually with SCIM provisioning.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/directories
   - - meta
     - property: og:title
       content: Directory Management and User Sync

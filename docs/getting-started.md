@@ -2,6 +2,9 @@
 title: Getting Started - Setup & Integration Guide
 description: Set up your corporate address book federation in minutes. Sync from Google Workspace, Microsoft 365, Okta, or OneLogin. Free for 20 users.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/getting-started
   - - meta
     - property: og:title
       content: Getting Started with Federated Directory

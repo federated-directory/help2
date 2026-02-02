@@ -2,6 +2,9 @@
 title: Contact Support - Get Help & Assistance
 description: Need help with your corporate directory? Contact our support team for assistance with setup, integrations, and troubleshooting.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/contact-us
   - - meta
     - property: og:title
       content: Contact Federated Directory Support

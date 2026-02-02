@@ -2,6 +2,9 @@
 title: Authentication - Obtaining OAuth 2.0 Tokens
 description: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/developer/obtaining-a-token
   - - meta
     - property: og:title
       content: Obtaining API Access Tokens

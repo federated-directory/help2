@@ -2,6 +2,9 @@
 title: Corporate Address Book Federation Platform
 description: Connect multiple corporate address books across companies. Share contact data securely with Google Workspace, Microsoft 365, and more. Free to start.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/
   - - meta
     - property: og:title
       content: Federated Directory - Corporate Address Book Federation

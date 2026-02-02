@@ -2,6 +2,9 @@
 title: Outlook Add-in - Search Directory in Email
 description: Search your Federated Directory directly from Outlook. Access contacts across companies while composing emails. Available on desktop and web.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/outlook-add-in
   - - meta
     - property: og:title
       content: Microsoft Outlook Add-in for Federated Directory

@@ -2,6 +2,9 @@
 title: OpenID Connect (OIDC) - Custom SSO Setup
 description: Configure OpenID Connect SSO for Federated Directory. Connect your custom identity provider with Authorization Code Flow support.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/oidc
   - - meta
     - property: og:title
       content: OpenID Connect (OIDC) Integration

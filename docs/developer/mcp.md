@@ -2,6 +2,9 @@
 title: Model Context Protocol (MCP) - AI Integration
 description: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/developer/mcp
   - - meta
     - property: og:title
       content: Model Context Protocol (MCP) API

@@ -2,6 +2,9 @@
 title: Company Settings and Configuration
 description: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/company
   - - meta
     - property: og:title
       content: Company Settings and Configuration

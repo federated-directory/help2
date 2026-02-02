@@ -2,6 +2,9 @@
 title: SCIM 2.0 - Automated User Provisioning API
 description: Provision users to Federated Directory using SCIM 2.0 standard. Create, update, deactivate, and delete users from any SCIM-compatible system.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/scim
   - - meta
     - property: og:title
       content: SCIM 2.0 User Provisioning

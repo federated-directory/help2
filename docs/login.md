@@ -2,6 +2,9 @@
 title: Login Guide - SSO, SAML & OAuth Authentication
 description: Login with Google, Microsoft, or company credentials. Support for SSO, SAML, and OpenID Connect authentication. Password reset available.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/login
   - - meta
     - property: og:title
       content: How to Login to Federated Directory

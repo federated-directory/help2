@@ -2,6 +2,9 @@
 title: My Account - Profile & Settings Management
 description: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/myaccount
   - - meta
     - property: og:title
       content: Manage Your Account Profile

@@ -2,6 +2,9 @@
 title: Audit Logs - Track Changes & Activity
 description: Track all changes in your Federated Directory. Review user modifications, directory updates, and administrative actions with detailed audit logs.
 head:
+  - - link
+    - rel: canonical
+      href: https://help.federated.directory/administrator/auditlogs
   - - meta
     - property: og:title
       content: Audit Logs and Activity Tracking
