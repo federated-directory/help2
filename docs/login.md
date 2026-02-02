@@ -1,4 +1,3 @@
-
 # Login
 
 You can start your login process at https://federated.directory/of

@@ -1,4 +1,3 @@
-
 # Integrate with OneLogin
 
 In case your company uses OneLogin as their identity and access management solution, a lot of contact data is already centrally available.

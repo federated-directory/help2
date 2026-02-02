@@ -1,4 +1,3 @@
-
 # Administrator
 
 These pages explain how you (as an administrator) can configure the various aspects of your Federated Directory.

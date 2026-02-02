@@ -1,4 +1,3 @@
-
 # Integrate with Okta
 
 In case your company uses Okta as their identity and access management solution, a lot of your corporate address book data resides in the Universal directory of Okta.  

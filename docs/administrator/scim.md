@@ -1,4 +1,3 @@
-
 # Integrate with SCIM 2.0
 
 Federated Directory supports the management of your users with the System for Cross-domain Identity Management (SCIM) standard.

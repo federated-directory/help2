@@ -1,4 +1,3 @@
-
 # Welcome
 
 Federated Directory makes it possible to connect multiple corporate address books<sup id="a1">[1](#f1)</sup> and make them available to other companies you work with and trust.

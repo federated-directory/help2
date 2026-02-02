@@ -1,4 +1,3 @@
-
 # Integrate with OpenID Connect
 
 OpenID Connect-based single sign-on (SSO) gives your users access to Federated Directory through an identity provider (IDP) of your choice.

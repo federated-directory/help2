@@ -1,4 +1,3 @@
-
 # Getting started
 
 ## Sign up

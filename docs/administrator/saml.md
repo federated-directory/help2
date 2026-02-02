@@ -1,4 +1,3 @@
-
 # Integrate with SAML 2.0
 
 SAML-based single sign-on (SSO) gives users access to their Federated Directory through an identity provider (IDP) of your choice.

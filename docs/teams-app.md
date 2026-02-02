@@ -1,7 +1,5 @@
-
 # Microsoft Teams app
 
-## Introduction
 
 Access your Federated Directory directly from within Microsoft Teams.
 

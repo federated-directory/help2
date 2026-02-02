@@ -1,4 +1,3 @@
-
 # My Account
 
 Once you're logged in, you can view and change your personal information by going to "My Account" in the menu on the left.

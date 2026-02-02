@@ -1,4 +1,3 @@
-
 # Integrate with Microsoft
 
 In case your company uses Microsoft 365, your corporate address book resides in Entra ID.  

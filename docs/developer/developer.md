@@ -1,4 +1,3 @@
-
 # Developer
 
 Federated Directory comes with a great set of API's. Use it to integrate the users data in your app or push contact data from your identity management solution.

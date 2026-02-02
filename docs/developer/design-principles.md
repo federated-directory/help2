@@ -1,4 +1,3 @@
-
 # Design Principles
 
 When you integrate your application with Federated Directory, it is important you understand our design principles. This way you will always know what to expect and build a reliable, secure and performant integration.

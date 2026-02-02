@@ -1,4 +1,3 @@
-
 # Integrate with Google
 
 If your corporate address book resides in Google Workspace you may want to integrate it with your Federated Directory.

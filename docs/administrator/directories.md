@@ -1,4 +1,3 @@
-
 # Directory
 
 A directory contains the users of your company and their contact data. Some of the characteristics of a directory are:

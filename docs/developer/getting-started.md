@@ -1,4 +1,3 @@
-
 # Getting started
 
 You can use the information in your Federated Directory in your own applications

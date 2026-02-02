@@ -1,4 +1,3 @@
-
 # Search
 
 Federated Directory has been built to make it easier to find the right contact information.
