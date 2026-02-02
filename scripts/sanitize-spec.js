@@ -130,12 +130,89 @@ async function run() {
       }
     };
 
+    // Generate searchable index for VitePress
+    generateSearchIndex(cleanSpec);
+
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cleanSpec, null, 2));
     console.log(`Success! Saved sanitized spec to ${OUTPUT_FILE}`);
   } catch (error) {
     console.error('Failed to process swagger.json:', error);
     process.exit(1);
   }
+}
+
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start
+    .replace(/-+$/, '');            // Trim - from end
+}
+
+function generateSearchIndex(spec) {
+  // Use 'API Documentation' as the title so search results show this category
+  let markdown = "# API Documentation\n\n";
+  const map = {};
+
+  if (spec.paths) {
+    for (const [pathKey, methods] of Object.entries(spec.paths)) {
+      for (const [method, op] of Object.entries(methods)) {
+        if (op.summary) {
+          const heading = `${op.summary}`;
+          const slug = slugify(heading);
+          const tagName = op.tags ? op.tags[0] : 'default';
+          const operationId = op.operationId;
+          
+          // Scalar anchor format: tag/{tagName}/operation/{operationId}
+          const scalarAnchor = `tag/${tagName}/operation/${operationId}`;
+          
+          map[`#${slug}`] = scalarAnchor;
+          
+          markdown += `## ${heading}\n\n`;
+          if (op.description) {
+             // Clean description of newlines for simple index
+             const cleanDesc = op.description.replace(/\n/g, ' ').substring(0, 150) + '...';
+             markdown += `${cleanDesc}\n\n`;
+          }
+          markdown += `**Method**: ${method.toUpperCase()} ${pathKey}\n\n`;
+          markdown += `[Go to endpoint](/developer/api-reference#${scalarAnchor})\n\n`;
+        }
+      }
+    }
+  }
+
+  // Add the script to redirect based on the hash
+  const script = `<script setup>
+import { onMounted } from 'vue'
+import { useRouter } from 'vitepress'
+
+const router = useRouter()
+
+const anchorMap = ${JSON.stringify(map, null, 2)};
+
+onMounted(() => {
+  const hash = window.location.hash;
+  if (hash && anchorMap[hash]) {
+    // Redirect to the deep link in Scalar
+    window.location.href = '/developer/api-reference#' + anchorMap[hash];
+  } else {
+    // Fallback if accessed directly without hash
+    // We stay here so search engine crawlers can see the content? 
+    // Or redirect to main api page?
+    // Let's redirect to main page to avoid confusion, but maybe delay or only if human?
+    // For now, redirect immediate if no hash match is safer for UX.
+    window.location.href = '/developer/api-reference';
+  }
+})
+</script>
+
+`;
+
+  const finalContent = script + markdown;
+  const searchIndexPath = path.join(__dirname, '../docs/developer/api-search.md');
+  fs.writeFileSync(searchIndexPath, finalContent);
+  console.log(`Generated searchable API index at ${searchIndexPath}`);
 }
 
 run();

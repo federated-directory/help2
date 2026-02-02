@@ -78,36 +78,30 @@ async function run() {
       await page.waitForSelector('.scalar-app', { timeout: 10000 });
       console.log('Scalar component detected.');
       
-      // Find and click the Download button
-      console.log('Attempting to find Download button info...');
-      const btnInfo = await page.evaluate(() => {
-        // Look for our custom button
-        const customBtn = document.querySelector('.vp-button-download');
-        if (customBtn) {
-           return {
-             type: 'CUSTOM',
-             text: customBtn.textContent,
-             href: customBtn.getAttribute('href'),
-             download: customBtn.getAttribute('download')
-           };
-        }
+      // Find Scalar Search Bar (inside the Scalar container)
+      console.log('Attempting to find Scalar Search Bar info...');
+      const searchInfo = await page.evaluate(() => {
+        const container = document.querySelector('.scalar-api-reference');
+        if (!container) return 'Scalar container not found';
         
-        // Fallback: Look for default (should be hidden)
-        const links = Array.from(document.querySelectorAll('a, button'));
-        const downloadBtn = links.find(el => el.textContent.includes('Download') || el.textContent.includes('Spec'));
-        if (downloadBtn) {
-           // Check if visible
-           const style = window.getComputedStyle(downloadBtn);
-           const isVisible = style.display !== 'none' && style.visibility !== 'hidden';
+        const inputs = Array.from(container.querySelectorAll('input, button'));
+        const searchEl = inputs.find(el => 
+          (el.placeholder && el.placeholder.toLowerCase().includes('search')) || 
+          (el.className && typeof el.className === 'string' && el.className.includes('search'))
+        );
+        
+        if (searchEl) {
            return {
-             type: 'DEFAULT',
-             visible: isVisible,
-             text: downloadBtn.textContent
+             tagName: searchEl.tagName,
+             classes: searchEl.className,
+             parentClasses: searchEl.parentElement?.className,
+             grandParentClasses: searchEl.parentElement?.parentElement?.className,
+             placeholder: searchEl.placeholder
            };
         }
-        return 'Not found';
+        return 'Not found in Scalar container';
       });
-      console.log('Download Button Info:', JSON.stringify(btnInfo, null, 2));
+      console.log('Scalar Search Info:', JSON.stringify(searchInfo, null, 2));
 
     } catch (e) {
       console.error('Scalar component NOT found or timed out!');

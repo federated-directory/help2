@@ -1,4 +1,16 @@
 
+<script setup>
+import { onMounted } from 'vue'
+import { useRouter } from 'vitepress'
+
+const router = useRouter()
+
+onMounted(() => {
+  // Redirect to the consolidated API reference
+  window.location.href = '/developer/api-reference#tag/Users';
+})
+</script>
+
 # Users API
 
 Our fully [SCIM 2.0](http://www.simplecloud.info) compliant API to create, search, retrieve, update and remove user information.

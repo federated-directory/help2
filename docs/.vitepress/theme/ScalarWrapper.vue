@@ -9,6 +9,7 @@ const configuration = computed(() => ({
   spec: { url: '/swagger.json' },
   theme: 'default',
   hideModels: false,
+  hideSearch: true,
   darkMode: isDark.value,
   withDefaultFonts: false // We use our own font in custom.css
 }))

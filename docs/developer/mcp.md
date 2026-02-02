@@ -1,3 +1,14 @@
+<script setup>
+import { onMounted } from 'vue'
+import { useRouter } from 'vitepress'
+
+const router = useRouter()
+
+onMounted(() => {
+  window.location.href = '/developer/api-reference#tag/MCP';
+})
+</script>
+
 # Model Context Protocol (MCP)
 
 The Model Context Protocol (MCP) allows AI models to interact with your Federated Directory data in a safe and structured way. This API implements the [MCP standard](https://modelcontextprotocol.io), enabling LLMs (like Claude, ChatGPT, or custom agents) to:

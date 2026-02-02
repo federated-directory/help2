@@ -7,10 +7,11 @@ This project is a static documentation site built with [VitePress](https://vitep
 - **Framework**: VitePress (Vue.js based)
 - **API Docs**: Scalar (fetching dynamically from Federated Directory API)
 - **Documentation Injection**: Local Markdown files (like `docs/developer/users-api.md` and `docs/developer/obtaining-a-token.md`) are injected into the OpenAPI specification during the build process to provide rich context within the API Reference.
+- **Unified Search**: A hidden search index is generated from the OpenAPI spec during build, allowing VitePress search to index and link to specific API operations.
 
 ## Build Scripts
 
-- `scripts/sanitize-spec.js`: Fetches the remote Swagger spec, sanitizes it for Scalar compatibility (fixing `$ref` issues), and **injects documentation** from local Markdown files directly into the OpenAPI tags. This allows us to maintain rich documentation in Markdown while delivering a unified API reference.
+- `scripts/sanitize-spec.js`: Fetches the remote Swagger spec, sanitizes it for Scalar compatibility (fixing `$ref` issues), **injects documentation** from local Markdown files into OpenAPI tags, and **generates a search index** for VitePress integration.
 
 ## Running Locally
 

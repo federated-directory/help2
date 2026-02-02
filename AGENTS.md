@@ -7,6 +7,7 @@ This project is a static documentation site built with [VitePress](https://vitep
 - **Framework**: VitePress (Vue.js based)
 - **Deployment**: GitHub Pages (via GitHub Actions)
 - **API Docs**: Scalar (fetching dynamically from Federated Directory API). Documentation from local Markdown files is **injected** into the Swagger spec during build.
+- **Search**: Unified VitePress search indexes both Markdown content and API endpoints (via a generated index file), providing deep links into the Scalar interface.
 
 ### Project Structure
 

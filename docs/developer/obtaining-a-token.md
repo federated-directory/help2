@@ -1,4 +1,15 @@
 
+<script setup>
+import { onMounted } from 'vue'
+import { useRouter } from 'vitepress'
+
+const router = useRouter()
+
+onMounted(() => {
+  window.location.href = '/developer/api-reference#tag/OAuth2';
+})
+</script>
+
 # Obtaining a token
 
 Any service or application that wants to integrate with the Federated Directory APIs needs to obtain an access token. This access token should be placed in the `Authorization` header of every API call as a Bearer token. Like this:

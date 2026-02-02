@@ -256,3 +256,8 @@ h1, h2, h3, h4, h5, h6 {
 .download {
   display: none !important;
 }
+
+/* Hide Scalar internal search bar */
+.scalar-api-references-standalone-search {
+  display: none !important;
+}

@@ -50,6 +50,7 @@ export default defineConfig({
       {
         text: 'Integrations',
         items: [
+          { text: 'Agentic AI', link: '/agentic-ai' },
           { text: 'Outlook Add-in', link: '/outlook-add-in' },
           { text: 'Teams App', link: '/teams-app' },
         ]
