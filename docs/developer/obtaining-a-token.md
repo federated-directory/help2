@@ -87,11 +87,3 @@ Use RS256 encryption to create and parse a JWT token. Use your 'private key' for
 There are a [a lot of libraries](https://jwt.io/libraries) available that can do this.
 
 This JWT can then be submitted by a POST action to this end-point :
-
-<ScalarEndpoint operationId="postV2LoginOauth2Token" />
-
-## Example Response
-
-You can use this token by including it in the header of any following request as:
-<br>
-`"Authorization" : "Bearer <access_token>"`
