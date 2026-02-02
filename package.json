@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "node scripts/sanitize-spec.js && vitepress dev docs",
-    "docs:build": "node scripts/sanitize-spec.js && vitepress build docs",
+    "docs:build": "node scripts/sanitize-spec.js && vitepress build docs && node scripts/generate-sitemap.mjs",
     "docs:preview": "vitepress preview docs",
     "check:links": "node scripts/check-external-links.js"
   },
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@scalar/api-reference": "^1.25.0",
     "playwright": "^1.58.1",
+    "sitemap": "^9.0.0",
     "vitepress": "^1.6.4"
   }
 }

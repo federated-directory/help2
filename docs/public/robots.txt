@@ -1,0 +1,12 @@
+# robots.txt for help.federated.directory
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://help.federated.directory/sitemap.xml
+
+# Crawl-delay (optional, helps prevent overwhelming the server)
+# User-agent: *
+# Crawl-delay: 1
