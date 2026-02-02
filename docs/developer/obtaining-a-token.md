@@ -4,7 +4,7 @@ description: Create directory keys and API keys for authentication. Generate OAu
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/obtaining-a-token
+      href: https://docs.federated.directory/developer/obtaining-a-token
   - - meta
     - property: og:title
       content: Obtaining API Access Tokens
@@ -13,7 +13,7 @@ head:
       content: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/obtaining-a-token
+      content: https://docs.federated.directory/developer/obtaining-a-token
   - - meta
     - name: twitter:title
       content: Obtaining API Access Tokens

@@ -4,7 +4,7 @@ description: Understand Federated Directory API versioning, compatibility rules,
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/design-principles
+      href: https://docs.federated.directory/developer/design-principles
   - - meta
     - property: og:title
       content: API Design Principles and Standards
@@ -13,7 +13,7 @@ head:
       content: Understand Federated Directory API versioning, compatibility rules, authentication, error handling, and SCIM compliance standards.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/design-principles
+      content: https://docs.federated.directory/developer/design-principles
   - - meta
     - name: twitter:title
       content: API Design Principles and Standards

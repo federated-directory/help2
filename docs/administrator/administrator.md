@@ -4,7 +4,7 @@ description: Configure your Federated Directory as an admin. Manage directories,
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/administrator
+      href: https://docs.federated.directory/administrator/administrator
   - - meta
     - property: og:title
       content: Administrator Guide - Federated Directory
@@ -13,7 +13,7 @@ head:
       content: Configure your Federated Directory as an admin. Manage directories, integrations, company settings, and user provisioning from multiple sources.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/administrator
+      content: https://docs.federated.directory/administrator/administrator
   - - meta
     - name: twitter:title
       content: Administrator Guide - Federated Directory

@@ -4,7 +4,7 @@ description: Start building with Federated Directory API in minutes. Setup Postm
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/getting-started
+      href: https://docs.federated.directory/developer/getting-started
   - - meta
     - property: og:title
       content: Developer Getting Started Guide
@@ -13,7 +13,7 @@ head:
       content: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/getting-started
+      content: https://docs.federated.directory/developer/getting-started
   - - meta
     - name: twitter:title
       content: Developer Getting Started Guide
@@ -40,7 +40,7 @@ You’ll need a Federated Directory to get started. If you don’t have one alre
 
 3. Launch Postman and click the Import button. Select Import From Link, and paste this link into the textbox:
 
-   - `https://help.federated.directory/assets/files/api.federated.directory.postman_environment.json` <br><br>
+   - `/assets/files/api.federated.directory.postman_environment.json` <br><br>
      <img style="width: 450px" src="/images/developer-gettingstarted-pmenvironment1.jpg" alt="Import the Federated Directory Getting Started Environment"/>
 
 4. Once it’s imported, make sure the _api.federated.directory_ environment is selected.

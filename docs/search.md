@@ -4,7 +4,7 @@ description: Search corporate contacts across multiple companies instantly. Filt
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/search
+      href: https://docs.federated.directory/search
   - - meta
     - property: og:title
       content: Search Contacts Across Companies
@@ -13,7 +13,7 @@ head:
       content: Search corporate contacts across multiple companies instantly. Filter by name, department, title, manager, and more. Find the right person fast.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/search
+      content: https://docs.federated.directory/search
   - - meta
     - name: twitter:title
       content: Search Contacts Across Companies

@@ -4,7 +4,7 @@ description: Integrate with Federated Directory using our SCIM-compliant REST AP
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/developer
+      href: https://docs.federated.directory/developer/developer
   - - meta
     - property: og:title
       content: Developer Documentation - Federated Directory API
@@ -13,7 +13,7 @@ head:
       content: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/developer
+      content: https://docs.federated.directory/developer/developer
   - - meta
     - name: twitter:title
       content: Developer Documentation - Federated Directory API

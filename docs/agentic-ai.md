@@ -4,7 +4,7 @@ description: Connect AI agents to your corporate directory with Model Context Pr
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/agentic-ai
+      href: https://docs.federated.directory/agentic-ai
   - - meta
     - property: og:title
       content: Agentic AI and Model Context Protocol (MCP)
@@ -13,7 +13,7 @@ head:
       content: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/agentic-ai
+      content: https://docs.federated.directory/agentic-ai
   - - meta
     - name: twitter:title
       content: Agentic AI and Model Context Protocol (MCP)

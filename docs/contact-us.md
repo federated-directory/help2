@@ -4,7 +4,7 @@ description: Need help with your corporate directory? Contact our support team f
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/contact-us
+      href: https://docs.federated.directory/contact-us
   - - meta
     - property: og:title
       content: Contact Federated Directory Support
@@ -13,7 +13,7 @@ head:
       content: Need help with your corporate directory? Contact our support team for assistance with setup, integrations, and troubleshooting.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/contact-us
+      content: https://docs.federated.directory/contact-us
   - - meta
     - name: twitter:title
       content: Contact Federated Directory Support

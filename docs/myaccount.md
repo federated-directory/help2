@@ -4,7 +4,7 @@ description: Update your profile data, photo, and password. View active sessions
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/myaccount
+      href: https://docs.federated.directory/myaccount
   - - meta
     - property: og:title
       content: Manage Your Account Profile
@@ -13,7 +13,7 @@ head:
       content: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/myaccount
+      content: https://docs.federated.directory/myaccount
   - - meta
     - name: twitter:title
       content: Manage Your Account Profile
@@ -60,7 +60,7 @@ Press the button, and your new profile photo will be uploaded, optimized, and sh
 
 <h3>Change your password</h3>
 
-**Can't log in because you forgot your current username and/or password?** [Go here](https://help.federated.directory/login).
+**Can't log in because you forgot your current username and/or password?** [Go here](https://docs.federated.directory/login).
 
 This functionality only works for those who use a Federated Directory account with username and password. You can request a password change by clicking **CHANGE PASSWORD** button. We will send you a link where you can reset your password to a new value.
 

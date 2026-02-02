@@ -4,7 +4,7 @@ description: Integrate Microsoft 365 and Entra ID with Federated Directory. Auto
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/microsoft
+      href: https://docs.federated.directory/administrator/microsoft
   - - meta
     - property: og:title
       content: Microsoft 365 and Entra ID Integration
@@ -13,7 +13,7 @@ head:
       content: Integrate Microsoft 365 and Entra ID with Federated Directory. Auto-sync users from Entra ID. Enable SSO with Microsoft accounts.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/microsoft
+      content: https://docs.federated.directory/administrator/microsoft
   - - meta
     - name: twitter:title
       content: Microsoft 365 and Entra ID Integration

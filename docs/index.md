@@ -4,7 +4,7 @@ description: Connect multiple corporate address books across companies. Share co
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/
+      href: https://docs.federated.directory/
   - - meta
     - property: og:title
       content: Federated Directory - Corporate Address Book Federation
@@ -13,7 +13,7 @@ head:
       content: Connect multiple corporate address books across companies. Share contact data securely with Google Workspace, Microsoft 365, and more. Free to start.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/
+      content: https://docs.federated.directory/
   - - meta
     - name: twitter:title
       content: Federated Directory - Corporate Address Book Federation

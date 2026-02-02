@@ -4,7 +4,7 @@ description: Create groups to control contact visibility across companies. Use s
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/groups
+      href: https://docs.federated.directory/groups
   - - meta
     - property: og:title
       content: Manage Groups and Contact Sharing
@@ -13,7 +13,7 @@ head:
       content: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/groups
+      content: https://docs.federated.directory/groups
   - - meta
     - name: twitter:title
       content: Manage Groups and Contact Sharing
@@ -39,7 +39,7 @@ This group can be removed by the administrator.
 
 ## Create a group
 
-Both users and administrators are able to create groups, however an administrator can disable this for its users on the [directory settings](https://help.federated.directory/administrator/directories#user-functionality).
+Both users and administrators are able to create groups, however an administrator can disable this for its users on the [directory settings](https://docs.federated.directory/administrator/directories#user-functionality).
 
 You create a new group by going to 'Groups' in the main menu and click the **CREATE GROUP** button.
 

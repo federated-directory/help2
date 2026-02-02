@@ -9,22 +9,22 @@ export default defineConfig({
     // Open Graph meta tags
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Federated Directory' }],
-    ['meta', { property: 'og:image', content: 'https://help.federated.directory/og-image.png' }],
+    ['meta', { property: 'og:image', content: 'https://docs.federated.directory/og-image.png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { property: 'og:image:alt', content: 'Federated Directory - Corporate Address Book Federation' }],
     // Twitter Card meta tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@fed_dir' }],
-    ['meta', { name: 'twitter:image', content: 'https://help.federated.directory/og-image.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://docs.federated.directory/og-image.png' }],
     ['meta', { name: 'twitter:image:alt', content: 'Federated Directory - Corporate Address Book Federation' }],
     // Structured Data - Organization
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Federated Directory",
-      "url": "https://help.federated.directory",
-      "logo": "https://help.federated.directory/images/FederatedDirectory_horizontal.svg",
+      "url": "https://docs.federated.directory",
+      "logo": "https://docs.federated.directory/images/FederatedDirectory_horizontal.svg",
       "description": "Corporate address book federation platform with SSO, SCIM, and SAML integration for Google Workspace and Microsoft 365",
       "sameAs": [
         "https://github.com/federated-directory"
@@ -35,7 +35,7 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Federated Directory Documentation",
-      "url": "https://help.federated.directory",
+      "url": "https://docs.federated.directory",
       "description": "Complete documentation for Federated Directory - corporate address book federation, API reference, integration guides, and administrator resources",
       "publisher": {
         "@type": "Organization",
@@ -45,7 +45,7 @@ export default defineConfig({
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://help.federated.directory/?q={search_term_string}"
+          "urlTemplate": "https://docs.federated.directory/?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }

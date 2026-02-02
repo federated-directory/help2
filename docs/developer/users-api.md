@@ -4,7 +4,7 @@ description: Create, search, update, and delete users with our SCIM 2.0 complian
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/users-api
+      href: https://docs.federated.directory/developer/users-api
   - - meta
     - property: og:title
       content: Users API - SCIM 2.0 Endpoints
@@ -13,7 +13,7 @@ head:
       content: Create, search, update, and delete users with our SCIM 2.0 compliant API. Bulk operations and enterprise extensions supported.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/users-api
+      content: https://docs.federated.directory/developer/users-api
   - - meta
     - name: twitter:title
       content: Users API - SCIM 2.0 Endpoints

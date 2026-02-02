@@ -4,7 +4,7 @@ description: Integrate OneLogin with Federated Directory for user provisioning a
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/onelogin
+      href: https://docs.federated.directory/administrator/onelogin
   - - meta
     - property: og:title
       content: OneLogin Integration Guide
@@ -13,7 +13,7 @@ head:
       content: Integrate OneLogin with Federated Directory for user provisioning and authentication. Connect your identity management solution.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/onelogin
+      content: https://docs.federated.directory/administrator/onelogin
   - - meta
     - name: twitter:title
       content: OneLogin Integration Guide

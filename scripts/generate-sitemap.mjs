@@ -12,7 +12,7 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const SITE_URL = 'https://help.federated.directory';
+const SITE_URL = 'https://docs.federated.directory';
 const OUTPUT_DIR = resolve(__dirname, '../docs/.vitepress/dist');
 const SITEMAP_PATH = join(OUTPUT_DIR, 'sitemap.xml');
 

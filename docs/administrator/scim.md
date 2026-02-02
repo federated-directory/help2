@@ -4,7 +4,7 @@ description: Provision users to Federated Directory using SCIM 2.0 standard. Cre
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/scim
+      href: https://docs.federated.directory/administrator/scim
   - - meta
     - property: og:title
       content: SCIM 2.0 User Provisioning
@@ -13,7 +13,7 @@ head:
       content: Provision users to Federated Directory using SCIM 2.0 standard. Create, update, deactivate, and delete users from any SCIM-compatible system.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/scim
+      content: https://docs.federated.directory/administrator/scim
   - - meta
     - name: twitter:title
       content: SCIM 2.0 User Provisioning

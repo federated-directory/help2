@@ -4,7 +4,7 @@ description: Create and manage directories for Google Workspace, Microsoft 365, 
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/directories
+      href: https://docs.federated.directory/administrator/directories
   - - meta
     - property: og:title
       content: Directory Management and User Sync
@@ -13,7 +13,7 @@ head:
       content: Create and manage directories for Google Workspace, Microsoft 365, Okta, and more. Sync users automatically or manually with SCIM provisioning.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/directories
+      content: https://docs.federated.directory/administrator/directories
   - - meta
     - name: twitter:title
       content: Directory Management and User Sync

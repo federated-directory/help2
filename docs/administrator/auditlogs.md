@@ -4,7 +4,7 @@ description: Track all changes in your Federated Directory. Review user modifica
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/auditlogs
+      href: https://docs.federated.directory/administrator/auditlogs
   - - meta
     - property: og:title
       content: Audit Logs and Activity Tracking
@@ -13,7 +13,7 @@ head:
       content: Track all changes in your Federated Directory. Review user modifications, directory updates, and administrative actions with detailed audit logs.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/auditlogs
+      content: https://docs.federated.directory/administrator/auditlogs
   - - meta
     - name: twitter:title
       content: Audit Logs and Activity Tracking

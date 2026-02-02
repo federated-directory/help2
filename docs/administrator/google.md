@@ -4,7 +4,7 @@ description: Sync users from Google Workspace to Federated Directory. Enable SSO
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/google
+      href: https://docs.federated.directory/administrator/google
   - - meta
     - property: og:title
       content: Google Workspace Integration Guide
@@ -13,7 +13,7 @@ head:
       content: Sync users from Google Workspace to Federated Directory. Enable SSO with Google accounts. Auto-provision users and profile updates.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/google
+      content: https://docs.federated.directory/administrator/google
   - - meta
     - name: twitter:title
       content: Google Workspace Integration Guide

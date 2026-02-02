@@ -4,7 +4,7 @@ description: Set up your corporate address book federation in minutes. Sync from
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/getting-started
+      href: https://docs.federated.directory/getting-started
   - - meta
     - property: og:title
       content: Getting Started with Federated Directory
@@ -13,7 +13,7 @@ head:
       content: Set up your corporate address book federation in minutes. Sync from Google Workspace, Microsoft 365, Okta, or OneLogin. Free for 20 users.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/getting-started
+      content: https://docs.federated.directory/getting-started
   - - meta
     - name: twitter:title
       content: Getting Started with Federated Directory

@@ -4,7 +4,7 @@ description: Create OAuth 2.0 API keys for integrating external services with yo
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/integrations
+      href: https://docs.federated.directory/administrator/integrations
   - - meta
     - property: og:title
       content: API Keys and Integrations
@@ -13,7 +13,7 @@ head:
       content: Create OAuth 2.0 API keys for integrating external services with your Federated Directory. Manage administrative access tokens securely.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/integrations
+      content: https://docs.federated.directory/administrator/integrations
   - - meta
     - name: twitter:title
       content: API Keys and Integrations

@@ -4,7 +4,7 @@ description: Connect Okta Universal Directory to Federated Directory. Enable SAM
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/administrator/okta
+      href: https://docs.federated.directory/administrator/okta
   - - meta
     - property: og:title
       content: Okta Integration Guide
@@ -13,7 +13,7 @@ head:
       content: Connect Okta Universal Directory to Federated Directory. Enable SAML SSO and auto-provision users from Okta with SCIM.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/administrator/okta
+      content: https://docs.federated.directory/administrator/okta
   - - meta
     - name: twitter:title
       content: Okta Integration Guide

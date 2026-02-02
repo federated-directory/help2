@@ -6,7 +6,7 @@ pageClass: api-reference-page
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/developer/api-reference
+      href: https://docs.federated.directory/developer/api-reference
   - - meta
     - property: og:title
       content: Interactive API Reference - Federated Directory
@@ -15,7 +15,7 @@ head:
       content: Explore our SCIM 2.0 REST API with interactive documentation. Test endpoints for users, groups, OAuth2, and Model Context Protocol integration.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/developer/api-reference
+      content: https://docs.federated.directory/developer/api-reference
   - - meta
     - name: twitter:title
       content: Interactive API Reference - Federated Directory

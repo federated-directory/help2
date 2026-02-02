@@ -4,7 +4,7 @@ description: Login with Google, Microsoft, or company credentials. Support for S
 head:
   - - link
     - rel: canonical
-      href: https://help.federated.directory/login
+      href: https://docs.federated.directory/login
   - - meta
     - property: og:title
       content: How to Login to Federated Directory
@@ -13,7 +13,7 @@ head:
       content: Login with Google, Microsoft, or company credentials. Support for SSO, SAML, and OpenID Connect authentication. Password reset available.
   - - meta
     - property: og:url
-      content: https://help.federated.directory/login
+      content: https://docs.federated.directory/login
   - - meta
     - name: twitter:title
       content: How to Login to Federated Directory
