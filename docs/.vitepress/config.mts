@@ -71,7 +71,10 @@ export default defineConfig({
   },
   themeConfig: {
     siteTitle: false,
-    logo: '/images/FederatedDirectory_horizontal.svg',
+    logo: {
+      src: '/images/FederatedDirectory_horizontal.svg',
+      alt: 'Federated Directory'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started' },
