@@ -10,7 +10,8 @@ const OUTPUT_FILE = path.join(OUTPUT_DIR, 'swagger.json');
 // Mapping of OpenAPI Tags to Markdown file paths for documentation injection
 const DOCS_MAPPING = {
   'Users': 'docs/developer/users-api.md',
-  'OAuth2': 'docs/developer/obtaining-a-token.md'
+  'OAuth2': 'docs/developer/obtaining-a-token.md',
+  'MCP': 'docs/developer/mcp.md'
 };
 
 // Ensure output directory exists
