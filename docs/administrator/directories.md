@@ -35,8 +35,6 @@ When you sign up to Federated Directory, we create your first directory. The adm
 
 Depending on your situation and wishes you might have one or multiple directories inside your tenant at Federated Directory. For possible use-cases please refer to the next paragraph.
 
----
-
 ## Single Directory versus Multiple Directories
 
 ### Single directory
@@ -57,8 +55,6 @@ The benefits of this setup is:
 - Users can filter on the organization of a contact and see this information in tje results
 - Admins of the various organizations get their Federated Directory environment and stay in control of their own data
 
----
-
 ## Create a directory
 
 Creating a new directory is easy: go to 'Directories' in the main menu and click the **CREATE DIRECTORY** button.
@@ -73,8 +69,6 @@ In the next step you can configure your new directory with main attributes.
 You will be able change these settings later on.
 
 Whenever you are done, click **CREATE DIRECTORY** button at the bottom to finalize creation process.
-
----
 
 ## Manage or sync users
 
@@ -113,8 +107,6 @@ If your company does not have a corporate address book, you can fill your direct
 ### Export
 
 To export users click <img style="display:inline;" src="/images/directories-get_app.svg" alt="Export icon"/> icon and to import click <img style="display:inline;" src="/images/directories-publish.svg" alt="Import Users"/> button.
-
----
 
 ## Directory settings
 
@@ -208,8 +200,6 @@ Access token gives direct access to all user data inside this directory, so stor
 The `issuer` and `private key` can be used to create an access token, based upon the OAuth2 principle. Check out our [developer help section](../developer/obtaining-a-token) for the details.
 
 If you do not use a directory key, remove it by opening a key and clicking **DELETE KEY** button.
-
----
 
 ## Delete a directory
 
