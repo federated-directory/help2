@@ -62,6 +62,15 @@ async function run() {
     console.log(`Navigating to ${url}...`);
     await page.goto(url);
 
+    // Monitor network requests to detect multiple downloads
+    let downloadCount = 0;
+    page.on('request', req => {
+      if (req.url().endsWith('swagger.json') || req.url().endsWith('.json')) {
+        console.log(`[NETWORK] Request to ${req.url()}`);
+        downloadCount++;
+      }
+    });
+
     // Wait for Scalar component to load (it renders asynchronously)
     console.log('Waiting for Scalar component to render...');
     try {
@@ -69,22 +78,36 @@ async function run() {
       await page.waitForSelector('.scalar-app', { timeout: 10000 });
       console.log('Scalar component detected.');
       
-      // INSPECTION: Find the "Powered by" element to identify its class for hiding
-      const footerHTML = await page.evaluate(() => {
-        const links = Array.from(document.querySelectorAll('a'));
-        const poweredBy = links.find(a => a.textContent.includes('scalar.com'));
-        if (poweredBy) {
-           // Return the class of the parent container
+      // Find and click the Download button
+      console.log('Attempting to find Download button info...');
+      const btnInfo = await page.evaluate(() => {
+        // Look for our custom button
+        const customBtn = document.querySelector('.vp-button-download');
+        if (customBtn) {
            return {
-             text: poweredBy.textContent,
-             classes: poweredBy.className,
-             parentClasses: poweredBy.parentElement?.className,
-             grandParentClasses: poweredBy.parentElement?.parentElement?.className
+             type: 'CUSTOM',
+             text: customBtn.textContent,
+             href: customBtn.getAttribute('href'),
+             download: customBtn.getAttribute('download')
+           };
+        }
+        
+        // Fallback: Look for default (should be hidden)
+        const links = Array.from(document.querySelectorAll('a, button'));
+        const downloadBtn = links.find(el => el.textContent.includes('Download') || el.textContent.includes('Spec'));
+        if (downloadBtn) {
+           // Check if visible
+           const style = window.getComputedStyle(downloadBtn);
+           const isVisible = style.display !== 'none' && style.visibility !== 'hidden';
+           return {
+             type: 'DEFAULT',
+             visible: isVisible,
+             text: downloadBtn.textContent
            };
         }
         return 'Not found';
       });
-      console.log('Powered By Element Info:', JSON.stringify(footerHTML, null, 2));
+      console.log('Download Button Info:', JSON.stringify(btnInfo, null, 2));
 
     } catch (e) {
       console.error('Scalar component NOT found or timed out!');

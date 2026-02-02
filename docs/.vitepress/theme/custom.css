@@ -251,3 +251,8 @@ h1, h2, h3, h4, h5, h6 {
 .darklight-reference {
   display: none !important;
 }
+
+/* Hide default Scalar download button (triggers multiple downloads) */
+.download {
+  display: none !important;
+}
