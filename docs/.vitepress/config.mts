@@ -75,7 +75,7 @@ export default defineConfig({
         text: 'Developer',
         items: [
           { text: 'Overview', link: '/developer/developer' },
-          { text: 'Getting Started', link: '/getting-started' },
+          { text: 'Getting Started', link: '/developer/getting-started' },
           { text: 'API Documentation', link: '/developer/api-reference' },
           { text: 'Design Principles', link: '/developer/design-principles' }
         ]
