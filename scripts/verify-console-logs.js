@@ -68,6 +68,24 @@ async function run() {
       // Scalar renders a specific structure. .scalar-app is usually the root.
       await page.waitForSelector('.scalar-app', { timeout: 10000 });
       console.log('Scalar component detected.');
+      
+      // INSPECTION: Find the "Powered by" element to identify its class for hiding
+      const footerHTML = await page.evaluate(() => {
+        const links = Array.from(document.querySelectorAll('a'));
+        const poweredBy = links.find(a => a.textContent.includes('scalar.com'));
+        if (poweredBy) {
+           // Return the class of the parent container
+           return {
+             text: poweredBy.textContent,
+             classes: poweredBy.className,
+             parentClasses: poweredBy.parentElement?.className,
+             grandParentClasses: poweredBy.parentElement?.parentElement?.className
+           };
+        }
+        return 'Not found';
+      });
+      console.log('Powered By Element Info:', JSON.stringify(footerHTML, null, 2));
+
     } catch (e) {
       console.error('Scalar component NOT found or timed out!');
       errors.push(new Error('Scalar component failed to render'));
