@@ -284,3 +284,8 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1 !important;
 }
 
+/* Hide API Version and OAS info (e.g. "0.9.1 OAS 2.0") */
+.api-reference-page .scalar-api-reference .version {
+    display: none !important;
+}
+
