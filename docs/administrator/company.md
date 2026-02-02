@@ -10,17 +10,8 @@ has_children: false
 
 As an administrator you can change your company data by clicking on 'Company' in the menu.
 
-You can update this data on your company:
-
-1. [General](#general)
-2. [Logo](#logo)
-3. [Verified domains](#verified-domains)
-4. [Session time](#session-time)
-5. [Custom user attributes](#custom-user-attributes)
-6. [Communication preferences](#communication-preferences)
-7. [Subscription](#subscription)
-
 ## General
+
 
 | Input              | Description                                                                                                                                                                                       |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

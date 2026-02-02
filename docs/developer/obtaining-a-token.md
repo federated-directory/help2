@@ -16,11 +16,6 @@ Any service or application that wants to integrate with the Federated Directory 
 
     Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
 
-In this chapter we will explain in more detail:
-
-- The different [audiences and roles](#audiences-and-roles) of access tokens and their impact
-- How to [retrieve an access token with a key](#retrieve-an-access-token-with-a-key)
-
 ## Audiences and roles
 
 The combination of an audience (aud) and a role describe the authorizations of an access token.

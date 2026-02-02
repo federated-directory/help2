@@ -12,13 +12,6 @@ When you sign up to Federated Directory, we create your first directory. The adm
 
 Depending on your situation and wishes you might have one or multiple directories inside your tenant at Federated Directory. For possible use-cases please refer to the next paragraph.
 
-1. [Single Directory versus Multiple Directories](#single-directory-versus-multiple-directories)
-2. [Create a directory](#create-a-directory)
-3. [Manage or sync users](#manage-or-sync-users)
-4. [Directory settings](#directory-settings)
-5. [Directory keys](#directory-keys)
-6. [Delete a directory](#delete-a-directory)
-
 ---
 
 ## Single Directory versus Multiple Directories

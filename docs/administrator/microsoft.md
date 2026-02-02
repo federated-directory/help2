@@ -4,11 +4,6 @@
 In case your company uses Microsoft 365, your corporate address book resides in Azure AD.  
 You can integrate Azure AD with Federated Directory.
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Configuration steps](#configuration-steps)
-- [Known limitations](#known-limitations)
-
 ## Features
 
 ### Authentication with Microsoft

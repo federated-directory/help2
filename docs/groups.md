@@ -1,14 +1,6 @@
 
 # Groups
 
-1. [Introduction](#introduction)
-2. [Create a group](#create-a-group)
-3. [Group roles](#group-roles)
-4. [Invite others to your group](#invite-others-to-your-group)
-5. [Automatically add users to a group](#automatically-add-users-to-a-group)
-6. [Multiple companies in a group](#multiple-companies-in-a-group)
-7. [Chat methods](#chat-methods)
-
 ## Introduction
 
 Users are created in directories and can be made a member of multiple groups. Users can search through the contact data of members in the same groups.

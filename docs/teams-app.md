@@ -1,14 +1,6 @@
 
 # Microsoft Teams app
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Opening](#opening)
-- [Searching](#searching)
-- [Chat](#chat)
-- [Email](#email)
-- [Call](#call)
-
 ## Introduction
 
 Access your Federated Directory directly from within Microsoft Teams.

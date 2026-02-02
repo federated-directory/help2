@@ -1,12 +1,6 @@
 
 # Microsoft Outlook add-in
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Using the add-in in Outlook](#using-the-add-in-in-outlook)
-- [Supported versions of Outlook](#supported-versions-of-outlook)
-- [Known limitations](#known-limitations)
-
 ## Introduction
 
 The contact data within a Federated Directory of a company is precious. The data gets even more powerful when it is accessible at the right moment; within the applications and services this company is already using. It is, therefore logical to deliver an add-in to one of the world's most commonly used e-mail clients: Microsoft Outlook.

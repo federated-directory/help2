@@ -3,15 +3,6 @@
 
 Once you're logged in, you can view and change your personal information by going to "My Account" in the menu on the left.
 
-There are three types of data you can view:
-
-1. <span>[Data](#data)</span>  
-   Update your profile information
-2. <span>[Sessions](#sessions)</span>  
-   View and manage your active sessions
-3. <span>[Logs](#logs)</span>  
-   View and manage your active sessions
-
 ---
 
 <h2 id="data">Profile data</h2>

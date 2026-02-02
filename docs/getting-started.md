@@ -1,17 +1,6 @@
 
 # Getting started
 
-1. [Sign up](#sign-up)
-2. [Set up](#set-up)
-   1. [Sync your current directories](#sync-your-current-directories)
-   2. [Combine users into groups](#combine-users-into-groups)
-   3. [Search through the contact details](#search-through-the-contact-details)
-   4. [Optional: Sync a group to Azure AD](#optional-sync-a-group-to-azure-ad)
-3. [Scenarios](#scenarios)
-   1. [Combine directories within your company](#combine-directories-within-your-company)
-   2. [Combine directories over multiple companies](#combine-directories-over-multiple-companies)
-4. [Examples](#examples)
-
 ## Sign up
 
 Continue to [set up your Federated Directory](#set-up) if you already signed up before.

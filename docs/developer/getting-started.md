@@ -5,13 +5,6 @@ You can use the information in your Federated Directory in your own applications
 
 We made it as easy as possible to get started with our (SCIM compliant) APIs and integrate it into your application.
 
-Getting started in four steps:
-
-1. [Sign-up](#sign-up)
-2. [Setup your environment](#setup-your-environment)
-3. [Import our Postman demo collection](#import-our-postman-demo-collection)
-4. [Send some requests](#send-some-requests)
-
 ## Sign Up
 
 You’ll need a Federated Directory to get started. If you don’t have one already, sign up for free to [create one](/getting-started#f1). You will get 20 users and all the features for free.
