@@ -1,5 +1,5 @@
 ---
-title: Manage Groups and Contact Sharing
+title: Groups & Contact Sharing - Access Control
 description: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
 head:
   - - meta

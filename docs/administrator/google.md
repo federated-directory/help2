@@ -1,5 +1,5 @@
 ---
-title: Google Workspace Integration Guide
+title: Google Workspace Integration - SSO & User Sync
 description: Sync users from Google Workspace to Federated Directory. Enable SSO with Google accounts. Auto-provision users and profile updates.
 head:
   - - meta

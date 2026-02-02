@@ -1,5 +1,5 @@
 ---
-title: Agentic AI and Model Context Protocol (MCP)
+title: AI Agents & Model Context Protocol (MCP)
 description: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
 head:
   - - meta

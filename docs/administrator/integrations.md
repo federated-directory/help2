@@ -1,5 +1,5 @@
 ---
-title: API Keys and Integrations
+title: API Keys & OAuth 2.0 Integration Setup
 description: Create OAuth 2.0 API keys for integrating external services with your Federated Directory. Manage administrative access tokens securely.
 head:
   - - meta

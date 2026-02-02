@@ -1,5 +1,5 @@
 ---
-title: API Design Principles and Standards
+title: API Design Principles - Standards & Best Practices
 description: Understand Federated Directory API versioning, compatibility rules, authentication, error handling, and SCIM compliance standards.
 head:
   - - meta

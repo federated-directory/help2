@@ -1,5 +1,5 @@
 ---
-title: Model Context Protocol (MCP) API
+title: Model Context Protocol (MCP) - AI Integration
 description: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
 head:
   - - meta

@@ -1,5 +1,5 @@
 ---
-title: Contact Federated Directory Support
+title: Contact Support - Get Help & Assistance
 description: Need help with your corporate directory? Contact our support team for assistance with setup, integrations, and troubleshooting.
 head:
   - - meta

@@ -19,13 +19,6 @@ head:
       content: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
 ---
 
-layout: default
-title: Company
-parent: Administrator
-nav_order: 2
-has_children: false
----
-
 # Company
 
 As an administrator you can change your company data by clicking on 'Company' in the menu.

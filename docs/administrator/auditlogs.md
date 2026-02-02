@@ -1,5 +1,5 @@
 ---
-title: Audit Logs and Activity Tracking
+title: Audit Logs - Track Changes & Activity
 description: Track all changes in your Federated Directory. Review user modifications, directory updates, and administrative actions with detailed audit logs.
 head:
   - - meta

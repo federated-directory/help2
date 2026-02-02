@@ -1,5 +1,5 @@
 ---
-title: Directory Management and User Sync
+title: Directory Management - User Sync & Provisioning
 description: Create and manage directories for Google Workspace, Microsoft 365, Okta, and more. Sync users automatically or manually with SCIM provisioning.
 head:
   - - meta

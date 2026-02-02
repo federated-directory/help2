@@ -1,5 +1,5 @@
 ---
-title: Okta Integration Guide
+title: Okta Integration - SAML SSO & SCIM Sync
 description: Connect Okta Universal Directory to Federated Directory. Enable SAML SSO and auto-provision users from Okta with SCIM.
 head:
   - - meta

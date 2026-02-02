@@ -1,5 +1,5 @@
 ---
-title: Users API - SCIM 2.0 Endpoints
+title: Users API - SCIM 2.0 User Management
 description: Create, search, update, and delete users with our SCIM 2.0 compliant API. Bulk operations and enterprise extensions supported.
 head:
   - - meta

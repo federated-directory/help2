@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 and Entra ID Integration
+title: Microsoft 365 & Entra ID - SSO Integration
 description: Integrate Microsoft 365 and Entra ID with Federated Directory. Auto-sync users from Entra ID. Enable SSO with Microsoft accounts.
 head:
   - - meta

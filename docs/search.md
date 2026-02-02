@@ -1,5 +1,5 @@
 ---
-title: Search Contacts Across Companies
+title: Search Contacts Across Multiple Companies
 description: Search corporate contacts across multiple companies instantly. Filter by name, department, title, manager, and more. Find the right person fast.
 head:
   - - meta

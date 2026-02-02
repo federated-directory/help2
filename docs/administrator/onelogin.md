@@ -1,5 +1,5 @@
 ---
-title: OneLogin Integration Guide
+title: OneLogin Integration - User Provisioning
 description: Integrate OneLogin with Federated Directory for user provisioning and authentication. Connect your identity management solution.
 head:
   - - meta
