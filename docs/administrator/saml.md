@@ -1,3 +1,8 @@
+---
+title: SAML 2.0 Integration Guide
+description: Set up SAML 2.0 single sign-on with your identity provider. Configure SP-initiated and IDP-initiated authentication flows.
+---
+
 # Integrate with SAML 2.0
 
 SAML-based single sign-on (SSO) gives users access to their Federated Directory through an identity provider (IDP) of your choice.

@@ -1,3 +1,8 @@
+---
+title: Microsoft 365 and Entra ID Integration
+description: Integrate Microsoft 365 and Entra ID with Federated Directory. Auto-sync users from Entra ID. Enable SSO with Microsoft accounts.
+---
+
 # Integrate with Microsoft
 
 In case your company uses Microsoft 365, your corporate address book resides in Entra ID.  

@@ -1,3 +1,8 @@
+---
+title: Model Context Protocol (MCP) API
+description: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
+---
+
 <script setup>
 import { onMounted } from 'vue'
 import { useRouter } from 'vitepress'

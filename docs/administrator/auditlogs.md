@@ -1,3 +1,8 @@
+---
+title: Audit Logs and Activity Tracking
+description: Track all changes in your Federated Directory. Review user modifications, directory updates, and administrative actions with detailed audit logs.
+---
+
 # Audit logs
 
 Every change made within your Federated Directory environment is recorded and can be reviewed. We store this information in two different audit logs:

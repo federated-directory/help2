@@ -1,3 +1,8 @@
+---
+title: Google Workspace Integration Guide
+description: Sync users from Google Workspace to Federated Directory. Enable SSO with Google accounts. Auto-provision users and profile updates.
+---
+
 # Integrate with Google
 
 If your corporate address book resides in Google Workspace you may want to integrate it with your Federated Directory.

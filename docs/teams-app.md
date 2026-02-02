@@ -1,3 +1,8 @@
+---
+title: Microsoft Teams App for Federated Directory
+description: Access your Federated Directory from Teams, Outlook, and Microsoft 365 apps. Search contacts, chat, call, and email from one interface.
+---
+
 # Microsoft Teams app
 
 

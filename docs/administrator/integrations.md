@@ -1,3 +1,8 @@
+---
+title: API Keys and Integrations
+description: Create OAuth 2.0 API keys for integrating external services with your Federated Directory. Manage administrative access tokens securely.
+---
+
 # Integrations
 
 To integrate other services or applications with your Federated Directory you will need an API key. This is an OAuth 2 key with administrative permissions for your entire Federated Directory. It has the same permissions as an administrator, except the ability to log in to our portal.

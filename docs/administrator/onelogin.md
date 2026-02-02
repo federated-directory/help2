@@ -1,3 +1,8 @@
+---
+title: OneLogin Integration Guide
+description: Integrate OneLogin with Federated Directory for user provisioning and authentication. Connect your identity management solution.
+---
+
 # Integrate with OneLogin
 
 In case your company uses OneLogin as their identity and access management solution, a lot of contact data is already centrally available.

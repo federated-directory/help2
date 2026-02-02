@@ -1,3 +1,8 @@
+---
+title: Obtaining API Access Tokens
+description: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
+---
+
 <script setup>
 import { onMounted } from 'vue'
 import { useRouter } from 'vitepress'

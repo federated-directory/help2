@@ -1,3 +1,8 @@
+---
+title: Company Settings and Configuration
+description: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
+---
+
 layout: default
 title: Company
 parent: Administrator

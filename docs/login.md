@@ -1,3 +1,8 @@
+---
+title: How to Login to Federated Directory
+description: Login with Google, Microsoft, or company credentials. Support for SSO, SAML, and OpenID Connect authentication. Password reset available.
+---
+
 # Login
 
 You can start your login process at https://federated.directory/of

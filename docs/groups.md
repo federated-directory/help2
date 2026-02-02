@@ -1,3 +1,8 @@
+---
+title: Manage Groups and Contact Sharing
+description: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
+---
+
 # Groups
 
 

@@ -1,3 +1,8 @@
+---
+title: OpenID Connect (OIDC) Integration
+description: Configure OpenID Connect SSO for Federated Directory. Connect your custom identity provider with Authorization Code Flow support.
+---
+
 # Integrate with OpenID Connect
 
 OpenID Connect-based single sign-on (SSO) gives your users access to Federated Directory through an identity provider (IDP) of your choice.

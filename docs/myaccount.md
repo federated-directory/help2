@@ -1,3 +1,8 @@
+---
+title: Manage Your Account Profile
+description: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
+---
+
 # My Account
 
 Once you're logged in, you can view and change your personal information by going to "My Account" in the menu on the left.

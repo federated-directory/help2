@@ -1,3 +1,8 @@
+---
+title: Administrator Guide - Federated Directory
+description: Configure your Federated Directory as an admin. Manage directories, integrations, company settings, and user provisioning from multiple sources.
+---
+
 # Administrator
 
 These pages explain how you (as an administrator) can configure the various aspects of your Federated Directory.

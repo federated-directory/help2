@@ -1,3 +1,8 @@
+---
+title: Users API - SCIM 2.0 Endpoints
+description: Create, search, update, and delete users with our SCIM 2.0 compliant API. Bulk operations and enterprise extensions supported.
+---
+
 <script setup>
 import { onMounted } from 'vue'
 import { useRouter } from 'vitepress'

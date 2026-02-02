@@ -1,3 +1,8 @@
+---
+title: Directory Management and User Sync
+description: Create and manage directories for Google Workspace, Microsoft 365, Okta, and more. Sync users automatically or manually with SCIM provisioning.
+---
+
 # Directory
 
 A directory contains the users of your company and their contact data. Some of the characteristics of a directory are:

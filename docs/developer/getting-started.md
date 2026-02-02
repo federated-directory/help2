@@ -1,3 +1,8 @@
+---
+title: Developer Getting Started Guide
+description: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
+---
+
 # Getting started
 
 You can use the information in your Federated Directory in your own applications

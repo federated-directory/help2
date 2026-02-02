@@ -1,3 +1,8 @@
+---
+title: Developer Documentation - Federated Directory API
+description: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
+---
+
 # Developer
 
 Federated Directory comes with a great set of API's. Use it to integrate the users data in your app or push contact data from your identity management solution.

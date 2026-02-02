@@ -1,3 +1,8 @@
+---
+title: Search Contacts Across Companies
+description: Search corporate contacts across multiple companies instantly. Filter by name, department, title, manager, and more. Find the right person fast.
+---
+
 # Search
 
 Federated Directory has been built to make it easier to find the right contact information.

@@ -1,3 +1,8 @@
+---
+title: Agentic AI and Model Context Protocol (MCP)
+description: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
+---
+
 # Agentic AI
 
 Federated Directory acts as a bridge between your AI agents and your organization's contact data. By integrating Federated Directory, you enable your AI agents to securely search, retrieve, and understand the organizational structure of your company or federation.

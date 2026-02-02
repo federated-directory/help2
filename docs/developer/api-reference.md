@@ -1,4 +1,6 @@
 ---
+title: Interactive API Reference - Federated Directory
+description: Explore our SCIM 2.0 REST API with interactive documentation. Test endpoints for users, groups, OAuth2, and Model Context Protocol integration.
 layout: page
 pageClass: api-reference-page
 ---
