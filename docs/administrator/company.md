@@ -1,6 +1,22 @@
 ---
 title: Company Settings and Configuration
 description: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
+head:
+  - - meta
+    - property: og:title
+      content: Company Settings and Configuration
+  - - meta
+    - property: og:description
+      content: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/administrator/company
+  - - meta
+    - name: twitter:title
+      content: Company Settings and Configuration
+  - - meta
+    - name: twitter:description
+      content: Manage company profile, logo, verified domains, session settings, and subscription. Configure custom user attributes and preferences.
 ---
 
 layout: default

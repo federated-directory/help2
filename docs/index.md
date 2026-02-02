@@ -1,6 +1,22 @@
 ---
 title: Federated Directory - Corporate Address Book Federation
 description: Connect multiple corporate address books across companies. Share contact data securely with Google Workspace, Microsoft 365, and more. Free to start.
+head:
+  - - meta
+    - property: og:title
+      content: Federated Directory - Corporate Address Book Federation
+  - - meta
+    - property: og:description
+      content: Connect multiple corporate address books across companies. Share contact data securely with Google Workspace, Microsoft 365, and more. Free to start.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/
+  - - meta
+    - name: twitter:title
+      content: Federated Directory - Corporate Address Book Federation
+  - - meta
+    - name: twitter:description
+      content: Connect multiple corporate address books across companies. Share contact data securely with Google Workspace, Microsoft 365, and more. Free to start.
 ---
 
 # Welcome

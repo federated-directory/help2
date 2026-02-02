@@ -1,6 +1,22 @@
 ---
 title: Manage Groups and Contact Sharing
 description: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
+head:
+  - - meta
+    - property: og:title
+      content: Manage Groups and Contact Sharing
+  - - meta
+    - property: og:description
+      content: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/groups
+  - - meta
+    - name: twitter:title
+      content: Manage Groups and Contact Sharing
+  - - meta
+    - name: twitter:description
+      content: Create groups to control contact visibility across companies. Use smart filters to auto-add users. Share contact data selectively and securely.
 ---
 
 # Groups

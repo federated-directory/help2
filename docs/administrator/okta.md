@@ -1,6 +1,22 @@
 ---
 title: Okta Integration Guide
 description: Connect Okta Universal Directory to Federated Directory. Enable SAML SSO and auto-provision users from Okta with SCIM.
+head:
+  - - meta
+    - property: og:title
+      content: Okta Integration Guide
+  - - meta
+    - property: og:description
+      content: Connect Okta Universal Directory to Federated Directory. Enable SAML SSO and auto-provision users from Okta with SCIM.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/administrator/okta
+  - - meta
+    - name: twitter:title
+      content: Okta Integration Guide
+  - - meta
+    - name: twitter:description
+      content: Connect Okta Universal Directory to Federated Directory. Enable SAML SSO and auto-provision users from Okta with SCIM.
 ---
 
 # Integrate with Okta

@@ -1,6 +1,22 @@
 ---
 title: API Design Principles and Standards
 description: Understand Federated Directory API versioning, compatibility rules, authentication, error handling, and SCIM compliance standards.
+head:
+  - - meta
+    - property: og:title
+      content: API Design Principles and Standards
+  - - meta
+    - property: og:description
+      content: Understand Federated Directory API versioning, compatibility rules, authentication, error handling, and SCIM compliance standards.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/developer/design-principles
+  - - meta
+    - name: twitter:title
+      content: API Design Principles and Standards
+  - - meta
+    - name: twitter:description
+      content: Understand Federated Directory API versioning, compatibility rules, authentication, error handling, and SCIM compliance standards.
 ---
 
 # Design Principles

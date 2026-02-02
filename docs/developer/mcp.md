@@ -1,6 +1,22 @@
 ---
 title: Model Context Protocol (MCP) API
 description: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
+head:
+  - - meta
+    - property: og:title
+      content: Model Context Protocol (MCP) API
+  - - meta
+    - property: og:description
+      content: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/developer/mcp
+  - - meta
+    - name: twitter:title
+      content: Model Context Protocol (MCP) API
+  - - meta
+    - name: twitter:description
+      content: Enable AI models to interact with your directory using Model Context Protocol. JSON-RPC 2.0 API for LLMs like Claude and ChatGPT.
 ---
 
 <script setup>

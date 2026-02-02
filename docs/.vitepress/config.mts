@@ -6,6 +6,18 @@ export default defineConfig({
   cleanUrls: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // Open Graph meta tags
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Federated Directory' }],
+    ['meta', { property: 'og:image', content: 'https://help.federated.directory/og-image.png' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { property: 'og:image:alt', content: 'Federated Directory - Corporate Address Book Federation' }],
+    // Twitter Card meta tags
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@fed_dir' }],
+    ['meta', { name: 'twitter:image', content: 'https://help.federated.directory/og-image.png' }],
+    ['meta', { name: 'twitter:image:alt', content: 'Federated Directory - Corporate Address Book Federation' }],
     // ['script', {}, `
     //   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     //   (function(){

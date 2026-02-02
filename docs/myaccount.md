@@ -1,6 +1,22 @@
 ---
 title: Manage Your Account Profile
 description: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
+head:
+  - - meta
+    - property: og:title
+      content: Manage Your Account Profile
+  - - meta
+    - property: og:description
+      content: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/myaccount
+  - - meta
+    - name: twitter:title
+      content: Manage Your Account Profile
+  - - meta
+    - name: twitter:description
+      content: Update your profile data, photo, and password. View active sessions and activity logs. Manage your personal information in Federated Directory.
 ---
 
 # My Account

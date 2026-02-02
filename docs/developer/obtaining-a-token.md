@@ -1,6 +1,22 @@
 ---
 title: Obtaining API Access Tokens
 description: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
+head:
+  - - meta
+    - property: og:title
+      content: Obtaining API Access Tokens
+  - - meta
+    - property: og:description
+      content: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/developer/obtaining-a-token
+  - - meta
+    - name: twitter:title
+      content: Obtaining API Access Tokens
+  - - meta
+    - name: twitter:description
+      content: Create directory keys and API keys for authentication. Generate OAuth 2.0 access tokens using JWT assertions for SCIM API access.
 ---
 
 <script setup>

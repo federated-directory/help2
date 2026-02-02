@@ -1,6 +1,22 @@
 ---
 title: SCIM 2.0 User Provisioning
 description: Provision users to Federated Directory using SCIM 2.0 standard. Create, update, deactivate, and delete users from any SCIM-compatible system.
+head:
+  - - meta
+    - property: og:title
+      content: SCIM 2.0 User Provisioning
+  - - meta
+    - property: og:description
+      content: Provision users to Federated Directory using SCIM 2.0 standard. Create, update, deactivate, and delete users from any SCIM-compatible system.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/administrator/scim
+  - - meta
+    - name: twitter:title
+      content: SCIM 2.0 User Provisioning
+  - - meta
+    - name: twitter:description
+      content: Provision users to Federated Directory using SCIM 2.0 standard. Create, update, deactivate, and delete users from any SCIM-compatible system.
 ---
 
 # Integrate with SCIM 2.0

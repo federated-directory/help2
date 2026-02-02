@@ -1,6 +1,22 @@
 ---
 title: Developer Documentation - Federated Directory API
 description: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
+head:
+  - - meta
+    - property: og:title
+      content: Developer Documentation - Federated Directory API
+  - - meta
+    - property: og:description
+      content: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/developer/developer
+  - - meta
+    - name: twitter:title
+      content: Developer Documentation - Federated Directory API
+  - - meta
+    - name: twitter:description
+      content: Integrate with Federated Directory using our SCIM-compliant REST API. Push or pull contact data programmatically. Free development environment.
 ---
 
 # Developer

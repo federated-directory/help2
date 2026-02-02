@@ -1,6 +1,22 @@
 ---
 title: Agentic AI and Model Context Protocol (MCP)
 description: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
+head:
+  - - meta
+    - property: og:title
+      content: Agentic AI and Model Context Protocol (MCP)
+  - - meta
+    - property: og:description
+      content: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/agentic-ai
+  - - meta
+    - name: twitter:title
+      content: Agentic AI and Model Context Protocol (MCP)
+  - - meta
+    - name: twitter:description
+      content: Connect AI agents to your corporate directory with Model Context Protocol. Enable Claude, ChatGPT, and custom agents to search your contact data.
 ---
 
 # Agentic AI

@@ -1,6 +1,22 @@
 ---
 title: Developer Getting Started Guide
 description: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
+head:
+  - - meta
+    - property: og:title
+      content: Developer Getting Started Guide
+  - - meta
+    - property: og:description
+      content: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
+  - - meta
+    - property: og:url
+      content: https://help.federated.directory/developer/getting-started
+  - - meta
+    - name: twitter:title
+      content: Developer Getting Started Guide
+  - - meta
+    - name: twitter:description
+      content: Start building with Federated Directory API in minutes. Setup Postman, create access tokens, and make your first API calls to manage users.
 ---
 
 # Getting started
