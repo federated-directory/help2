@@ -174,7 +174,7 @@ Enable or disable some functionalities in Federated Directory for the users in t
 The best way to integrate another system with one directory, is to use a directory key. A directory key only has administrator privileges inside the directory it is created.
 With a directory key, the other system can create, read, update and delete the users inside that directory only.
 
-All [user management introductions](#automaticusermanagement) mentioned above require a directory key for their integration with Federated Directory.
+All [user management introductions](#automatically) mentioned above require a directory key for their integration with Federated Directory.
 
 Select tab **KEYS** to manage the directory keys. Click **CREATE KEY** button to create a new key.
 

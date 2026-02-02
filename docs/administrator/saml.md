@@ -73,5 +73,5 @@ Your IDP must ensure a user is both authenticated and authorized before sending 
 
 <h2 id="automaticusermanagement"> Automatic user management </h2>
 
-A SAML integration delivers SSO for your users. It can be combined with any of the user management options we [offer](./directories#automaticusermanagement).
+A SAML integration delivers SSO for your users. It can be combined with any of the user management options we [offer](./directories#automatically).
 Just make sure the userName of the user is filled properly.

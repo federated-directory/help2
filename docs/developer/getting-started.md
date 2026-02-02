@@ -6,7 +6,7 @@ We made it as easy as possible to get started with our (SCIM compliant) APIs and
 
 ## Sign Up
 
-You’ll need a Federated Directory to get started. If you don’t have one already, sign up for free to [create one](/getting-started#f1). You will get 20 users and all the features for free.
+You’ll need a Federated Directory to get started. If you don’t have one already, sign up for free to [create one](/getting-started). You will get 20 users and all the features for free.
 
 ## Setup your environment
 

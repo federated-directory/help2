@@ -21,6 +21,5 @@ The contact data in your Federated Directory can be searched and filtered in our
 
 You can [get started](./getting-started) for free. No commitments.
 
----
 
 <b id="f1">1.</b> 'Corporate address book' is also known as 'Global Address List' (GAL), 'shared contacts' or 'company directory'. [↩](#a1)

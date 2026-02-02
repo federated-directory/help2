@@ -1,7 +1,5 @@
 # Getting started
 
-## Sign up
-
 Continue to [set up your Federated Directory](#set-up) if you already signed up before.
 
 Before you start using Federated Directory, you have to sign up. It is easy and free.
@@ -23,7 +21,6 @@ During your sign up you will need to provide this information:
 
 Only finalize the sign-up process after you have read and agreed to our [terms of service](https://federated.directory/terms).
 
----
 
 ## Set up
 
@@ -33,8 +30,8 @@ The setup of your Federated Directory consists out of a few steps.
 
 1. [Sync your current directories](#sync-your-current-directories)
 2. [Combine users into groups](#combine-users-into-groups)
-3. [Search through the contact details](#search-through-the-contact-details)
-4. [Optional: Sync a group to Entra ID](#optional-sync-a-group-to-azure-ad)
+3. [Search through the contact details](#search-across-companies)
+4. [Optional: Sync a group to Entra ID](#optional-sync-a-group-to-entra-id)
 
 ### Sync your current directories
 
@@ -111,7 +108,6 @@ For more information :
 - About provisioning from Google Workspace refer to [here](./administrator/google).
 - About provisioning from Entra ID refer to [here](./administrator/microsoft).
 
----
 
 ### Combine directories over multiple companies
 
