@@ -23,7 +23,7 @@
   "tags": [
     {
       "name": "Users",
-      "description": "User management endpoints"
+      "description": "# Users API\n\nOur fully [SCIM 2.0](http://www.simplecloud.info) compliant API to create, search, retrieve, update and remove user information.\n\n> **Info**\nAll API calls require a valid token. See how to [obtain a token](./obtaining-a-token).\n\n\n## User Data Model\n\nThe User resource in Federated Directory is composed of three schemas:\n1. **Core User**: `urn:ietf:params:scim:schemas:core:2.0:User`\n2. **Enterprise Extension**: `urn:ietf:params:scim:schemas:extension:enterprise:2.0:User`\n3. **FD Extension**: `urn:ietf:params:scim:schemas:extension:fd:2.0:User`\n\nTechnical details for all attributes (types, constraints, and descriptions) are available in the interactive sections below.\n\n## User Operations\n\n### Search Users\nSearch through all the users in your Federated Directory across all companies, divisions, and departments. You can use standard SCIM filters like `co` (contains) and `eq` (equals).\n\n\n\n### Get a User\nRetrieve the full SCIM representation of a specific user by their unique ID.\n\n\n\n### Get Current User (Me)\nRetrieve the SCIM representation of the currently authenticated user based on the provided token.\n\n\n\n### Create User\nCreate a new user in a specific directory. When using a Directory Key, the user is automatically created in the associated directory.\n\n\n\n### Update User (PATCH)\nUpdate specific attributes of a user without replacing the entire resource. This supports `add`, `remove`, and `replace` operations as per the SCIM 2.0 specification.\n\n#### PATCH Operations Guide\n- **Add/Replace**: Used to set or update attribute values.\n- **Remove**: Used to clear attribute values.\n- **Complex Attributes**: Sub-attributes are referenced using dot notation (e.g., `name.givenName`).\n- **Multivalued Attributes**: Can be targeted using filters (e.g., `emails[type eq \"work\"].value`).\n\n\n\n### Replace User (PUT)\nReplace the entire user resource. Any mutable attributes not included in the request body will be emptied or reset to their default values.\n\n\n\n### Delete User\nPermanently remove a user and all associated data. This action is irreversible and removes the user from all groups.\n\n\n\n### Bulk User Updates\nPerform multiple CRUD actions (Create, Update, Delete) in a single API call (up to 1000 operations)."
     },
     {
       "name": "Groups",
@@ -35,7 +35,7 @@
     },
     {
       "name": "OAuth2",
-      "description": "OAuth 2.0 authentication endpoints"
+      "description": "# Obtaining a token\n\nAny service or application that wants to integrate with the Federated Directory APIs needs to obtain an access token. This access token should be placed in the `Authorization` header of every API call as a Bearer token. Like this:\n\n    Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...\n\nIn this chapter we will explain in more detail:\n\n- The different [audiences and roles](#audiences-and-roles) of access tokens and their impact\n- How to [retrieve an access token with a key](#retrieve-an-access-token-with-a-key)\n\n## Audiences and roles\n\nThe combination of an audience (aud) and a role describe the authorizations of an access token.\n\nAn audience basically says for what kind of user the access token was created.\n\n| Audience | Description                                                                                                                                                                     |\n| :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| User     | A user represents a person and is contained in a user directory. It's main purpose is for the usage of the platform by a person.                                                |\n| Key      | A key is not linked to a natural person and is mainly intended for system integration. There are two kind of keys: a directory key and a admin key. Both have a different role. |\n\nA role determines the authorizations given to an access token.\n\n| Role         | Description                                                                                                                                                                                                                        |\n| :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| User         | Is not able to make changes to any other user in or the configuration in its company                                                                                                                                               |\n| directoryKey | Always a key (audience) that has admin permissions on one specific directory in your Federated Directory. Ideal for integration with your current corporate address book or IAM solution (like Azure AD, Google Directory or Okta) |\n| admin        | Full administrative permissions. Can modify all users and settings in its company                                                                                                                                                  |\n\n## Retrieve an access token with a key\n\nThere are two sort of keys.\n\n1. [Directory key](#create-a-directory-key) (role = directoryKey)\n2. [API key](#create-an-api-key) (role = admin)\n\nDecide which key is appropriate for your integration scenario.\n\n### Create a directory key\n\nGo to 'directories' and select the directory you want to integrate with.\nGo to the \"KEYS\" tab and create a new key.\n\nAfter the key has been created you will receive three things:\n\n1. issuer\n2. private key\n3. access token\n\nThe access token is only returned directly after you create the key. This access token is\nvalid for many years. So keep it secure!\n\nThe 'issuer' and 'private key' can be used to [create access tokens](#create-an-access-token-with-the-issuer-and-private-key). These tokens have the\nsame lifetime as a user session. This is [configurable per tenant](/administrator/company)\nbut has a default value of 480 minutes (8 hours).\n\n### Create an API key\n\nAn API key has the same permissions as a user with the 'administrator' role.\n\nTo create such a key, go to 'integrations' in the menu and create a new key.\n\nAfter the key has been created you will receive two things:\n\n1. issuer\n2. private key\n\nThe 'issuer' and 'private key' can be used to [create access tokens](#create-an-access-token-with-the-issuer-and-private-key). These tokens have the\nsame lifetime as a user session. This is [configurable per tenant](/administrator/company)\nbut has a default value of 480 minutes (8 hours).\n\n## Create an access token with the issuer and private key\n\nPlace the 'issuer' value of your key in the below JSON.\n\n```json\n{\n  \"iss\": \"<issuer>\",\n  \"scope\": [\"directoryKey\"], // [\"admin\"] if this is the API key and not Directory key\n  \"aud\": \"key\"\n}\n```\n\nUse RS256 encryption to create and parse a JWT token. Use your 'private key' for this.\nThere are a [a lot of libraries](https://jwt.io/libraries) available that can do this.\n\nThis JWT can then be submitted by a POST action to this end-point :\n\n\n\n## Example Response\n\nYou can use this token by including it in the header of any following request as:\n<br>\n`\"Authorization\" : \"Bearer <access_token>\"`"
     },
     {
       "name": "SCIM",
@@ -1342,7 +1342,7 @@
             "guid": true
           }
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 200,
@@ -1384,7 +1384,7 @@
           "minLength": 1,
           "maxLength": 200
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 300
@@ -1650,7 +1650,7 @@
           "department": "Tour Operations",
           "manager": {
             "value": "26118915-6090-4610-87e4-49d8ca9f808d",
-            "$ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
+            "ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
             "displayName": "John Smith"
           }
         },
@@ -1844,7 +1844,7 @@
             "guid": true
           }
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 300
@@ -1975,12 +1975,12 @@
         "members": [
           {
             "value": "2819c223-7f76-453a-919d-413861904646",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/2819c223-7f76-453a-919d-413861904646",
             "display": "Babs Jensen"
           },
           {
             "value": "902c246b-6245-4190-8e05-0018c3524c9a",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/902c246b-6245-4190-8e05-0018c3524c9a",
             "display": "Mandy Pepperidge"
           }
         ]
@@ -2037,12 +2037,12 @@
             "members": [
               {
                 "value": "2819c223-7f76-453a-919d-413861904646",
-                "$ref": "#/definitions/UserResponse",
+                "ref": "https://api.federated.directory/v2/Users/2819c223-7f76-453a-919d-413861904646",
                 "display": "Babs Jensen"
               },
               {
                 "value": "902c246b-6245-4190-8e05-0018c3524c9a",
-                "$ref": "#/definitions/UserResponse",
+                "ref": "https://api.federated.directory/v2/Users/902c246b-6245-4190-8e05-0018c3524c9a",
                 "display": "Mandy Pepperidge"
               }
             ]
@@ -3572,12 +3572,12 @@
         "members": [
           {
             "value": "2819c223-7f76-453a-919d-413861904646",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/2819c223-7f76-453a-919d-413861904646",
             "display": "Babs Jensen"
           },
           {
             "value": "902c246b-6245-4190-8e05-0018c3524c9a",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/902c246b-6245-4190-8e05-0018c3524c9a",
             "display": "Mandy Pepperidge"
           }
         ]
@@ -3687,7 +3687,7 @@
           "department": "Tour Operations",
           "manager": {
             "value": "26118915-6090-4610-87e4-49d8ca9f808d",
-            "$ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
+            "ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
             "displayName": "John Smith"
           }
         },
@@ -4040,7 +4040,7 @@
           "department": "Tour Operations",
           "manager": {
             "value": "26118915-6090-4610-87e4-49d8ca9f808d",
-            "$ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
+            "ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
             "displayName": "John Smith"
           }
         },
@@ -4292,7 +4292,7 @@
             "value": [
               {
                 "display": "Babs Jensen",
-                "$ref": "#/definitions/UserResponse",
+                "ref": "https://api.federated.directory/v2/Users/2819c223-7f76-453a-919d-413861904646",
                 "value": "2819c223-7f76-453a-919d-413861904646"
               }
             ]
@@ -4357,7 +4357,7 @@
         "display": {
           "type": "string"
         },
-        "$ref": {
+        "ref": {
           "type": "string"
         },
         "value": {
@@ -4456,6 +4456,24 @@
       "required": [
         "Operations"
       ]
+    },
+    "SCIMReference": {
+      "type": "object",
+      "description": "Reference to another resource (User or Group)",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Unique identifier of the resource"
+        },
+        "ref": {
+          "type": "string",
+          "description": "URI of the resource"
+        },
+        "display": {
+          "type": "string",
+          "description": "Display name of the resource"
+        }
+      }
     }
   },
   "x-alt-definitions": {
@@ -4745,7 +4763,7 @@
             "guid": true
           }
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 200,
@@ -4787,7 +4805,7 @@
           "minLength": 1,
           "maxLength": 200
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 300
@@ -5053,7 +5071,7 @@
           "department": "Tour Operations",
           "manager": {
             "value": "26118915-6090-4610-87e4-49d8ca9f808d",
-            "$ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
+            "ref": "../v2/Users/26118915-6090-4610-87e4-49d8ca9f808d",
             "displayName": "John Smith"
           }
         },
@@ -5551,7 +5569,7 @@
             "guid": true
           }
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 300
@@ -5682,12 +5700,12 @@
         "members": [
           {
             "value": "2819c223-7f76-453a-919d-413861904646",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/2819c223-7f76-453a-919d-413861904646",
             "display": "Babs Jensen"
           },
           {
             "value": "902c246b-6245-4190-8e05-0018c3524c9a",
-            "$ref": "#/definitions/UserResponse",
+            "ref": "https://api.federated.directory/v2/Users/902c246b-6245-4190-8e05-0018c3524c9a",
             "display": "Mandy Pepperidge"
           }
         ]
@@ -5729,7 +5747,7 @@
             "guid": true
           }
         },
-        "$ref": {
+        "ref": {
           "type": "string",
           "minLength": 0,
           "maxLength": 300
@@ -5759,7 +5777,7 @@
         "display": {
           "type": "string"
         },
-        "$ref": {
+        "ref": {
           "type": "string"
         },
         "value": {

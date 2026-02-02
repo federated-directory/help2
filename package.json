@@ -21,6 +21,7 @@
   "homepage": "https://github.com/federated-directory/help2#readme",
   "devDependencies": {
     "@scalar/api-reference": "^1.25.0",
+    "playwright": "^1.58.1",
     "vitepress": "^1.6.4"
   }
 }

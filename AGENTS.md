@@ -6,14 +6,14 @@ This project is a static documentation site built with [VitePress](https://vitep
 
 - **Framework**: VitePress (Vue.js based)
 - **Deployment**: GitHub Pages (via GitHub Actions)
-- **API Docs**: Scalar (fetching dynamically from Federated Directory API)
+- **API Docs**: Scalar (fetching dynamically from Federated Directory API). Documentation from local Markdown files is **injected** into the Swagger spec during build.
 
 ### Project Structure
 
 - `docs/`: Markdown source files for the documentation.
 - `docs/.vitepress/`: VitePress configuration and theme customization.
 - `docs/public/`: Static assets (images, icons, favicon).
-- `scripts/`: Build-time scripts (e.g., Swagger sanitization).
+- `scripts/`: Build-time scripts (e.g., Swagger sanitization and docs injection).
 
 ## Build and Run Guidelines
 
