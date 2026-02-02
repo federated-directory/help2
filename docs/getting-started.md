@@ -35,14 +35,14 @@ The setup of your Federated Directory consists out of a few steps.
 1. [Sync your current directories](#sync-your-current-directories)
 2. [Combine users into groups](#combine-users-into-groups)
 3. [Search through the contact details](#search-through-the-contact-details)
-4. [Optional: Sync a group to Azure AD](#optional-sync-a-group-to-azure-ad)
+4. [Optional: Sync a group to Entra ID](#optional-sync-a-group-to-azure-ad)
 
 ### Sync your current directories
 
 After you sign up, your Federated Directory will only contain your user account. There are multiple ways to import the contact data of your current corporate address book. You can create the users manually or upload a CSV file but you can also sync the data directly from:
 
 - [Google](./administrator/google)
-- [Microsoft 365 / Azure AD](./administrator/microsoft)
+- [Microsoft 365 / Entra ID](./administrator/microsoft)
 - [OneLogin](./administrator/onelogin)
 - [Okta](./administrator/okta)
 
@@ -82,17 +82,17 @@ This 'smart filter' adds all the users to this group that meets this specific fi
 You and your colleagues can now [login](./login) and [search](./search) through all the directories at the same time.
 This can be done, through our web based application (PWA) or through our <a href="./client-integrations/outlook-add-in">Microsoft Outlook add-in</a>.
 
-### Optional: Sync a group to Azure AD
+### Optional: Sync a group to Entra ID
 
 This has not been released yet.
-We are working on a way to sync all the users from a group in your Federated Directory back to an Azure AD. This would make it possible to find the contact data of the users in this group, directly in the Office apps your employees already use. Like Teams & Outlook.
+We are working on a way to sync all the users from a group in your Federated Directory back to an Entra ID. This would make it possible to find the contact data of the users in this group, directly in the Office apps your employees already use. Like Teams & Outlook.
 
 ## Scenarios
 
 ### Combine directories within your company
 
-Imagine you have one company that uses two different cloud services like Google Workspace and Azure AD.
-Or you have two daughter companies with separate Azure AD's and you would like to make employees of both services searchable at one place.
+Imagine you have one company that uses two different cloud services like Google Workspace and Entra ID.
+Or you have two daughter companies with separate Entra ID's and you would like to make employees of both services searchable at one place.
 
 <div style="display: flex">
   <img style="width: 30rem; border: none;" src="/images/two-to-one-first.svg " alt="One company, different providers"/>
@@ -110,7 +110,7 @@ For more information :
 
 - About directories refer to [here](./administrator/directories).
 - About provisioning from Google Workspace refer to [here](./administrator/google).
-- About provisioning from Azure AD refer to [here](./administrator/microsoft).
+- About provisioning from Entra ID refer to [here](./administrator/microsoft).
 
 ---
 

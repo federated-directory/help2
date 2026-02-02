@@ -5,7 +5,7 @@ A directory contains the users of your company and their contact data. Some of t
 
 - contains users that can log in to Federated Directory
 - contains information the way users are authenticated e.g. using SSO or direct login
-- can be provisioned by other services e.g. Azure AD or Google Workspace
+- can be provisioned by other services e.g. Entra ID or Google Workspace
 - can co-exist next to other directories
 
 When you sign up to Federated Directory, we create your first directory. The administrator account you receive during sign up is located in this directory.
@@ -65,7 +65,7 @@ To fill a directory, you can choose one of two options:
 If your company owns a corporate address book, you can provision it to directory with all the users becoming available to you automatically. We have turnkey integrations with following systems:
 
 - [Google](./administrator/google)
-- [Microsoft 365 / Azure AD](./administrator/microsoft)
+- [Microsoft 365 / Entra ID](./administrator/microsoft)
 - [OneLogin](./administrator/onelogin)
 - [Okta](./administrator/okta)
 
@@ -126,7 +126,7 @@ Authentication method defines the way your users will log in to Federated Direct
     <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-azure.svg" alt="Microsoft accounts"/> </td>
     <td>Microsoft accounts</td>
-    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Microsoft 365 and other applications that are integrated with Microsoft Azure AD. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
+    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Microsoft 365 and other applications that are integrated with Microsoft Entra ID. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
   </tr>
     <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-gsuite.svg" alt="Google accounts"/> </td>

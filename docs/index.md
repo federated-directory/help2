@@ -15,7 +15,7 @@ With help of Federated Directory, **_Company A_** gets access to the contact det
 Possible use cases are:
 
 - Companies that work together, but have their own isolated corporate address books
-- A company that uses different cloud services like Google Workspace and Azure AD
+- A company that uses different cloud services like Google Workspace and Entra ID
 - Franchises
 
 The contact data in your Federated Directory can be searched and filtered in our web application, through our APIs or through Microsoft Outlook Add-in.

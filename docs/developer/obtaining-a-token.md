@@ -32,7 +32,7 @@ A role determines the authorizations given to an access token.
 | Role         | Description                                                                                                                                                                                                                        |
 | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | User         | Is not able to make changes to any other user in or the configuration in its company                                                                                                                                               |
-| directoryKey | Always a key (audience) that has admin permissions on one specific directory in your Federated Directory. Ideal for integration with your current corporate address book or IAM solution (like Azure AD, Google Directory or Okta) |
+| directoryKey | Always a key (audience) that has admin permissions on one specific directory in your Federated Directory. Ideal for integration with your current corporate address book or IAM solution (like Entra ID, Google Directory or Okta) |
 | admin        | Full administrative permissions. Can modify all users and settings in its company                                                                                                                                                  |
 
 ## Retrieve an access token with a key

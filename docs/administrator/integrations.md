@@ -4,7 +4,7 @@
 To integrate other services or applications with your Federated Directory you will need an API key. This is an OAuth 2 key with administrative permissions for your entire Federated Directory. It has the same permissions as an administrator, except the ability to log in to our portal.
 So make sure you submit these keys only at locations you trust and remove the keys you don't use.
 
-Whenever you need to have an automatic user provisioning e.g, from Azure AD or Okta you will need to create a "Directory Key". This key only has administrative permissions for the directory it was created for and you can create it within directory view. Find out more [here](../administrator/directories#directory-keys)
+Whenever you need to have an automatic user provisioning e.g, from Entra ID or Okta you will need to create a "Directory Key". This key only has administrative permissions for the directory it was created for and you can create it within directory view. Find out more [here](../administrator/directories#directory-keys)
 
 To create an API key you need to provide a name and a description for it.
 
