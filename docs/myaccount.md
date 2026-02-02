@@ -17,7 +17,7 @@ All input fields have some minimum (mostly 0) and a maximum number of characters
 
 When you are done updating your profile, and there is no incorrect data in any of the input fields, you can save your new profile by pressing the blue "update profile" button at the bottom of the page.
 
-A complete overview of the syntax requirements on these attributes can be found [here](https://help.federated.directory/developer/data-model).
+A complete overview of the syntax requirements on these attributes can be found [here](/developer/api-reference#model/UserResponse).
 
 <h3>Update your photo</h3>
 

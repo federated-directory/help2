@@ -5,7 +5,7 @@ import { useRouter } from 'vitepress'
 const router = useRouter()
 
 onMounted(() => {
-  window.location.href = '/developer/api-reference#tag/MCP';
+  window.location.href = '/developer/api-reference#tag/mcp';
 })
 </script>
 

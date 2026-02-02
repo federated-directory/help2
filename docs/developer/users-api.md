@@ -7,7 +7,7 @@ const router = useRouter()
 
 onMounted(() => {
   // Redirect to the consolidated API reference
-  window.location.href = '/developer/api-reference#tag/Users';
+  window.location.href = '/developer/api-reference#tag/users';
 })
 </script>
 
@@ -16,7 +16,7 @@ onMounted(() => {
 Our fully [SCIM 2.0](http://www.simplecloud.info) compliant API to create, search, retrieve, update and remove user information.
 
 ::: info
-All API calls require a valid token. See how to [obtain a token](./obtaining-a-token).
+All API calls require a valid token. See how to [obtain a token](/developer/api-reference#tag/oauth2).
 :::
 
 ## User Data Model

@@ -6,7 +6,7 @@ import { useRouter } from 'vitepress'
 const router = useRouter()
 
 onMounted(() => {
-  window.location.href = '/developer/api-reference#tag/OAuth2';
+  window.location.href = '/developer/api-reference#tag/oauth2';
 })
 </script>
 

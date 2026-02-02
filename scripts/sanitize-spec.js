@@ -24,6 +24,8 @@ function processMarkdown(content) {
   content = content.replace(/^---[\s\S]*?---\n/, '');
   // Remove <ScalarEndpoint ... /> lines
   content = content.replace(/<ScalarEndpoint.*?\/>/g, '');
+  // Remove <script setup> ... </script> blocks
+  content = content.replace(/<script setup>[\s\S]*?<\/script>/g, '');
   // Convert ::: info to blockquote
   content = content.replace(/::: info\n([\s\S]*?):::/g, '> **Info**\n$1');
   return content.trim();
@@ -165,7 +167,8 @@ function generateSearchIndex(spec) {
           const operationId = op.operationId;
           
           // Scalar anchor format: tag/{tagName}/operation/{operationId}
-          const scalarAnchor = `tag/${tagName}/operation/${operationId}`;
+          // Tags must be lowercase for deep links
+          const scalarAnchor = `tag/${tagName.toLowerCase()}/operation/${operationId}`;
           
           map[`#${slug}`] = scalarAnchor;
           

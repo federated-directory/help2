@@ -96,5 +96,8 @@ export default defineConfig({
       provider: 'local'
     }
   },
-  ignoreDeadLinks: true
+    ignoreDeadLinks: [
+      // Ignore localhost links in documentation (e.g. for running locally)
+      /^http:\/\/localhost/
+    ]
 })

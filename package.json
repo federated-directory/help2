@@ -6,7 +6,8 @@
   "scripts": {
     "docs:dev": "node scripts/sanitize-spec.js && vitepress dev docs",
     "docs:build": "node scripts/sanitize-spec.js && vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "check:links": "node scripts/check-external-links.js"
   },
   "repository": {
     "type": "git",

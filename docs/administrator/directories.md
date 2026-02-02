@@ -23,7 +23,7 @@ In case your organization have stored all the contacts information centrally, yo
 ### Multiple directories
 
 If you have multiple directories in your organization we advice you to create a directory for every source.  
-Multiple directories or a single directory have no impact on the search experience or your users. Users from separate directories or even companies are joined within Federated Directory in [groups](./groups). This is how they can find each other's contact data.
+Multiple directories or a single directory have no impact on the search experience or your users. Users from separate directories or even companies are joined within Federated Directory in [groups](/groups). This is how they can find each other's contact data.
 
 ### Multiple companies
 
@@ -64,12 +64,12 @@ To fill a directory, you can choose one of two options:
 
 If your company owns a corporate address book, you can provision it to directory with all the users becoming available to you automatically. We have turnkey integrations with following systems:
 
-- [Google](./administrator/google)
-- [Microsoft 365 / Entra ID](./administrator/microsoft)
-- [OneLogin](./administrator/onelogin)
-- [Okta](./administrator/okta)
+- [Google](/administrator/google)
+- [Microsoft 365 / Entra ID](/administrator/microsoft)
+- [OneLogin](/administrator/onelogin)
+- [Okta](/administrator/okta)
 
-However, if your contact data are stored on another system then mention above and this platform supports SCIM 2.0 provisioning, you are in luck. You can use our generic [SCIM API interface](./administrator/scim) to push user data into your the directory.
+However, if your contact data are stored on another system then mention above and this platform supports SCIM 2.0 provisioning, you are in luck. You can use our generic [SCIM API interface](/administrator/scim) to push user data into your the directory.
 
 Any user that is created, updated, or deleted on those systems will be automatically replicated into your directory, including all the relevant contact information.
 
@@ -126,22 +126,22 @@ Authentication method defines the way your users will log in to Federated Direct
     <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-azure.svg" alt="Microsoft accounts"/> </td>
     <td>Microsoft accounts</td>
-    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Microsoft 365 and other applications that are integrated with Microsoft Entra ID. <a href="./microsoft">Setup authentication with Microsoft accounts</a></td>
+    <td>Users will log in with their Microsoft account. The same set of credentials they use to log in to Microsoft 365 and other applications that are integrated with Microsoft Entra ID. <a href="/administrator/microsoft">Setup authentication with Microsoft accounts</a></td>
   </tr>
     <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-gsuite.svg" alt="Google accounts"/> </td>
     <td>Google accounts</td>
-    <td>Users will log in with their Google account. The same set of credentials they use to log in to their Google Workspace services and other applications that are integrated with Google Cloud Identity. <a href="./google">Setup authentication with Google accounts</a></td>
+    <td>Users will log in with their Google account. The same set of credentials they use to log in to their Google Workspace services and other applications that are integrated with Google Cloud Identity. <a href="/administrator/google">Setup authentication with Google accounts</a></td>
   </tr>
      <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-oidc.svg" alt="Connect your own IDP through a OpenID Connect connection"/> </td>
     <td>OpenID Connect</td>
-    <td>OpenID Connect (OIDC) is an open standard used for user authentication in applications. If your organization already utilizes an OIDC Identity Provider (IDP), you can choose this option to integrate it with your Federated Directory. <a href="./oidc">Setup authentication with OpenID Connect</a></td>
+    <td>OpenID Connect (OIDC) is an open standard used for user authentication in applications. If your organization already utilizes an OIDC Identity Provider (IDP), you can choose this option to integrate it with your Federated Directory. <a href="/administrator/oidc">Setup authentication with OpenID Connect</a></td>
   </tr>
     <tr>
     <td><img style="width: 40px;   display:inline;" src="/images/directories-introduction-saml.svg" alt="Connect your own IDP through a SAML 2.0 connection"/> </td>
     <td>SAML 2.0</td>
-    <td>SAML 2.0 is an open standard used for user authentication in applications. It can be utilized to link Federated Directory with your personal Identity Provider (IDP). However, if your IDP is compatible with OpenID Connect, it is recommended to use that method. <a href="./saml">Setup authentication with SAML 2.0</a></td>
+    <td>SAML 2.0 is an open standard used for user authentication in applications. It can be utilized to link Federated Directory with your personal Identity Provider (IDP). However, if your IDP is compatible with OpenID Connect, it is recommended to use that method. <a href="/administrator/saml">Setup authentication with SAML 2.0</a></td>
   </tr>
 </table>
 

@@ -57,4 +57,4 @@ Configure your MCP client with the following settings:
 
 For developers building custom MCP clients or needing detailed schema definitions for the tools, please refer to the technical documentation.
 
-[View MCP API Reference](/developer/api-reference#tag/MCP)
+[View MCP API Reference](/developer/api-reference#tag/mcp)
